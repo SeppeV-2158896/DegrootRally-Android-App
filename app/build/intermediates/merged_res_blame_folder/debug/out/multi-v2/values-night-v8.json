@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-27:/values-night-v8/values-night-v8.xml",
+            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-61:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\seppe\\Documents\\appRally\\DegrootRally\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\seppe\\OneDrive\\Bureaublad\\DegrootRally\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

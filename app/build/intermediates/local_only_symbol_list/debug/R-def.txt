@@ -16,12 +16,16 @@ drawable ic_launcher_foreground
 id drawerLayout
 id frmTodoContainer
 id navView
+id recycler_view
 layout activity_main
+layout fragment_hoofd_menu
+layout fragment_kalender
 layout nav_header
 menu nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string hello_blank_fragment
 style Theme.DegrootRally
 xml backup_rules
 xml data_extraction_rules
