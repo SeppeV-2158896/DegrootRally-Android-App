@@ -2864,6 +2864,8 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
+id PilootEnCoPiloot
+id Resultaat
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -2871,6 +2873,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id TitelRallyEnDatum
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -2918,6 +2921,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_hoofdMenuFragment_to_kalenderFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -3026,7 +3030,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
-id drawerLayout
+id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3057,7 +3061,6 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
-id frmTodoContainer
 id frost
 id fullscreen_header
 id ghost_view
@@ -3074,6 +3077,7 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
+id hoofdMenuFragment
 id horizontal_only
 id icon
 id icon_group
@@ -3081,6 +3085,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id indeterminate
@@ -3093,6 +3098,7 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
+id kalenderFragment
 id labeled
 id layout
 id left
@@ -3166,8 +3172,13 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id navView
+id nav_account
 id nav_controller_view_tag
+id nav_graph_xml
+id nav_home
 id nav_host_fragment_container
+id nav_kalender_en_resultaten
+id nav_picture
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3213,6 +3224,7 @@ id progress_horizontal
 id progress_icon
 id progress_title
 id radio
+id rally_container
 id ratio
 id rectangles
 id recycler_view
@@ -3556,6 +3568,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout rally_item_view
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -3563,6 +3576,7 @@ layout support_simple_spinner_dropdown_item
 menu nav_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+navigation nav_graph
 plurals mtrl_badge_content_description
 raw keep
 string abc_action_bar_home_description
@@ -3719,6 +3733,8 @@ string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
+string nav_close
+string nav_open
 string navigation_menu
 string not_selected
 string off

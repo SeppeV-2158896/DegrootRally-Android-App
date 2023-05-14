@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/nav_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_kalender_en_resultaten"
+        android:title="Kalender en Resultaten" />
+
+    <item
+        android:id="@+id/nav_picture"
+        android:title="Upload Pictures" />
+
+    <item
+        android:id="@+id/nav_account"
+        android:title="Account" />
 
 </menu>
