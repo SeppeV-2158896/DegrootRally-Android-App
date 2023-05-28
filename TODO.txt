@@ -1,0 +1,13 @@
+//TODO
+
+- Read website en voeg toe aan kalender aan resultaten (https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet#0)
+- voeg login activity toe
+- voeg picture upload fragment toe (https://developer.android.com/training/camera-deprecated/photobasics)
+- voeg optie toe om route naar rally te krijgen 
+- voeg crash check in of andere sensor https://developer.android.com/guide/topics/sensors/sensors_motion
+- voeg account image toe
+- voeg app icon toe
+- maak homepage (next event - news - last result)
+- add rally button in kalender en resultaten (if admin account + save data to file) = RecyclerView
+- intent voor login activity naar main activity
+
