@@ -12,6 +12,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">Degroot Rally</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_close">Close</string>
+    <string name="nav_open">Open</string>
     <style name="Theme.DegrootRally" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/degrootGreen</item>
