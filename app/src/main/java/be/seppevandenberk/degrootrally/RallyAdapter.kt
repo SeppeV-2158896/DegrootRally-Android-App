@@ -34,6 +34,4 @@ class RallyAdapter(val items : List<RallyItem>) : RecyclerView.Adapter<RallyAdap
 
     override fun getItemCount(): Int = items.size
 
-
-
 }

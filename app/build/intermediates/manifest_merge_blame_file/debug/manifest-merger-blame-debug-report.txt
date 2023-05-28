@@ -6,171 +6,171 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="26"
-8-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml
+8-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml
+9-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml
 10
 11    <permission
-11-->[androidx.core:core:1.9.0] C:\Users\seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+11-->[androidx.core:core:1.9.0] C:\Users\Seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 12        android:name="be.seppevandenberk.degrootrally.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-12-->[androidx.core:core:1.9.0] C:\Users\seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+12-->[androidx.core:core:1.9.0] C:\Users\Seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 13        android:protectionLevel="signature" />
-13-->[androidx.core:core:1.9.0] C:\Users\seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+13-->[androidx.core:core:1.9.0] C:\Users\Seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 14
 15    <uses-permission android:name="be.seppevandenberk.degrootrally.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" /> <!-- Permission will be merged into the manifest of the hosting app. -->
-15-->[androidx.core:core:1.9.0] C:\Users\seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-15-->[androidx.core:core:1.9.0] C:\Users\seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+15-->[androidx.core:core:1.9.0] C:\Users\Seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.9.0] C:\Users\Seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 16    <!-- Is required to launch foreground extraction service for targetSdkVersion 28+. -->
 17    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-17-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:13:5-77
-17-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:13:22-74
+17-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:13:5-77
+17-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:13:22-74
 18
 19    <application
-19-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:5:5-23:19
+19-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:5:5-23:19
 20        android:allowBackup="true"
-20-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:6:9-35
+20-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:6:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-21-->[androidx.core:core:1.9.0] C:\Users\seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+21-->[androidx.core:core:1.9.0] C:\Users\Seppe\.gradle\caches\transforms-3\c73afc1fa215d9ca128620a3c01802b0\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:7:9-65
+22-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:7:9-65
 23        android:debuggable="true"
 24        android:extractNativeLibs="false"
 25        android:fullBackupContent="@xml/backup_rules"
-25-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:8:9-54
+25-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:8:9-54
 26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:9:9-43
+26-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:9:9-43
 27        android:label="@string/app_name"
-27-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:10:9-41
+27-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:10:9-41
 28        android:supportsRtl="true"
-28-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:11:9-35
+28-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:11:9-35
 29        android:testOnly="true"
 30        android:theme="@style/Theme.DegrootRally" >
-30-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:12:9-50
+30-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:12:9-50
 31        <activity
-31-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:14:9-22:20
+31-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:14:9-22:20
 32            android:name="be.seppevandenberk.degrootrally.MainActivity"
-32-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:15:13-41
+32-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:15:13-41
 33            android:exported="true" >
-33-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:16:13-36
+33-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:16:13-36
 34            <intent-filter>
-34-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:17:13-21:29
+34-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:17:13-21:29
 35                <action android:name="android.intent.action.MAIN" />
-35-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:18:17-69
-35-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:18:25-66
+35-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:18:17-69
+35-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:18:25-66
 36
 37                <category android:name="android.intent.category.LAUNCHER" />
-37-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:20:17-77
-37-->C:\Users\seppe\OneDrive\Bureaublad\DegrootRally\app\src\main\AndroidManifest.xml:20:27-74
+37-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:20:17-77
+37-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:20:27-74
 38            </intent-filter>
 39        </activity>
 40
 41        <uses-library
-41-->[androidx.window:window:1.0.0] C:\Users\seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+41-->[androidx.window:window:1.0.0] C:\Users\Seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
 42            android:name="androidx.window.extensions"
-42-->[androidx.window:window:1.0.0] C:\Users\seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+42-->[androidx.window:window:1.0.0] C:\Users\Seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
 43            android:required="false" />
-43-->[androidx.window:window:1.0.0] C:\Users\seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+43-->[androidx.window:window:1.0.0] C:\Users\Seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
 44        <uses-library
-44-->[androidx.window:window:1.0.0] C:\Users\seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+44-->[androidx.window:window:1.0.0] C:\Users\Seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
 45            android:name="androidx.window.sidecar"
-45-->[androidx.window:window:1.0.0] C:\Users\seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+45-->[androidx.window:window:1.0.0] C:\Users\Seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
 46            android:required="false" />
-46-->[androidx.window:window:1.0.0] C:\Users\seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+46-->[androidx.window:window:1.0.0] C:\Users\Seppe\.gradle\caches\transforms-3\57ca3fa706d0531e32e0a842a9463d39\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 47
 48        <provider
-48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+48-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 49            android:name="androidx.startup.InitializationProvider"
-49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+49-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 50            android:authorities="be.seppevandenberk.degrootrally.androidx-startup"
-50-->[androidx.emoji2:emoji2:1.2.0] C:\Users\seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+50-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 51            android:exported="false" >
-51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+51-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 52            <meta-data
-52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+52-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 53                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+53-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 54                android:value="androidx.startup" />
-54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+54-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Seppe\.gradle\caches\transforms-3\66814d0c9c223a08105bc116aeb53dd5\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 55            <meta-data
-55-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\seppe\.gradle\caches\transforms-3\d64e7ca6b93f4a6c092b1dd37cf249d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+55-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Seppe\.gradle\caches\transforms-3\d64e7ca6b93f4a6c092b1dd37cf249d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 56                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-56-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\seppe\.gradle\caches\transforms-3\d64e7ca6b93f4a6c092b1dd37cf249d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+56-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Seppe\.gradle\caches\transforms-3\d64e7ca6b93f4a6c092b1dd37cf249d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 57                android:value="androidx.startup" />
-57-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\seppe\.gradle\caches\transforms-3\d64e7ca6b93f4a6c092b1dd37cf249d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+57-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Seppe\.gradle\caches\transforms-3\d64e7ca6b93f4a6c092b1dd37cf249d6\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 58            <meta-data
-58-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:31:13-33:52
+58-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:31:13-33:52
 59                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-59-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:32:17-85
+59-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:32:17-85
 60                android:value="androidx.startup" />
-60-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:33:17-49
+60-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:33:17-49
 61        </provider>
 62
 63        <receiver
-63-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:36:9-45:20
+63-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:36:9-45:20
 64            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-64-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:37:13-76
+64-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:37:13-76
 65            android:directBootAware="false"
-65-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:38:13-44
+65-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:38:13-44
 66            android:enabled="true"
-66-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:39:13-35
+66-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:39:13-35
 67            android:exported="true"
-67-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:40:13-36
+67-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:40:13-36
 68            android:permission="android.permission.DUMP" >
-68-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:41:13-57
+68-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:41:13-57
 69            <intent-filter>
-69-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:42:13-44:29
+69-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:42:13-44:29
 70                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-70-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:43:17-91
-70-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:43:25-88
+70-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:43:17-91
+70-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\Seppe\.gradle\caches\transforms-3\1c45fd99a4d7922f54b8eef23c4920ce\transformed\profileinstaller-1.0.1\AndroidManifest.xml:43:25-88
 71            </intent-filter>
 72        </receiver> <!-- The activities will be merged into the manifest of the hosting app. -->
 73        <activity
-73-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:18:9-24:45
+73-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:18:9-24:45
 74            android:name="com.google.android.play.core.missingsplits.PlayCoreMissingSplitsActivity"
-74-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:19:13-100
+74-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:19:13-100
 75            android:enabled="false"
-75-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:20:13-36
+75-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:20:13-36
 76            android:exported="false"
-76-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:21:13-37
+76-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:21:13-37
 77            android:launchMode="singleInstance"
-77-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:22:13-48
+77-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:22:13-48
 78            android:process=":playcore_missing_splits_activity"
-78-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:23:13-64
+78-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:23:13-64
 79            android:stateNotNeeded="true" />
-79-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:24:13-42
+79-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:24:13-42
 80        <activity
-80-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:25:9-29:65
+80-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:25:9-29:65
 81            android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity"
-81-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:26:13-93
+81-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:26:13-93
 82            android:exported="false"
-82-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:27:13-37
+82-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:27:13-37
 83            android:stateNotNeeded="true"
-83-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:28:13-42
+83-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:28:13-42
 84            android:theme="@style/Theme.PlayCore.Transparent" /> <!-- The services will be merged into the manifest of the hosting app. -->
-84-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:29:13-62
+84-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:29:13-62
 85        <service
-85-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:32:9-39:19
+85-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:32:9-39:19
 86            android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService"
-86-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:33:13-94
+86-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:33:13-94
 87            android:enabled="false"
-87-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:34:13-36
+87-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:34:13-36
 88            android:exported="true" >
-88-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:35:13-36
+88-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:35:13-36
 89            <meta-data
-89-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:36:13-38:41
+89-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:36:13-38:41
 90                android:name="com.google.android.play.core.assetpacks.versionCode"
-90-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:37:17-83
+90-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:37:17-83
 91                android:value="11003" />
-91-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:38:17-38
+91-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:38:17-38
 92        </service>
 93        <service
-93-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:40:9-43:40
+93-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:40:9-43:40
 94            android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"
-94-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:41:13-95
+94-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:41:13-95
 95            android:enabled="false"
-95-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:42:13-36
+95-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:42:13-36
 96            android:exported="false" />
-96-->[com.google.android.play:core:1.10.3] C:\Users\seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:43:13-37
+96-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\499855a013d774e6800eb9abf44181d7\transformed\core-1.10.3\AndroidManifest.xml:43:13-37
 97    </application>
 98
 99</manifest>

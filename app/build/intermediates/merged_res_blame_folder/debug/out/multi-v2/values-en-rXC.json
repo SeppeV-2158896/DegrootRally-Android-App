@@ -4,7 +4,7 @@
             "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-61:/values-en-rXC/values-en-rXC.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\seppe\\.gradle\\caches\\transforms-3\\8d9343f569df63b726615d18b45679d4\\transformed\\appcompat-1.6.1\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\8d9343f569df63b726615d18b45679d4\\transformed\\appcompat-1.6.1\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\seppe\\.gradle\\caches\\transforms-3\\dff07449f78ec9262ea5b4e603a06c2c\\transformed\\navigation-dynamic-features-fragment-2.5.3\\res\\values-en-rXC\\values-en-rXC.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "55,258,456,654,823,1003",
-                        "endColumns": "202,197,197,168,179,169",
-                        "endOffsets": "253,451,649,818,998,1168"
-                    },
-                    "to": {
-                        "startLines": "34,35,36,40,42,43",
-                        "startColumns": "4,4,4,4,4,4",
-                        "startOffsets": "6490,6693,6891,7629,7965,8145",
-                        "endColumns": "202,197,197,168,179,169",
-                        "endOffsets": "6688,6886,7084,7793,8140,8310"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\seppe\\.gradle\\caches\\transforms-3\\c73afc1fa215d9ca128620a3c01802b0\\transformed\\core-1.9.0\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\c73afc1fa215d9ca128620a3c01802b0\\transformed\\core-1.9.0\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -55,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\seppe\\.gradle\\caches\\transforms-3\\d0870c2b19878c141ab1906a1e445e68\\transformed\\ui-1.0.1\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\d0870c2b19878c141ab1906a1e445e68\\transformed\\ui-1.0.1\\res\\values-en-rXC\\values-en-rXC.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
@@ -69,6 +52,23 @@
                         "startOffsets": "5528,5719,5904,6101,6286,7089,7277,7464,7798,8501,8871,9038",
                         "endColumns": "190,184,196,184,203,187,186,164,166,165,166,237",
                         "endOffsets": "5714,5899,6096,6281,6485,7272,7459,7624,7960,8662,9033,9271"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\dff07449f78ec9262ea5b4e603a06c2c\\transformed\\navigation-dynamic-features-fragment-2.5.3\\res\\values-en-rXC\\values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,258,456,654,823,1003",
+                        "endColumns": "202,197,197,168,179,169",
+                        "endOffsets": "253,451,649,818,998,1168"
+                    },
+                    "to": {
+                        "startLines": "34,35,36,40,42,43",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "6490,6693,6891,7629,7965,8145",
+                        "endColumns": "202,197,197,168,179,169",
+                        "endOffsets": "6688,6886,7084,7793,8140,8310"
                     }
                 }
             ]

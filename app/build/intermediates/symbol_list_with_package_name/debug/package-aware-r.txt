@@ -2921,7 +2921,6 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
-id action_hoofdMenuFragment_to_kalenderFragment
 id action_image
 id action_menu_divider
 id action_menu_presenter
@@ -2988,6 +2987,7 @@ id compose_view_saveable_id_tag
 id compress
 id confirm_button
 id constraint
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -3060,7 +3060,9 @@ id fixed
 id flip
 id floating
 id forever
+id fragmentLayout
 id fragment_container_view_tag
+id frameLayout
 id frost
 id fullscreen_header
 id ghost_view
@@ -3078,6 +3080,7 @@ id home
 id homeAsUp
 id honorRequest
 id hoofdMenuFragment
+id hoofdMenuText
 id horizontal_only
 id icon
 id icon_group
@@ -3098,7 +3101,8 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
-id kalenderFragment
+id kalenderEnResultatenFragment
+id kalendertxt
 id labeled
 id layout
 id left
@@ -3224,10 +3228,8 @@ id progress_horizontal
 id progress_icon
 id progress_title
 id radio
-id rally_container
 id ratio
 id rectangles
-id recycler_view
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3509,7 +3511,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dynamic_feature_install_fragment
 layout fragment_hoofd_menu
-layout fragment_kalender
+layout fragment_kalender_en_resultaten
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
