@@ -4,4 +4,12 @@
 
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+    <string name="title_activity_login">LoginActivity</string>
+
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="guest">Continue as Guest</string>
+    <string name="no_account">No account? Sign up here</string>
+    <string name="username">Username</string>
+    <string name="forgot">Forgot Password</string>
 </resources>

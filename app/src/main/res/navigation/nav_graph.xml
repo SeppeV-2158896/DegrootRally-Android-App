@@ -6,12 +6,12 @@
     app:startDestination="@id/hoofdMenuFragment">
     <fragment
         android:id="@+id/hoofdMenuFragment"
-        android:name="be.seppevandenberk.degrootrally.HoofdMenuFragment"
+        android:name="be.seppevandenberk.degrootrally.Fragments.HoofdMenuFragment"
         android:label="fragment_hoofd_menu"
         tools:layout="@layout/fragment_hoofd_menu" />
     <fragment
         android:id="@+id/kalenderEnResultatenFragment"
-        android:name="be.seppevandenberk.degrootrally.KalenderEnResultatenFragment"
+        android:name="be.seppevandenberk.degrootrally.Fragments.KalenderEnResultatenFragment"
         android:label="fragment_kalender_en_resultaten"
         tools:layout="@layout/fragment_kalender_en_resultaten" />
 </navigation>

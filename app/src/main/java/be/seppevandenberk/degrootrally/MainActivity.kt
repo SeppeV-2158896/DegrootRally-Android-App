@@ -7,6 +7,8 @@ import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
+import be.seppevandenberk.degrootrally.Fragments.HoofdMenuFragment
+import be.seppevandenberk.degrootrally.Fragments.KalenderEnResultatenFragment
 import be.seppevandenberk.degrootrally.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding = ActivityMainBinding.inflate(layoutInflater)
 
 
-        displayFragment(kalenderEnResultatenFragment)
+        displayFragment(hoofdMenuFragment)
 
         setupActionBarDrawer()
 
@@ -86,7 +88,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun displayFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragmentLayout, fragment)
+            replace(R.id.fragmentLayoutMain, fragment)
             addToBackStack(null)
             commit()
         }
