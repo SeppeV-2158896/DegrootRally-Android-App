@@ -1,16 +1,19 @@
-#Sun May 28 15:35:20 CEST 2023
+#Mon May 29 23:02:26 CEST 2023
 base.0=F\:\\Documents\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=F\:\\Documents\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=F\:\\Documents\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.3=F\:\\Documents\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
-base.4=F\:\\Documents\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.4=F\:\\Documents\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
+base.5=F\:\\Documents\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=4/classes.dex
 path.3=7/classes.dex
-path.4=classes2.dex
+path.4=9/classes.dex
+path.5=classes2.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
 renamed.2=classes3.dex
 renamed.3=classes4.dex
 renamed.4=classes5.dex
+renamed.5=classes6.dex
