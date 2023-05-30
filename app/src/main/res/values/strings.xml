@@ -12,4 +12,7 @@
     <string name="no_account">No account? Sign up here</string>
     <string name="username">Username</string>
     <string name="forgot">Forgot Password</string>
+    <string name="email">E-mail</string>
+    <string name="submit">Submit</string>
+    <string name="confirm">Confirm password</string>
 </resources>

@@ -2968,7 +2968,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3048,6 +3047,8 @@ id easeOut
 id east
 id edit_query
 id elastic
+id email_new_txt_ed
+id email_txt_ed
 id embed
 id end
 id endToStart
@@ -3230,6 +3231,8 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password_confirm_txt_ed
+id password_new_txt_ed
 id password_toggle
 id password_txt_ed
 id path
@@ -3249,6 +3252,7 @@ id progress_title
 id radio
 id ratio
 id rectangles
+id register_btn
 id register_txt_vw
 id reverseSawtooth
 id right
@@ -3334,6 +3338,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id submit_btn
 id supportScrollUp
 id tabMode
 id tag_accessibility_actions
@@ -3386,6 +3391,7 @@ id uniform
 id unlabeled
 id up
 id useLogo
+id username_new_txt_ed
 id vertical_only
 id view
 id view_offset_helper
@@ -3649,10 +3655,12 @@ string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
 string collapsed
+string confirm
 string default_error_message
 string default_popup_window_title
 string dialog
 string dropdown_menu
+string email
 string error_a11y_label
 string error_icon_content_description
 string expanded
@@ -3794,6 +3802,7 @@ string selected
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string submit
 string tab
 string template_percent
 string title_activity_login

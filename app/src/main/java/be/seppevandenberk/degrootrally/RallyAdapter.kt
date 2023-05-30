@@ -6,7 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class RallyAdapter(val items : List<RallyItem>) : RecyclerView.Adapter<RallyAdapter.RallyItemViewHolder>() {
+class RallyAdapter(val items: List<RallyItem>) :
+    RecyclerView.Adapter<RallyAdapter.RallyItemViewHolder>() {
     inner class RallyItemViewHolder(currentItemView: View) :
         RecyclerView.ViewHolder(currentItemView)
 

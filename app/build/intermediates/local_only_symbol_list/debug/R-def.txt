@@ -22,9 +22,10 @@ drawable ic_person
 id PilootEnCoPiloot
 id Resultaat
 id TitelRallyEnDatum
-id button
 id constraintLayout
 id drawer_layout
+id email_new_txt_ed
+id email_txt_ed
 id forgot_txt_vw
 id fragmentLayoutLogin
 id fragmentLayoutMain
@@ -44,8 +45,13 @@ id nav_graph.xml
 id nav_home
 id nav_kalender_en_resultaten
 id nav_picture
+id password_confirm_txt_ed
+id password_new_txt_ed
 id password_txt_ed
+id register_btn
 id register_txt_vw
+id submit_btn
+id username_new_txt_ed
 id view
 layout activity_login
 layout activity_main
@@ -61,6 +67,8 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
 string app_name
+string confirm
+string email
 string forgot
 string guest
 string hello_blank_fragment
@@ -69,6 +77,7 @@ string nav_close
 string nav_open
 string no_account
 string password
+string submit
 string title_activity_login
 string username
 style Theme.DegrootRally

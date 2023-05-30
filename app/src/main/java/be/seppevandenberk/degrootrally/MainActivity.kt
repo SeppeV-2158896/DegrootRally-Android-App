@@ -1,14 +1,14 @@
 package be.seppevandenberk.degrootrally
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import be.seppevandenberk.degrootrally.Fragments.HoofdMenuFragment
-import be.seppevandenberk.degrootrally.Fragments.KalenderEnResultatenFragment
+import be.seppevandenberk.degrootrally.fragments.HoofdMenuFragment
+import be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment
 import be.seppevandenberk.degrootrally.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 

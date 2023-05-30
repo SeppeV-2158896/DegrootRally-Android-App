@@ -2967,7 +2967,6 @@ int id bounce 0x7f080063
 int id bounceBoth 0x7f080064
 int id bounceEnd 0x7f080065
 int id bounceStart 0x7f080066
-int id button 0x7f080067
 int id buttonPanel 0x7f080068
 int id cache_measures 0x7f080069
 int id callMeasure 0x7f08006a
@@ -3047,6 +3046,8 @@ int id easeOut 0x7f0800b3
 int id east 0x7f0800b4
 int id edit_query 0x7f0800b5
 int id elastic 0x7f0800b6
+int id email_new_txt_ed 0x7f08021d
+int id email_txt_ed 0x7f08021e
 int id embed 0x7f0800b7
 int id end 0x7f0800b8
 int id endToStart 0x7f0800b9
@@ -3229,6 +3230,8 @@ int id parent 0x7f080169
 int id parentPanel 0x7f08016a
 int id parentRelative 0x7f08016b
 int id parent_matrix 0x7f08016c
+int id password_confirm_txt_ed 0x7f08021f
+int id password_new_txt_ed 0x7f080220
 int id password_toggle 0x7f08016d
 int id password_txt_ed 0x7f08016e
 int id path 0x7f08016f
@@ -3248,6 +3251,7 @@ int id progress_title 0x7f08017c
 int id radio 0x7f08017d
 int id ratio 0x7f08017e
 int id rectangles 0x7f08017f
+int id register_btn 0x7f080221
 int id register_txt_vw 0x7f080180
 int id reverseSawtooth 0x7f080181
 int id right 0x7f080182
@@ -3333,6 +3337,7 @@ int id stop 0x7f0801d1
 int id stretch 0x7f0801d2
 int id submenuarrow 0x7f0801d3
 int id submit_area 0x7f0801d4
+int id submit_btn 0x7f080222
 int id supportScrollUp 0x7f0801d5
 int id tabMode 0x7f0801d6
 int id tag_accessibility_actions 0x7f0801d7
@@ -3385,6 +3390,7 @@ int id uniform 0x7f080205
 int id unlabeled 0x7f080206
 int id up 0x7f080207
 int id useLogo 0x7f080208
+int id username_new_txt_ed 0x7f080223
 int id vertical_only 0x7f080209
 int id view 0x7f08020a
 int id view_offset_helper 0x7f08020b
@@ -3648,10 +3654,12 @@ int string clear_text_end_icon_content_description 0x7f120027
 int string close_drawer 0x7f120028
 int string close_sheet 0x7f120029
 int string collapsed 0x7f12002a
+int string confirm 0x7f1200c0
 int string default_error_message 0x7f12002b
 int string default_popup_window_title 0x7f12002c
 int string dialog 0x7f12002d
 int string dropdown_menu 0x7f12002e
+int string email 0x7f1200c1
 int string error_a11y_label 0x7f12002f
 int string error_icon_content_description 0x7f120030
 int string expanded 0x7f120031
@@ -3793,6 +3801,7 @@ int string selected 0x7f1200b8
 int string side_sheet_accessibility_pane_title 0x7f1200b9
 int string side_sheet_behavior 0x7f1200ba
 int string status_bar_notification_info_overflow 0x7f1200bb
+int string submit 0x7f1200c2
 int string tab 0x7f1200bc
 int string template_percent 0x7f1200bd
 int string title_activity_login 0x7f1200be
