@@ -22,10 +22,13 @@ drawable ic_person
 id PilootEnCoPiloot
 id Resultaat
 id TitelRallyEnDatum
+id action_loginFragment_to_forgotPasswordFragment
+id action_loginFragment_to_signUpFragment
 id constraintLayout
 id drawer_layout
 id email_new_txt_ed
 id email_txt_ed
+id forgotPasswordFragment
 id forgot_txt_vw
 id fragmentLayoutLogin
 id fragmentLayoutMain
@@ -36,6 +39,7 @@ id hoofdMenuText
 id imageView
 id kalenderEnResultatenFragment
 id kalendertxt
+id loginFragment
 id login_btn
 id login_txt_ed
 id login_txt_vw
@@ -50,6 +54,7 @@ id password_new_txt_ed
 id password_txt_ed
 id register_btn
 id register_txt_vw
+id signUpFragment
 id submit_btn
 id username_new_txt_ed
 id view

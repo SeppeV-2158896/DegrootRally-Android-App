@@ -1,126 +1,130 @@
 [
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\activity_main.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_fragment_login.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/fragment_login.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_rally_item_view.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\rally_item_view.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_activity_main.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/activity_main.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\drawable_edt_background.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\drawable\\edt_background.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_activity_login.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/activity_login.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_rally_item_view.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/rally_item_view.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_fragment_kalender_en_resultaten.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\fragment_kalender_en_resultaten.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-anydpi-v33/ic_launcher.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_fragment_hoofd_menu.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/fragment_hoofd_menu.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_nav_header.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/nav_header.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\fragment_login.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/xml_data_extraction_rules.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_fragment_hoofd_menu.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\fragment_hoofd_menu.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/drawable_edt_background.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/drawable/edt_background.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\menu_nav_menu.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\menu\\nav_menu.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\activity_login.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_fragment_sign_up.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/fragment_sign_up.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-anydpi-v33\\ic_launcher.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/drawable_ic_person.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/drawable/ic_person.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_fragment_sign_up.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\fragment_sign_up.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/menu_nav_menu.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/menu/nav_menu.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_fragment_forgot_password.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\fragment_forgot_password.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_fragment_forgot_password.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/fragment_forgot_password.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\layout_nav_header.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\layout\\nav_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\drawable_ic_lock.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\drawable\\ic_lock.xml"
+    },
+    {
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
         "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/navigation_nav_graph.xml.flat",
         "source": "be.seppevandenberk.degrootrally.app-main-65:/navigation/nav_graph.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/drawable_ic_launcher_background.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/drawable_ic_lock.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/drawable/ic_lock.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\navigation\\nav_graph.xml"
     },
     {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-hdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/mipmap-xhdpi/ic_launcher.webp"
-    },
-    {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/xml_backup_rules.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/xml/backup_rules.xml"
-    },
-    {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-63:/layout_fragment_kalender_en_resultaten.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-65:/layout/fragment_kalender_en_resultaten.xml"
+        "merged": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-63:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Seppe\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-65:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     }
 ]

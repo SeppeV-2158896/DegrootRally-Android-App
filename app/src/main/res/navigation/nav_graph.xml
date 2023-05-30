@@ -14,4 +14,24 @@
         android:name="be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment"
         android:label="fragment_kalender_en_resultaten"
         tools:layout="@layout/fragment_kalender_en_resultaten" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="be.seppevandenberk.degrootrally.fragments.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="be.seppevandenberk.degrootrally.fragments.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="be.seppevandenberk.degrootrally.fragments.SignUpFragment"
+        android:label="SignUpFragment" />
 </navigation>

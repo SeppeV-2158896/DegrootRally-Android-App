@@ -11,8 +11,8 @@
 9-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-11-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:4:5-80
-11-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:4:22-77
+11-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:5:5-80
+11-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:5:22-77
 12
 13    <permission
 13-->[androidx.core:core:1.9.0] C:\Users\Seppe\.gradle\caches\transforms-3\6492d4be1dafc14eeb126acfa6937b10\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
@@ -30,48 +30,48 @@
 19-->[com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\transforms-3\917755411e164491713a0a3b8ea06696\transformed\core-1.10.3\AndroidManifest.xml:13:22-74
 20
 21    <application
-21-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:5:5-29:19
+21-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:6:5-30:19
 22        android:allowBackup="true"
-22-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:6:9-35
+22-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:7:9-35
 23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 23-->[androidx.core:core:1.9.0] C:\Users\Seppe\.gradle\caches\transforms-3\6492d4be1dafc14eeb126acfa6937b10\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 24        android:dataExtractionRules="@xml/data_extraction_rules"
-24-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:7:9-65
+24-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:8:9-65
 25        android:debuggable="true"
 26        android:extractNativeLibs="false"
 27        android:fullBackupContent="@xml/backup_rules"
-27-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:8:9-54
+27-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:9:9-54
 28        android:icon="@mipmap/ic_launcher"
-28-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:9:9-43
+28-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:10:9-43
 29        android:label="@string/app_name"
-29-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:10:9-41
+29-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:11:9-41
 30        android:supportsRtl="true"
-30-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:11:9-35
+30-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:12:9-35
 31        android:testOnly="true"
 32        android:theme="@style/Theme.DegrootRally" >
-32-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:12:9-50
+32-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:13:9-50
 33        <activity
-33-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:14:9-18:20
+33-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:15:9-19:20
 34            android:name="be.seppevandenberk.degrootrally.activities.MainActivity"
-34-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:15:13-52
+34-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:16:13-52
 35            android:exported="true" >
-35-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:16:13-36
+35-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:17:13-36
 36        </activity>
 37        <activity
-37-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:19:9-27:20
+37-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:20:9-28:20
 38            android:name="be.seppevandenberk.degrootrally.activities.LoginActivity"
-38-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:20:13-53
+38-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:21:13-53
 39            android:exported="true" >
-39-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:21:13-36
+39-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:22:13-36
 40            <intent-filter>
-40-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:22:13-26:29
+40-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:23:13-27:29
 41                <action android:name="android.intent.action.MAIN" />
-41-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:23:17-69
-41-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:23:25-66
+41-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:24:17-69
+41-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:24:25-66
 42
 43                <category android:name="android.intent.category.LAUNCHER" />
-43-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:25:17-77
-43-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:25:27-74
+43-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:26:17-77
+43-->F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:26:27-74
 44            </intent-filter>
 45        </activity>
 46

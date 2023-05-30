@@ -8,9 +8,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import be.seppevandenberk.degrootrally.R
+import be.seppevandenberk.degrootrally.databinding.ActivityMainBinding
 import be.seppevandenberk.degrootrally.fragments.HoofdMenuFragment
 import be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment
-import be.seppevandenberk.degrootrally.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {

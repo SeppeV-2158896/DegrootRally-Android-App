@@ -2928,6 +2928,8 @@ id action_container
 id action_context_bar
 id action_divider
 id action_image
+id action_loginFragment_to_forgotPasswordFragment
+id action_loginFragment_to_signUpFragment
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -3068,6 +3070,7 @@ id fixed
 id flip
 id floating
 id forever
+id forgotPasswordFragment
 id forgot_txt_vw
 id fragmentLayoutLogin
 id fragmentLayoutMain
@@ -3125,6 +3128,7 @@ id linear
 id listMode
 id list_item
 id locale
+id loginFragment
 id login_btn
 id login_txt_ed
 id login_txt_vw
@@ -3300,6 +3304,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signUpFragment
 id sin
 id skipCollapsed
 id skipped

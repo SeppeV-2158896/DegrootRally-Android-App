@@ -57,6 +57,5 @@ dependencies {
 
 
     String fragment_version = "1.5.7"
-    // Kotlin
     implementation("androidx.fragment:fragment-ktx:$fragment_version")
 }
