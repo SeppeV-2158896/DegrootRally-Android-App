@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-73:/values-night-v8/values-night-v8.xml",
+            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-61:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\3e050352d50c5db8d7ab581b0a5992da\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
@@ -42,10 +42,10 @@
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
-                        "startOffsets": "102",
+                        "startOffsets": "55",
                         "endLines": "14",
                         "endColumns": "12",
-                        "endOffsets": "815"
+                        "endOffsets": "768"
                     },
                     "to": {
                         "startLines": "9",

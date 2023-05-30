@@ -1,8 +1,9 @@
-package be.seppevandenberk.degrootrally
+package be.seppevandenberk.degrootrally.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.fragments.ForgotPasswordFragment
 import be.seppevandenberk.degrootrally.fragments.LoginFragment
 import be.seppevandenberk.degrootrally.fragments.SignUpFragment

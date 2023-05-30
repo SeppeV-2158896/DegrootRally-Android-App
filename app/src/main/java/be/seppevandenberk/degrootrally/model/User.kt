@@ -1,4 +1,4 @@
-package be.seppevandenberk.degrootrally
+package be.seppevandenberk.degrootrally.model
 
 
 open class User {

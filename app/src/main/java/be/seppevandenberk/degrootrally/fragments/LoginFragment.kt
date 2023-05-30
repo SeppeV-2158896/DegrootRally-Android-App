@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
-import be.seppevandenberk.degrootrally.MainActivity
+import be.seppevandenberk.degrootrally.activities.MainActivity
 import be.seppevandenberk.degrootrally.R
 
 

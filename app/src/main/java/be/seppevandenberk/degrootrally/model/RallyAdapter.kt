@@ -1,10 +1,11 @@
-package be.seppevandenberk.degrootrally
+package be.seppevandenberk.degrootrally.model
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import be.seppevandenberk.degrootrally.R
 
 class RallyAdapter(val items: List<RallyItem>) :
     RecyclerView.Adapter<RallyAdapter.RallyItemViewHolder>() {
