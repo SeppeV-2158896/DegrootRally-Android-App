@@ -42,7 +42,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
     }
     fun displayFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-        transaction.replace(R.id.frameLayoutKalender, fragment)
+        transaction.replace(R.id.fragmentLayoutMain, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }

@@ -2916,10 +2916,10 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id account_image_ic
 id actionDown
 id actionDownUp
 id actionUp
-id action_addRaceFragment_to_id_kalender
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -2931,7 +2931,6 @@ id action_container
 id action_context_bar
 id action_divider
 id action_image
-id action_kalenderEnResultatenFragment_to_addRaceFragment
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -2942,7 +2941,7 @@ id actions
 id activity_chooser_view_content
 id add
 id addButton
-id addRaceFragment
+id admin_txt_vw
 id alertTitle
 id aligned
 id all
@@ -2972,7 +2971,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id btnChangePassword
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2986,6 +2984,8 @@ id center_vertical
 id chain
 id chain2
 id chains
+id change_password_btn
+id change_to_new_password_btn
 id checkbox
 id checked
 id chronometer
@@ -2999,6 +2999,7 @@ id collapseActionView
 id compose_view_saveable_id_tag
 id compress
 id confirm_button
+id confirm_password_txt_ed
 id constraint
 id constraintLayout
 id container
@@ -3012,9 +3013,11 @@ id cos
 id counterclockwise
 id cradle
 id currentState
+id current_password_txt_ed
 id custom
 id customPanel
 id cut
+id dataBinding
 id date_picker_actions
 id date_txt_vw
 id decelerate
@@ -3055,6 +3058,7 @@ id edit_query
 id elastic
 id email_new_txt_ed
 id email_txt_ed
+id email_txt_vw
 id embed
 id end
 id endToStart
@@ -3079,6 +3083,7 @@ id floating
 id forever
 id forgot_txt_vw
 id fragmentLayoutLogin
+id fragmentLayoutMain
 id fragment_container_view_tag
 id frameLayoutKalender
 id frost
@@ -3102,12 +3107,10 @@ id hoofdMenuText
 id horizontal_only
 id icon
 id icon_group
-id id_kalender
 id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageAccountIcon
 id imageView
 id immediateStop
 id included
@@ -3133,8 +3136,10 @@ id listMode
 id list_item
 id locale
 id login_btn
+id login_guest_btn
 id login_txt_ed
 id login_txt_vw
+id logout_btn
 id ltr
 id m3_side_sheet
 id marquee
@@ -3196,11 +3201,9 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
-id navHostFragment
 id navView
 id nav_account
 id nav_controller_view_tag
-id nav_graph_xml
 id nav_home
 id nav_host_fragment_container
 id nav_kalender_en_resultaten
@@ -3215,6 +3218,7 @@ id navigation_header_container
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
+id new_password_txt_ed
 id noScroll
 id noState
 id none
@@ -3225,6 +3229,8 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id onAttachStateChangeListener
+id onDateChanged
 id onInterceptTouchReturnSwipe
 id outline
 id outward
@@ -3361,13 +3367,12 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
-id textEmail
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textUsername
+id textWatcher
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3400,6 +3405,7 @@ id unlabeled
 id up
 id useLogo
 id username_new_txt_ed
+id username_txt_vw
 id vertical_only
 id view
 id view_offset_helper
@@ -3549,6 +3555,7 @@ layout design_text_input_start_icon
 layout dynamic_feature_install_fragment
 layout fragment_account
 layout fragment_add_race
+layout fragment_change_password
 layout fragment_forgot_password
 layout fragment_hoofd_menu
 layout fragment_kalender_en_resultaten
@@ -3621,7 +3628,6 @@ menu nav_menu
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 mipmap ic_launcher_square
-navigation nav_graph
 plurals mtrl_badge_content_description
 raw keep
 string abc_action_bar_home_description
@@ -3651,6 +3657,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string admin
 string androidx_startup
 string app_name
 string appbar_scrolling_view_behavior
@@ -3668,6 +3675,7 @@ string clear_text_end_icon_content_description
 string close_drawer
 string close_sheet
 string confirm
+string current
 string default_error_message
 string email
 string error_a11y_label
@@ -3687,6 +3695,7 @@ string installation_failed
 string installing_module
 string item_view_role_description
 string login
+string logout
 string m3_sys_motion_easing_emphasized
 string m3_sys_motion_easing_emphasized_accelerate
 string m3_sys_motion_easing_emphasized_decelerate
@@ -3787,6 +3796,7 @@ string nav_app_bar_open_drawer_description
 string nav_close
 string nav_open
 string navigation_menu
+string newpw
 string no_account
 string not_selected
 string off

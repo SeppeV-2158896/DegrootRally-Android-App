@@ -5,7 +5,6 @@
     android:id="@+id/frameLayoutKalender"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    app:navGraph="@navigation/nav_graph"
     tools:context=".fragments.KalenderEnResultatenFragment">
 
     <androidx.recyclerview.widget.RecyclerView

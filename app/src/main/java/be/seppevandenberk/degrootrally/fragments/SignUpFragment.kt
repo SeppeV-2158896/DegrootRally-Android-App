@@ -81,12 +81,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             return
         }
         val hashedpassword = user.hashPassword(passwordEditText.text.toString())
-        user.create(
-            emailEditText.text.toString(),
-            usernameEditText.text.toString(),
-            hashedpassword,
-            "User"
-        )
+        user.create()
         val intent = Intent(requireContext(), MainActivity::class.java)
         startActivity(intent)
 

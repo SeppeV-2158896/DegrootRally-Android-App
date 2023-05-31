@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-61:/values-my/values-my.xml",
+            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-65:/values-my/values-my.xml",
             "map": [
                 {
                     "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\6492d4be1dafc14eeb126acfa6937b10\\transformed\\core-1.9.0\\res\\values-my\\values-my.xml",

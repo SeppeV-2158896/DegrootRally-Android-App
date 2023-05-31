@@ -1,13 +1,15 @@
-#Wed May 31 14:56:44 CEST 2023
+#Wed May 31 15:10:59 CEST 2023
 path.4=4/classes.dex
 path.3=1/classes.dex
 path.2=10/classes.dex
+renamed.9=classes10.dex
 path.1=0/classes.dex
 renamed.8=classes9.dex
 path.8=classes2.dex
 path.7=8/classes.dex
 path.6=7/classes.dex
 path.5=6/classes.dex
+renamed.10=classes11.dex
 path.0=classes.dex
 base.4=C\:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
 base.3=C\:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\1\\classes.dex
@@ -17,7 +19,10 @@ base.0=C\:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\build\\intermediates\\de
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
+path.10=9/classes.dex
 renamed.0=classes.dex
+base.9=C\:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\11\\classes.dex
+path.9=11/classes.dex
 renamed.7=classes8.dex
 base.8=C\:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 renamed.6=classes7.dex
@@ -26,3 +31,4 @@ renamed.5=classes6.dex
 base.6=C\:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 renamed.4=classes5.dex
 base.5=C\:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex
+base.10=C\:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex
