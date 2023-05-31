@@ -136,7 +136,7 @@ MERGED from [com.google.android.play:core:1.10.3] C:\Users\Seppe\.gradle\caches\
 	tools:targetApi
 		ADDED from F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:14:9-29
 	android:icon
-		ADDED from F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:10:9-43
+		ADDED from F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:10:9-50
 	android:allowBackup
 		ADDED from F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:7:9-35
 	android:theme

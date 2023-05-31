@@ -4,6 +4,7 @@ color black
 color darkGreen
 color degrootGreen
 color errorRed
+color ic_launcher_background
 color pastel_green
 color purple_200
 color purple_500
@@ -68,8 +69,9 @@ layout fragment_sign_up
 layout nav_header
 layout rally_item_view
 menu nav_menu
-mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap ic_launcher_square
 navigation nav_graph
 string app_name
 string confirm
