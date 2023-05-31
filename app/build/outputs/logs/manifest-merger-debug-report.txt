@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
 MERGED from [androidx.databinding:databinding-adapters:7.4.2] C:\Users\jan-m\.gradle\caches\transforms-3\56dd56350049952d7136a9fefda8c81e\transformed\databinding-adapters-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-ktx:7.4.2] C:\Users\jan-m\.gradle\caches\transforms-3\86ea552072a7542c3f70c0364c0e33d8\transformed\databinding-ktx-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.databinding:databinding-runtime:7.4.2] C:\Users\jan-m\.gradle\caches\transforms-3\baabd148c79890deb0fe24f8b074f7b5\transformed\databinding-runtime-7.4.2\AndroidManifest.xml:2:1-7:12
@@ -84,22 +84,22 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\jan-m\.gradle\caches\transform
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\jan-m\.gradle\caches\transforms-3\390fa600097b3c88e1c5f1ef4d47c3bb\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.ui:ui-util:1.0.1] C:\Users\jan-m\.gradle\caches\transforms-3\f1850946a7d39afa07bede37692e2aa1\transformed\ui-util-1.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.play:core:1.10.3] C:\Users\jan-m\.gradle\caches\transforms-3\917755411e164491713a0a3b8ea06696\transformed\core-1.10.3\AndroidManifest.xml:2:1-46:12
-INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
+INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
 	package
 		INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:1-31:12
 		INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:2:11-69
@@ -108,7 +108,7 @@ ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xm
 	android:name
 		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:5:22-77
 application
-ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:7:5-31:19
+ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:7:5-29:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\jan-m\.gradle\caches\transforms-3\5bfbb98925d55404dd65fe1d59403a34\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\jan-m\.gradle\caches\transforms-3\5bfbb98925d55404dd65fe1d59403a34\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\jan-m\.gradle\caches\transforms-3\e8c0283c61e44847dfd638aa92d3d48e\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -147,34 +147,28 @@ MERGED from [com.google.android.play:core:1.10.3] C:\Users\jan-m\.gradle\caches\
 		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:14:9-50
 	android:dataExtractionRules
 		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:9:9-65
-activity#be.seppevandenberk.degrootrally.activities.KalenderActivity
-ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:16:9-18:40
-	android:exported
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:18:13-37
-	android:name
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:17:13-56
 activity#be.seppevandenberk.degrootrally.activities.MainActivity
-ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:19:9-21:48
+ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:17:9-19:48
 	android:exported
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:21:13-36
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:19:13-36
 	android:name
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:20:13-52
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:18:13-52
 activity#be.seppevandenberk.degrootrally.activities.LoginActivity
-ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:22:9-30:20
+ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:exported
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:24:13-36
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:22:13-36
 	android:name
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:23:13-53
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:21:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:23:13-27:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
-		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml:26:27-74
 uses-sdk
 INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\jan-m\Downloads\DegrootRally\app\src\main\AndroidManifest.xml

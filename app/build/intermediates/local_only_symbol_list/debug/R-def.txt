@@ -26,6 +26,7 @@ id Resultaat
 id TitelRallyEnDatum
 id account_image_ic
 id addButton
+id addRaceBtn
 id admin_txt_vw
 id change_password_btn
 id change_to_new_password_btn
@@ -34,6 +35,7 @@ id constraintLayout
 id copilot_txt_ed
 id current_password_txt_ed
 id date_txt_vw
+id deleteBtn
 id drawerLayout
 id email_new_txt_ed
 id email_txt_ed
@@ -65,10 +67,11 @@ id register_btn
 id register_txt_vw
 id submit_btn
 id title_txt_ed
+id txt_date_ed
+id txt_result_ed
 id username_new_txt_ed
 id username_txt_vw
 id view
-layout activity_kalender
 layout activity_login
 layout activity_main
 layout fragment_account

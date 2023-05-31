@@ -2940,6 +2940,7 @@ int id actions 0x7f080048
 int id activity_chooser_view_content 0x7f080049
 int id add 0x7f08004a
 int id addButton 0x7f08004b
+int id addRaceBtn 0x7f080232
 int id admin_txt_vw 0x7f08004c
 int id alertTitle 0x7f08004d
 int id aligned 0x7f08004e
@@ -3023,6 +3024,7 @@ int id decelerate 0x7f08009b
 int id decelerateAndComplete 0x7f08009c
 int id decor_content_parent 0x7f08009d
 int id default_activity_button 0x7f08009e
+int id deleteBtn 0x7f080235
 int id deltaRelative 0x7f08009f
 int id dependency_ordering 0x7f0800a0
 int id design_bottom_sheet 0x7f0800a1
@@ -3398,6 +3400,8 @@ int id transition_position 0x7f080212
 int id transition_scene_layoutid_cache 0x7f080213
 int id transition_transform 0x7f080214
 int id triangle 0x7f080215
+int id txt_date_ed 0x7f080233
+int id txt_result_ed 0x7f080234
 int id unchecked 0x7f080216
 int id uniform 0x7f080217
 int id unlabeled 0x7f080218
@@ -3532,7 +3536,6 @@ int layout abc_search_dropdown_item_icons_2line 0x7f0b0018
 int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
-int layout activity_kalender 0x7f0b001c
 int layout activity_login 0x7f0b001d
 int layout activity_main 0x7f0b001e
 int layout custom_dialog 0x7f0b001f

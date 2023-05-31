@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Co Pilot"
+        android:hint="Co-pilot"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -49,12 +49,36 @@
 
     <TextView
         android:id="@+id/date_txt_vw"
-        android:layout_width="45dp"
-        android:layout_height="25dp"
+        android:layout_width="206dp"
+        android:layout_height="22dp"
         android:layout_marginTop="16dp"
-        android:text="Date"
+        android:text="Date:  dd/mm/yyyy"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/copilot_txt_ed"
         app:layout_constraintTop_toBottomOf="@+id/copilot_txt_ed" />
+
+    <Button
+        android:id="@+id/addRaceBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txt_result_ed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Result"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_txt_vw" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

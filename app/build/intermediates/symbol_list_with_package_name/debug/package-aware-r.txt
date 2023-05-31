@@ -2941,6 +2941,7 @@ id actions
 id activity_chooser_view_content
 id add
 id addButton
+id addRaceBtn
 id admin_txt_vw
 id alertTitle
 id aligned
@@ -3024,6 +3025,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteBtn
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3399,6 +3401,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txt_date_ed
+id txt_result_ed
 id unchecked
 id uniform
 id unlabeled
@@ -3533,7 +3537,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_kalender
 layout activity_login
 layout activity_main
 layout custom_dialog

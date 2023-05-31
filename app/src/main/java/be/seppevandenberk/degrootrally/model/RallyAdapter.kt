@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import be.seppevandenberk.degrootrally.R
+import java.math.BigDecimal
 
 class RallyAdapter(val items: List<RallyItem>) :
     RecyclerView.Adapter<RallyAdapter.RallyItemViewHolder>() {
@@ -23,7 +24,7 @@ class RallyAdapter(val items: List<RallyItem>) :
         holder.itemView.apply {
             findViewById<TextView>(R.id.TitelRallyEnDatum).text =
                 currentRally.title.plus(" - ").plus(currentRally.date.toString())
-            if (currentRally.result != null) {
+            if (currentRally.result != BigDecimal.ZERO) {
                 findViewById<TextView>(R.id.Resultaat).text = currentRally.result.toString()
             } else {
                 findViewById<TextView>(R.id.Resultaat).text = " "

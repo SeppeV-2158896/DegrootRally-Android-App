@@ -31,9 +31,6 @@
         android:testOnly="true"
         android:theme="@style/Theme.DegrootRally" >
         <activity
-            android:name="be.seppevandenberk.degrootrally.activities.KalenderActivity"
-            android:exported="false" />
-        <activity
             android:name="be.seppevandenberk.degrootrally.activities.MainActivity"
             android:exported="true" />
         <activity
