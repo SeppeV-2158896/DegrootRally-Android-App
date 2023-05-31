@@ -56,7 +56,7 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         }
 
         binding.dateTxtVw.setOnClickListener {
-            //showDatePicker()
+            showDatePicker()
         }
 
         return binding.root
@@ -68,7 +68,7 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         transaction.addToBackStack(null)
         transaction.commit()
     }
-    /*
+
     private fun showDatePicker() {
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
@@ -87,6 +87,4 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
 
         datePicker.show()
     }
-    */
-
 }
