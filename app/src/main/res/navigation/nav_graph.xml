@@ -2,19 +2,9 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/hoofdMenuFragment">
+    android:id="@+id/nav_graph.xml">
     <fragment
-        android:id="@+id/hoofdMenuFragment"
-        android:name="be.seppevandenberk.degrootrally.fragments.HoofdMenuFragment"
-        android:label="fragment_hoofd_menu"
-        tools:layout="@layout/fragment_hoofd_menu" >
-        <action
-            android:id="@+id/action_hoofdMenuFragment_to_kalenderEnResultatenFragment"
-            app:destination="@id/kalenderEnResultatenFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/kalenderEnResultatenFragment"
+        android:id="@+id/id_kalender"
         android:name="be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment"
         android:label="fragment_kalender_en_resultaten"
         tools:layout="@layout/fragment_kalender_en_resultaten" >
@@ -26,5 +16,9 @@
         android:id="@+id/addRaceFragment"
         android:name="be.seppevandenberk.degrootrally.fragments.AddRaceFragment"
         android:label="fragment_add_race"
-        tools:layout="@layout/fragment_add_race" />
+        tools:layout="@layout/fragment_add_race" >
+        <action
+            android:id="@+id/action_addRaceFragment_to_id_kalender"
+            app:destination="@id/id_kalender" />
+    </fragment>
 </navigation>

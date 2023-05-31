@@ -13,32 +13,32 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="491" />
-                            <option name="y" value="13" />
+                            <option name="x" value="357" />
+                            <option name="y" value="-392" />
                           </Point>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="hoofdMenuFragment">
+                  <entry key="id_hoofd_menu">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="70" />
-                            <option name="y" value="12" />
+                            <option name="x" value="-82" />
+                            <option name="y" value="-396" />
                           </Point>
                         </option>
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="kalenderEnResultatenFragment">
+                  <entry key="id_kalender">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="256" />
-                            <option name="y" value="12" />
+                            <option name="x" value="142" />
+                            <option name="y" value="-392" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -49,6 +49,18 @@
                               </value>
                             </entry>
                           </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="loginFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="-403" />
+                            <option name="y" value="-557" />
+                          </Point>
                         </option>
                       </LayoutPositions>
                     </value>

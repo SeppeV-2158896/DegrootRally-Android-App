@@ -96,22 +96,24 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         var userExists = false
         if (db != null) {
             val cursor = db.getUser()
+            if (cursor != null){
+                val index = cursor!!.getColumnIndex(DatabaseHelper.NAME_COL)
 
-            val index = cursor!!.getColumnIndex(DatabaseHelper.NAME_COL)
-
-            if (index >= 0) if (cursor.getString(index) == null) {
-                val user = User(null, id, "guest", null, requireContext())
-                user.create(id, id, user.hashPassword("guest"), "Guest")
-            }
-            if (cursor.getString(index).equals(id)) {
-                userExists = true
-            }
-            while (cursor.moveToNext()) {
+                if (index >= 0) if (cursor.getString(index) == null) {
+                    val user = User(null, id, "guest", null, requireContext())
+                    user.create(id, id, user.hashPassword("guest"), "Guest")
+                }
                 if (cursor.getString(index).equals(id)) {
                     userExists = true
                 }
+                while (cursor.moveToNext()) {
+                    if (cursor.getString(index).equals(id)) {
+                        userExists = true
+                    }
+                }
+                cursor.close()
             }
-            cursor.close()
+
 
             db.close()
 

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,10 +34,16 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         var adapter = RallyAdapter(rallyItems)
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
-        //val navController = NavHostFragment.findNavController(this)
         binding.addButton.setOnClickListener{
-            findNavController().navigate(R.id.action_kalenderEnResultatenFragment_to_addRaceFragment, null)
+            //navController.navigate(R.id.action_kalenderEnResultatenFragment_to_addRaceFragment)
+            displayFragment(AddRaceFragment())
         }
         return binding.root
+    }
+    fun displayFragment(fragment: Fragment) {
+        val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+        transaction.replace(R.id.frameLayoutKalender, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }

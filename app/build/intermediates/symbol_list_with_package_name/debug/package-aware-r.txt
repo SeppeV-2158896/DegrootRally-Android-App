@@ -1417,6 +1417,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color ic_launcher_background
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2773,6 +2774,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable edt_background
+drawable ic_account
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -2917,6 +2919,7 @@ id accessibility_custom_action_9
 id actionDown
 id actionDownUp
 id actionUp
+id action_addRaceFragment_to_id_kalender
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -2928,8 +2931,7 @@ id action_container
 id action_context_bar
 id action_divider
 id action_image
-id action_loginFragment_to_forgotPasswordFragment
-id action_loginFragment_to_signUpFragment
+id action_kalenderEnResultatenFragment_to_addRaceFragment
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -2939,6 +2941,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addButton
+id addRaceFragment
 id alertTitle
 id aligned
 id all
@@ -2968,6 +2972,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btnChangePassword
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3002,6 +3007,7 @@ id contentPanel
 id contiguous
 id continuousVelocity
 id coordinator
+id copilot_txt_ed
 id cos
 id counterclockwise
 id cradle
@@ -3010,6 +3016,7 @@ id custom
 id customPanel
 id cut
 id date_picker_actions
+id date_txt_vw
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -3038,7 +3045,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
-id drawer_layout
+id drawerLayout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3070,12 +3077,10 @@ id fixed
 id flip
 id floating
 id forever
-id forgotPasswordFragment
 id forgot_txt_vw
 id fragmentLayoutLogin
-id fragmentLayoutMain
 id fragment_container_view_tag
-id frameLayout
+id frameLayoutKalender
 id frost
 id fullscreen_header
 id ghost_view
@@ -3093,15 +3098,16 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
-id hoofdMenuFragment
 id hoofdMenuText
 id horizontal_only
 id icon
 id icon_group
+id id_kalender
 id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageAccountIcon
 id imageView
 id immediateStop
 id included
@@ -3115,8 +3121,6 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
-id kalenderEnResultatenFragment
-id kalendertxt
 id labeled
 id layout
 id left
@@ -3128,7 +3132,6 @@ id linear
 id listMode
 id list_item
 id locale
-id loginFragment
 id login_btn
 id login_txt_ed
 id login_txt_vw
@@ -3193,6 +3196,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id navHostFragment
 id navView
 id nav_account
 id nav_controller_view_tag
@@ -3239,6 +3243,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id pilot_txt_ed
 id pin
 id position
 id postLayout
@@ -3251,6 +3256,7 @@ id progress_title
 id radio
 id ratio
 id rectangles
+id recyclerView
 id register_btn
 id register_txt_vw
 id reverseSawtooth
@@ -3304,7 +3310,6 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
-id signUpFragment
 id sin
 id skipCollapsed
 id skipped
@@ -3356,11 +3361,13 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
+id textEmail
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textUsername
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3374,6 +3381,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id title_txt_ed
 id toggle
 id top
 id topPanel
@@ -3519,6 +3527,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_kalender
 layout activity_login
 layout activity_main
 layout custom_dialog
@@ -3538,6 +3547,8 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dynamic_feature_install_fragment
+layout fragment_account
+layout fragment_add_race
 layout fragment_forgot_password
 layout fragment_hoofd_menu
 layout fragment_kalender_en_resultaten
@@ -3607,8 +3618,9 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu nav_menu
-mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+mipmap ic_launcher_square
 navigation nav_graph
 plurals mtrl_badge_content_description
 raw keep
@@ -3648,6 +3660,7 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string change
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
