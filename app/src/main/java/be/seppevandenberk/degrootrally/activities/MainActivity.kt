@@ -13,9 +13,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import be.seppevandenberk.degrootrally.R
+import be.seppevandenberk.degrootrally.databinding.ActivityMainBinding
 import be.seppevandenberk.degrootrally.fragments.HoofdMenuFragment
 import be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment
-import be.seppevandenberk.degrootrally.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -46,14 +46,14 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment)
+        val navController = findNavController(R.id.fragmentLayoutMain)
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
 
     private fun setupActionBarDrawer() {
         actionBarDrawerToggle =
-            ActionBarDrawerToggle(this, binding.drawerLayout, R.string.nav_open, R.string.nav_close)
+            ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close)
         binding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
 
 

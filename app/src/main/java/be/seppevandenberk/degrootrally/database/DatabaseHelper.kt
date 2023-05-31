@@ -13,14 +13,17 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
     override fun onCreate(db: SQLiteDatabase) {
         // below is a sqlite query, where column names along with their data types is given
+
         val query = ("CREATE TABLE " + TABLE_NAME + " ("
                 + EMAIL_COL + " EMAIL, " +
-                NAME_COl + " NAME," +
-                PASSWORD_COL + " PASSWORD" +
+                NAME_COL + " NAME," +
+                PASSWORD_COL + " PASSWORD," +
                 TYPE_COL + " TYPE" + ")")
 
         // method for executing our query
         db.execSQL(query)
+
+
     }
 
     override fun onUpgrade(db: SQLiteDatabase, p1: Int, p2: Int) {
@@ -29,14 +32,14 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         onCreate(db)
     }
 
-    fun addUser(email : String, name: String, password: String, type : String) {
+    fun addUser(email: String, name: String, password: String, type: String) {
 
         val values = ContentValues()
 
         values.put(EMAIL_COL, email)
-        values.put(NAME_COl, name)
+        values.put(NAME_COL, name)
         values.put(PASSWORD_COL, password)
-        values.put(NAME_COl, name)
+        values.put(TYPE_COL, type)
 
         // here we are creating a
         // writable variable of
@@ -61,7 +64,13 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
         // below code returns a cursor to
         // read data from the database
-        return db.rawQuery("SELECT * FROM " + TABLE_NAME, null)
+        val cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null)
+
+        if (cursor.moveToFirst()){
+            return cursor
+        }
+
+        return null
 
     }
 
@@ -74,8 +83,12 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
         val TABLE_NAME = "gfg_table"
         val EMAIL_COL = "email"
-        val NAME_COl = "name"
+        val NAME_COL = "name"
         val PASSWORD_COL = "password"
-        val TYPE_COL = "password"
+        val TYPE_COL = "type"
+    }
+
+    fun getPath():String{
+        return writableDatabase.path
     }
 }

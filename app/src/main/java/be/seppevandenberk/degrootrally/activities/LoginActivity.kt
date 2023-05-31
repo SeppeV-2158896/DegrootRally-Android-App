@@ -4,10 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import be.seppevandenberk.degrootrally.R
+import be.seppevandenberk.degrootrally.databinding.ActivityLoginBinding
 import be.seppevandenberk.degrootrally.fragments.ForgotPasswordFragment
 import be.seppevandenberk.degrootrally.fragments.LoginFragment
 import be.seppevandenberk.degrootrally.fragments.SignUpFragment
-import be.seppevandenberk.degrootrally.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
