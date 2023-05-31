@@ -20,4 +20,5 @@
     <string name="confirm">Confirm password</string>
     <string name="change">Change Password</string>
     <string name="logout">Logout</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
