@@ -9,16 +9,22 @@ import java.security.MessageDigest
 
 
 data class User(
-    val email: String?,
+    private var email: String?,
     val username: String,
     val password: String,
-    val type: String?,
+    private var type: String?,
     val context: Context
 ) {
 
-    fun create(email: String, username: String, hashedPassword: String, type: String) {
+    fun create() {
+        if (email == null) {
+            this.email = "NaN"
+        }
+        if (type == null) {
+            this.type = "User"
+        }
         val db = DatabaseHelper(context, null)
-        db.addUser(email, username, hashedPassword, type)
+        db.addUser(email!!, username, hashPassword(password), type!!)
         Toast.makeText(context, "Account has been registered", Toast.LENGTH_LONG).show()
     }
 
@@ -107,5 +113,33 @@ data class User(
         }
         return false
     }
+
+    fun getType(): String {
+        val db = context.let { DatabaseHelper(it, null) }
+        if(db != null) {
+            val cursor = checkForAccountWithSameUsername(username) ?: return ""
+            val index = cursor.getColumnIndex(DatabaseHelper.TYPE_COL)
+            val type = cursor.getString(index)
+            db.close()
+            cursor.close()
+            return type
+        }
+        return ""
+    }
+
+    fun getEmail(): String {
+        val db = context.let { DatabaseHelper(it, null) }
+        if(db != null) {
+            val cursor = checkForAccountWithSameUsername(username) ?: return ""
+            val index = cursor.getColumnIndex(DatabaseHelper.EMAIL_COL)
+            val email = cursor.getString(index)
+            db.close()
+            cursor.close()
+            return email
+        }
+        return ""
+    }
+
+
 
 }

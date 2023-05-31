@@ -7,8 +7,11 @@
     <string name="title_activity_login">LoginActivity</string>
 
     <string name="login">Login</string>
+    <string name="current">Current Password</string>
+    <string name="newpw">New Password</string>
     <string name="password">Password</string>
     <string name="guest">Continue as Guest</string>
+    <string name="admin">Continue as Admin</string>
     <string name="no_account">No account? Sign up here</string>
     <string name="username">Username</string>
     <string name="forgot">Forgot Password</string>
@@ -16,4 +19,5 @@
     <string name="submit">Submit</string>
     <string name="confirm">Confirm password</string>
     <string name="change">Change Password</string>
+    <string name="logout">Logout</string>
 </resources>
