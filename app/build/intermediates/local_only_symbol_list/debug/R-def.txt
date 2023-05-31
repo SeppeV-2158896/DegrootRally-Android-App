@@ -62,12 +62,16 @@ id password_confirm_txt_ed
 id password_new_txt_ed
 id password_txt_ed
 id pilot_txt_ed
+id recvw_lastResult_vw
+id recvw_nextEvent_vw
 id recyclerView
 id register_btn
 id register_txt_vw
 id submit_btn
 id tempEmergencyBtn
 id title_txt_ed
+id txt_lastResult_vw
+id txt_nextEvent_vw
 id txt_result_ed
 id username_new_txt_ed
 id username_txt_vw

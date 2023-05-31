@@ -3264,6 +3264,8 @@ id progress_title
 id radio
 id ratio
 id rectangles
+id recvw_lastResult_vw
+id recvw_nextEvent_vw
 id recyclerView
 id register_btn
 id register_txt_vw
@@ -3402,6 +3404,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txt_lastResult_vw
+id txt_nextEvent_vw
 id txt_result_ed
 id unchecked
 id uniform

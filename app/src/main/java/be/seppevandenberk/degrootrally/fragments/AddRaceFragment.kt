@@ -47,7 +47,8 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
                 BigDecimal.ZERO
             }
 
-            rallyItems.add(RallyItem(binding.titleTxtEd.text.toString(), binding.pilotTxtEd.text.toString(), binding.copilotTxtEd.text.toString(), Calendar.getInstance().time, result))
+            val newRallyItem = RallyItem(binding.titleTxtEd.text.toString(), binding.pilotTxtEd.text.toString(), binding.copilotTxtEd.text.toString(), date, result)
+            rallyItems.add(newRallyItem)
             adapter.notifyItemInserted(rallyItems.size - 1)
             if (rallyItemsFileRepo != null) {
                 rallyItemsFileRepo.save(rallyItems as ArrayList<RallyItem>)
@@ -78,7 +79,6 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         val datePicker = DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
             val selectedDate = Calendar.getInstance()
             selectedDate.set(selectedYear, selectedMonth, selectedDay)
-
             val formattedDate = String.format("%02d/%02d/%04d", selectedDay, selectedMonth + 1, selectedYear)
             binding.dateTxtVw.text = "Date: $formattedDate"
 

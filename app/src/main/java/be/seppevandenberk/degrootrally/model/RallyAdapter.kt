@@ -7,6 +7,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import be.seppevandenberk.degrootrally.R
 import java.math.BigDecimal
+import java.text.SimpleDateFormat
+import java.util.*
 
 class RallyAdapter(val items: List<RallyItem>) :
     RecyclerView.Adapter<RallyAdapter.RallyItemViewHolder>() {
@@ -21,9 +23,12 @@ class RallyAdapter(val items: List<RallyItem>) :
 
     override fun onBindViewHolder(holder: RallyItemViewHolder, position: Int) {
         val currentRally = items[position]
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        val formattedDate = dateFormat.format(currentRally.date)
+
         holder.itemView.apply {
             findViewById<TextView>(R.id.TitelRallyEnDatum).text =
-                currentRally.title.plus(" - ").plus(currentRally.date.toString())
+                currentRally.title.plus(" - ").plus(formattedDate)
             if (currentRally.result != BigDecimal.ZERO) {
                 findViewById<TextView>(R.id.Resultaat).text = currentRally.result.toString()
             } else {

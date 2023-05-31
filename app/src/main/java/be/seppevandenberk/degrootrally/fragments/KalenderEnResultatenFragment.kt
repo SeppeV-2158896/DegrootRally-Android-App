@@ -30,6 +30,8 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentKalenderEnResultatenBinding.inflate(layoutInflater)
+
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
         if(rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size){
             rallyItems.addAll(rallyItemsFileRepo.read())
@@ -45,9 +47,9 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             }
         }
 
-        binding = FragmentKalenderEnResultatenBinding.inflate(layoutInflater)
+        var sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
 
-        var adapter = RallyAdapter(rallyItems)
+        var adapter = RallyAdapter(sortedRallyItems)
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
 
@@ -69,5 +71,16 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         transaction.replace(R.id.fragmentLayoutMain, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
+    }
+
+    fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
+        if (rallyItems.size > 1){
+            var sortedRallyItems = rallyItems
+            sortedRallyItems.sortWith(Comparator{rallyItem1, rallyItem2 ->
+                rallyItem1.date.compareTo(rallyItem2.date)
+            })
+            return sortedRallyItems
+        }
+        return rallyItems
     }
 }
