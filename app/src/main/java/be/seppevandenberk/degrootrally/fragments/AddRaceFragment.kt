@@ -1,4 +1,4 @@
-package be.seppevandenberk.degrootrally
+package be.seppevandenberk.degrootrally.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -18,6 +18,7 @@ class AddRaceFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        binding = FragmentAddRaceBinding.inflate(layoutInflater)
         return binding.root
     }
 }

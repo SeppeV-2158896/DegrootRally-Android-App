@@ -2927,7 +2927,9 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_hoofdMenuFragment_to_kalenderEnResultatenFragment
 id action_image
+id action_kalenderEnResultatenFragment_to_addRaceFragment
 id action_menu_divider
 id action_menu_presenter
 id action_mode_bar
@@ -2937,6 +2939,8 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addButton
+id addRaceFragment
 id alertTitle
 id aligned
 id all
@@ -3000,6 +3004,7 @@ id contentPanel
 id contiguous
 id continuousVelocity
 id coordinator
+id copilot_txt_ed
 id cos
 id counterclockwise
 id cradle
@@ -3008,6 +3013,7 @@ id custom
 id customPanel
 id cut
 id date_picker_actions
+id date_txt_vw
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
@@ -3113,7 +3119,6 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id kalenderEnResultatenFragment
-id kalendertxt
 id labeled
 id layout
 id left
@@ -3194,6 +3199,7 @@ id nav_account
 id nav_controller_view_tag
 id nav_graph_xml
 id nav_home
+id nav_host_fragment
 id nav_host_fragment_container
 id nav_kalender_en_resultaten
 id nav_picture
@@ -3235,6 +3241,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id pilot_txt_ed
 id pin
 id position
 id postLayout
@@ -3247,6 +3254,7 @@ id progress_title
 id radio
 id ratio
 id rectangles
+id recyclerView
 id register_btn
 id register_txt_vw
 id reverseSawtooth
@@ -3369,6 +3377,7 @@ id time
 id title
 id titleDividerNoCustom
 id title_template
+id title_txt_ed
 id toggle
 id top
 id topPanel
@@ -3514,6 +3523,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_kalender
 layout activity_login
 layout activity_main
 layout custom_dialog
@@ -3533,6 +3543,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dynamic_feature_install_fragment
+layout fragment_add_race
 layout fragment_forgot_password
 layout fragment_hoofd_menu
 layout fragment_kalender_en_resultaten

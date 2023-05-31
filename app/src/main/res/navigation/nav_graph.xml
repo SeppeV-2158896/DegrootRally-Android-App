@@ -8,10 +8,23 @@
         android:id="@+id/hoofdMenuFragment"
         android:name="be.seppevandenberk.degrootrally.fragments.HoofdMenuFragment"
         android:label="fragment_hoofd_menu"
-        tools:layout="@layout/fragment_hoofd_menu" />
+        tools:layout="@layout/fragment_hoofd_menu" >
+        <action
+            android:id="@+id/action_hoofdMenuFragment_to_kalenderEnResultatenFragment"
+            app:destination="@id/kalenderEnResultatenFragment" />
+    </fragment>
     <fragment
         android:id="@+id/kalenderEnResultatenFragment"
         android:name="be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment"
         android:label="fragment_kalender_en_resultaten"
-        tools:layout="@layout/fragment_kalender_en_resultaten" />
+        tools:layout="@layout/fragment_kalender_en_resultaten" >
+        <action
+            android:id="@+id/action_kalenderEnResultatenFragment_to_addRaceFragment"
+            app:destination="@id/addRaceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRaceFragment"
+        android:name="be.seppevandenberk.degrootrally.fragments.AddRaceFragment"
+        android:label="fragment_add_race"
+        tools:layout="@layout/fragment_add_race" />
 </navigation>
