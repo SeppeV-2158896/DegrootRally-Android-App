@@ -67,7 +67,6 @@ id register_btn
 id register_txt_vw
 id submit_btn
 id title_txt_ed
-id txt_date_ed
 id txt_result_ed
 id username_new_txt_ed
 id username_txt_vw

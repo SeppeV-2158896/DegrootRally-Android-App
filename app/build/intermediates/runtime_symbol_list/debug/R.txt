@@ -3400,7 +3400,6 @@ int id transition_position 0x7f080212
 int id transition_scene_layoutid_cache 0x7f080213
 int id transition_transform 0x7f080214
 int id triangle 0x7f080215
-int id txt_date_ed 0x7f080233
 int id txt_result_ed 0x7f080234
 int id unchecked 0x7f080216
 int id uniform 0x7f080217
