@@ -33,6 +33,7 @@
     <string name="password">Password</string>
     <string name="submit">Submit</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
     <string name="username">Username</string>
     <style name="Theme.DegrootRally" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         

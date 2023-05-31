@@ -8,7 +8,23 @@
         android:minSdkVersion="26"
         android:targetSdkVersion="33" />
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Include required permissions for Google Maps API to run. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <queries>
+
+        <!-- Needs to be explicitly declared on Android R+ -->
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
 
     <permission
         android:name="be.seppevandenberk.degrootrally.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -30,6 +46,14 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.DegrootRally" >
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB5gXpCOVyrWWu9trUSst-cmSaFgk99Hf4" />
+
+        <activity
+            android:name="be.seppevandenberk.degrootrally.activities.MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
         <activity
             android:name="be.seppevandenberk.degrootrally.activities.MainActivity"
             android:exported="true" />
@@ -42,6 +66,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- Needs to be explicitly declared on P+ -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
         <uses-library
             android:name="androidx.window.extensions"

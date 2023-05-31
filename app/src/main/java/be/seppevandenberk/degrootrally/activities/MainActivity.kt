@@ -1,6 +1,6 @@
 package be.seppevandenberk.degrootrally.activities
 
-import be.seppevandenberk.degrootrally.fragments.AccountFragment
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -8,16 +8,17 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.databinding.ActivityMainBinding
+import be.seppevandenberk.degrootrally.fragments.AccountFragment
 import be.seppevandenberk.degrootrally.fragments.HoofdMenuFragment
 import be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment
 import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
     private lateinit var binding: ActivityMainBinding
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     private val hoofdMenuFragment = HoofdMenuFragment()
@@ -79,7 +80,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_picture -> {
                 navigateToPicture()
             }
-            // Handle other menu items here
+
+            R.id.nav_maps -> {
+                val intent = Intent(this, MapsActivity::class.java)
+                startActivity(intent)
+            }
         }
         // Close the navigation drawer if necessary
         binding.drawerLayout.closeDrawer(GravityCompat.START)
@@ -100,6 +105,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             commit()
         }
     }
+
+
 
 
 }

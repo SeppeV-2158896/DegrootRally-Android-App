@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-65:/values-v16/values-v16.xml",
+            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-68:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\3e050352d50c5db8d7ab581b0a5992da\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\7613ee39803c39bd16cd24348bca8696\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\6492d4be1dafc14eeb126acfa6937b10\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\be5ed09a12909e09a1cd489b018e1ef7\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
