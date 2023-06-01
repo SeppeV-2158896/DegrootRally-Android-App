@@ -21,4 +21,6 @@
     <string name="change">Change Password</string>
     <string name="logout">Logout</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="wind">Update Winddata</string>
 </resources>
