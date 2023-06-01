@@ -22,8 +22,9 @@ import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.StorageMetadata
 import com.google.firebase.storage.ktx.storage
 
+//source = https://www.geeksforgeeks.org/android-upload-an-image-on-firebase-storage-with-kotlin/
+
 class PictureFragment : Fragment() {
-    //source = https://www.geeksforgeeks.org/android-upload-an-image-on-firebase-storage-with-kotlin/
     private var storageRef = Firebase.storage.reference
 
     override fun onCreateView(

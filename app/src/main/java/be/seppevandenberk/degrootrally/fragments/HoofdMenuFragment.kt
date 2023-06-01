@@ -14,6 +14,7 @@ import be.seppevandenberk.degrootrally.model.RallyAdapter
 import be.seppevandenberk.degrootrally.model.RallyItem
 import be.seppevandenberk.degrootrally.model.User
 import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
+import be.seppevandenberk.degrootrally.repository.NewsFileRepo
 import be.seppevandenberk.degrootrally.repository.RallyItemsFileRepo
 import java.util.Calendar
 
@@ -56,9 +57,7 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
             val user = User(null, name, "", null, requireContext())
             val type = user.getType()
             if (type != "Admin") {
-                binding.newsBodyTxtVw.setOnClickListener {
-                    displayFragment(NewsFragment())
-                }
+                binding.newsBtn.visibility = View.INVISIBLE
             }
         }
 
@@ -71,6 +70,16 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         binding.lastResultsBtn.setOnClickListener {
             displayFragment(KalenderEnResultatenFragment())
         }
+        binding.newsBtn.setOnClickListener {
+            displayFragment(EditNewsFragment())
+        }
+
+        val newsFileRepo = this.context?.let { it1 -> NewsFileRepo(it1) }
+        var news = newsFileRepo?.readString()
+        if(news == null){
+            news = ""
+        }
+        binding.newsBodyTxtVw.text = news
 
         return binding.root
     }
@@ -85,6 +94,7 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         }
         return rallyItems
     }
+
     private fun assignNextEventAndLastResultArray(rallyItems: ArrayList<RallyItem>) {
         val sortedRallyItems = sortRallyItemsByDate(rallyItems)
 

@@ -4,7 +4,6 @@ import be.seppevandenberk.degrootrally.fragments.HoofdMenuFragment
 import be.seppevandenberk.degrootrally.model.RallyItem
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
-import java.util.Calendar
 import java.util.Date
 
 class DegrootRallyUnitTest {
