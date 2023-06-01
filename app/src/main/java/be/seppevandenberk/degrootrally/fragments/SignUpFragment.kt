@@ -70,12 +70,12 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             requireContext()
         )
 
-        if (user.checkForAccountWithSameEmail(emailEditText.text.toString())) {
+        if (user.checkForAccountWithSameEmail()) {
             view?.let{rootView -> Snackbar.make(rootView, "Account with same email already exists", Snackbar.LENGTH_SHORT).show()}
             return
         }
 
-        val cursor = user.checkForAccountWithSameUsername(usernameEditText.text.toString())
+        val cursor = user.checkForAccountWithSameUsername()
         if (cursor != null) {
             cursor.close()
             view?.let{rootView -> Snackbar.make(rootView, "Account with same username already exists", Snackbar.LENGTH_SHORT).show()}

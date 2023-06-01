@@ -29,7 +29,6 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         onCreate(db)
     }
 
-    //TODO test
     fun addUser(email: String, name: String, password: String, type: String) {
         val values = ContentValues()
 
@@ -49,7 +48,6 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
     }
 
     // below method is to get all data from our database
-    //TODO test
     fun getUser(): Cursor? {
         // here we are creating a readable variable of our database as we want to read value from it
         val db = this.readableDatabase

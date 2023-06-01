@@ -85,7 +85,6 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         }
         return rallyItems
     }
-    //TODO test
     private fun assignNextEventAndLastResultArray(rallyItems: ArrayList<RallyItem>) {
         val sortedRallyItems = sortRallyItemsByDate(rallyItems)
 

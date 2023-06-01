@@ -51,7 +51,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
                 }
             } else {
                 val user = User(null, username, password, "User", requireContext())
-                if (user.checkAccessGranted(username, password)) {
+                if (user.checkAccessGranted()) {
                     val intent = Intent(requireContext(), MainActivity::class.java)
                     intent.putExtra("name",username)
                     startActivity(intent)
@@ -97,7 +97,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         transaction.addToBackStack(null)
         transaction.commit()
     }
-    //TODO test
     private fun getGuestAccount(): String {
         val id =
             Settings.Secure.getString(requireActivity().contentResolver, Settings.Secure.ANDROID_ID)
@@ -134,7 +133,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
         return id
     }
-    //TODO test
     private fun getAdminAccount(): String {
         val db = context?.let { DatabaseHelper(it, null) }
         var adminExists = false

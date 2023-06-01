@@ -27,8 +27,8 @@ data class User(
 
         Toast.makeText(context, "Account has been registered", Toast.LENGTH_LONG).show()
     }
-    //TODO test
-    fun checkForAccountWithSameEmail(email: String): Boolean {
+
+    fun checkForAccountWithSameEmail(): Boolean {
         val db = DatabaseHelper(context, null)
 
         Log.i("Path", db.getPath())
@@ -56,8 +56,8 @@ data class User(
         }
         return false
     }
-    //TODO test
-    fun checkForAccountWithSameUsername(username: String): Cursor? {
+
+    fun checkForAccountWithSameUsername(): Cursor? {
         val db = DatabaseHelper(context, null)
 
         val cursor = db.getUser() ?: return null
@@ -89,11 +89,11 @@ data class User(
         val hashedInput = hashPassword(input)
         return hashedInput == hashedPassword
     }
-    //TODO test
-    fun checkAccessGranted(username: String, password: String): Boolean {
+
+    fun checkAccessGranted(): Boolean {
         val db = DatabaseHelper(context, null)
 
-        val cursor = checkForAccountWithSameUsername(username) ?: return false
+        val cursor = checkForAccountWithSameUsername() ?: return false
         val index = cursor.getColumnIndex(DatabaseHelper.PASSWORD_COL)
         if (index >= 0) {
             if (compareHashedPassword(password, cursor.getString(index))) {
@@ -106,20 +106,20 @@ data class User(
         }
         return false
     }
-    //TODO test
+
     fun getType(): String {
         val db = DatabaseHelper(context, null)
-        val cursor = checkForAccountWithSameUsername(username) ?: return ""
+        val cursor = checkForAccountWithSameUsername() ?: return ""
         val index = cursor.getColumnIndex(DatabaseHelper.TYPE_COL)
         val type = cursor.getString(index)
         db.close()
         cursor.close()
         return type
     }
-    //TODO test
+
     fun getEmail(): String {
         val db = DatabaseHelper(context, null)
-        val cursor = checkForAccountWithSameUsername(username) ?: return ""
+        val cursor = checkForAccountWithSameUsername() ?: return ""
         val index = cursor.getColumnIndex(DatabaseHelper.EMAIL_COL)
         val email = cursor.getString(index)
         db.close()

@@ -4,7 +4,7 @@
             "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-72:/values-sv/values-sv.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\7a038ebd6a930b4385a25ba6760e0ae4\\transformed\\appcompat-1.6.1\\res\\values-sv\\values-sv.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\7a038ebd6a930b4385a25ba6760e0ae4\\transformed\\appcompat-1.6.1\\res\\values-sv\\values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\09ff2472fa05983c20285eb696c826fb\\transformed\\play-services-basement-18.1.0\\res\\values-sv\\values.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\09ff2472fa05983c20285eb696c826fb\\transformed\\play-services-basement-18.1.0\\res\\values-sv\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\459ae28b0f40ceb78143135402488630\\transformed\\navigation-ui-2.5.3\\res\\values-sv\\values-sv.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\459ae28b0f40ceb78143135402488630\\transformed\\navigation-ui-2.5.3\\res\\values-sv\\values-sv.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -55,24 +55,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\d432bd9040e3fa941694188d0e29bb44\\transformed\\browser-1.4.0\\res\\values-sv\\values-sv.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "55,155,255,368",
-                        "endColumns": "99,99,112,97",
-                        "endOffsets": "150,250,363,461"
-                    },
-                    "to": {
-                        "startLines": "61,65,66,67",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "6129,6480,6580,6693",
-                        "endColumns": "99,99,112,97",
-                        "endOffsets": "6224,6575,6688,6786"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\6d2bd63fa36d4aaff648bb65845267ae\\transformed\\navigation-dynamic-features-fragment-2.5.3\\res\\values-sv\\values-sv.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\6d2bd63fa36d4aaff648bb65845267ae\\transformed\\navigation-dynamic-features-fragment-2.5.3\\res\\values-sv\\values-sv.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -89,24 +72,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\5c1fab020fb9c6f18ba976b0c4d4ec95\\transformed\\ui-1.0.1\\res\\values-sv\\values-sv.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,198,286,382,458,563,652,733,797,861,930,997",
-                        "endColumns": "92,87,95,75,104,88,80,63,63,68,66,119",
-                        "endOffsets": "193,281,377,453,558,647,728,792,856,925,992,1112"
-                    },
-                    "to": {
-                        "startLines": "41,42,62,69,70,126,127,128,130,135,137,138",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3742,3835,6229,6855,6931,11403,11492,11573,11701,12074,12244,12311",
-                        "endColumns": "92,87,95,75,104,88,80,63,63,68,66,119",
-                        "endOffsets": "3830,3918,6320,6926,7031,11487,11568,11632,11760,12138,12306,12426"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\5b7ff25ecc619b5c647b7fd3526b0efa\\transformed\\core-1.9.0\\res\\values-sv\\values-sv.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\5b7ff25ecc619b5c647b7fd3526b0efa\\transformed\\core-1.9.0\\res\\values-sv\\values-sv.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -123,7 +89,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\a823a3e398978ccb995b7c51af57560f\\transformed\\material-1.8.0\\res\\values-sv\\values-sv.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\a823a3e398978ccb995b7c51af57560f\\transformed\\material-1.8.0\\res\\values-sv\\values-sv.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -142,7 +108,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\1b1e51bc583b35a5d1d65cfafa70dc4d\\transformed\\play-services-base-18.0.1\\res\\values-sv\\values.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\1b1e51bc583b35a5d1d65cfafa70dc4d\\transformed\\play-services-base-18.0.1\\res\\values-sv\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -156,6 +122,40 @@
                         "startOffsets": "3923,4030,4187,4314,4424,4565,4690,4813,5065,5213,5321,5483,5611,5765,5921,5987,6050",
                         "endColumns": "106,156,126,109,140,124,122,103,147,107,161,127,153,155,65,62,78",
                         "endOffsets": "4025,4182,4309,4419,4560,4685,4808,4912,5208,5316,5478,5606,5760,5916,5982,6045,6124"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\5c1fab020fb9c6f18ba976b0c4d4ec95\\transformed\\ui-1.0.1\\res\\values-sv\\values-sv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,198,286,382,458,563,652,733,797,861,930,997",
+                        "endColumns": "92,87,95,75,104,88,80,63,63,68,66,119",
+                        "endOffsets": "193,281,377,453,558,647,728,792,856,925,992,1112"
+                    },
+                    "to": {
+                        "startLines": "41,42,62,69,70,126,127,128,130,135,137,138",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3742,3835,6229,6855,6931,11403,11492,11573,11701,12074,12244,12311",
+                        "endColumns": "92,87,95,75,104,88,80,63,63,68,66,119",
+                        "endOffsets": "3830,3918,6320,6926,7031,11487,11568,11632,11760,12138,12306,12426"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\d432bd9040e3fa941694188d0e29bb44\\transformed\\browser-1.4.0\\res\\values-sv\\values-sv.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,155,255,368",
+                        "endColumns": "99,99,112,97",
+                        "endOffsets": "150,250,363,461"
+                    },
+                    "to": {
+                        "startLines": "61,65,66,67",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "6129,6480,6580,6693",
+                        "endColumns": "99,99,112,97",
+                        "endOffsets": "6224,6575,6688,6786"
                     }
                 }
             ]

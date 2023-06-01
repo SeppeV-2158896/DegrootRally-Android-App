@@ -164,4 +164,3 @@ string username
 string wind
 style Theme.DegrootRally
 xml backup_rules
-xml data_extraction_rules

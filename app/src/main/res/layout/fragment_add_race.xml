@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".fragments.AddRaceFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
     <EditText
         android:id="@+id/title_txt_ed"
