@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.seppevandenberk.degrootrally.R
@@ -53,18 +54,18 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
             val user = User(null,name,"",null,requireContext())
             val type = user.getType()
             if (type != "Admin"){
-                binding.tempEmergencyBtn.visibility = View.INVISIBLE
+                binding.newsBodyTxtVw.setOnClickListener{
+                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+                    transaction.replace(R.id.fragmentLayoutLogin, NewsFragment())
+                    transaction.addToBackStack(null)
+                    transaction.commit()
+                }
             }
         }
 
         assignNextEventAndLastResultArray(rallyItems as ArrayList<RallyItem>)
         adapterLastResult.notifyDataSetChanged()
 
-        binding.tempEmergencyBtn.setOnClickListener {
-            if (rallyItemsFileRepo != null) {
-                rallyItemsFileRepo.delete()
-            }
-        }
         return binding.root
     }
     // -> tot hier
