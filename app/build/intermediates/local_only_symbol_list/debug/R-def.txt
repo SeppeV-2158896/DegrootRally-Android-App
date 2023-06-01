@@ -134,6 +134,7 @@ string app_name
 string change
 string confirm
 string current
+string data
 string date
 string default_web_client_id
 string email
@@ -161,6 +162,5 @@ string temperature
 string title_activity_login
 string title_activity_maps
 string username
-string wind
 style Theme.DegrootRally
 xml backup_rules

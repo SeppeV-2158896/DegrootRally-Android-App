@@ -27,7 +27,7 @@
     <string name="humidity">Humidity</string>
     <string name="pressure">Pressure</string>
 
-    <string name="wind">Update Winddata</string>
+    <string name="data">Update Data</string>
 
     <string name="APP_KEY">b9kt8v09ov2tkp6</string>
     <string name="APP_SECRET">pmjyi3cabwfjqso</string>

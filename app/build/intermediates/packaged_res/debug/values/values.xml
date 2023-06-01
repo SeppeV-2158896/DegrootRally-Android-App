@@ -23,6 +23,7 @@
     <string name="change">Change Password</string>
     <string name="confirm">Confirm password</string>
     <string name="current">Current Password</string>
+    <string name="data">Update Data</string>
     <string name="date">Date</string>
     <string name="default_web_client_id" translatable="false">203277665146-uvrepghubk0l8dh8eht5sunh2rfonttr.apps.googleusercontent.com</string>
     <string name="email">E-mail</string>
@@ -50,7 +51,6 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="username">Username</string>
-    <string name="wind">Update Winddata</string>
     <style name="Theme.DegrootRally" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/degrootGreen</item>

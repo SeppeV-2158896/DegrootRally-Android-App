@@ -1,5 +1,6 @@
 package be.seppevandenberk.degrootrally.activities
 
+import WeatherForecast
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
@@ -10,14 +11,15 @@ import android.hardware.SensorManager
 import android.location.Location
 import android.location.LocationManager
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
+import android.widget.CalendarView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.databinding.ActivityMapsBinding
-import be.seppevandenberk.degrootrally.model.WeatherData
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -30,6 +32,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
 import java.io.IOException
+import java.util.Calendar
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, android.location.LocationListener,
     SensorEventListener {
@@ -109,7 +112,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, android.location.L
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1f, this)
             val lastKnownLocation =
                 locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-            lastKnownLocation?.let { updateCurrentLocation(it) }
+            if(lastKnownLocation == null){
+                windButton.visibility = View.INVISIBLE
+            }
+            lastKnownLocation?.let {
+                updateCurrentLocation(it)
+                windButton.visibility= View.VISIBLE
+            }
+
         }
     }
 
@@ -168,7 +178,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, android.location.L
 
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1f, this)
         val lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)!!
-        getWindData("https://api.open-meteo.com/v1/forecast?latitude=" + lastKnownLocation.latitude.toString() + "&longitude=" + lastKnownLocation.longitude.toString() + "&hourly=windspeed_10m,winddirection_10m&daily=weathercode&current_weather=true&forecast_days=1&timezone=auto")
+        getWindData("https://api.open-meteo.com/v1/forecast?latitude=" + lastKnownLocation.latitude.toString() + "&longitude=" + lastKnownLocation.longitude.toString() + "&hourly=temperature_2m,relativehumidity_2m,surface_pressure,windspeed_10m,winddirection_10m&current_weather=true&forecast_days=1&timezone=auto")
     }
 
     private fun getWindData(url: String) {
@@ -184,13 +194,30 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, android.location.L
                 val strResponse = response.body()!!.string()
 
                 val gson = Gson()
-                val weatherData = gson.fromJson(strResponse, WeatherData::class.java)
+                val weatherData = gson.fromJson(strResponse, WeatherForecast::class.java)
                 val currentWeather = weatherData.current_weather
+                val temperatures = weatherData.hourly.temperature_2m
+                val pressures = weatherData.hourly.surface_pressure
+                val humidities = weatherData.hourly.relativehumidity_2m
 
                 runOnUiThread {
                     windTextView.text = "Wind: " + currentWeather.windspeed.toString() + " km/h"
                     findViewById<ImageView>(R.id.wind_arrow).rotation =
                         currentWeather.winddirection.toFloat()
+                    val now = Calendar.getInstance()
+                    if(temperatureSensor == null){
+                        findViewById<TextView>(R.id.temperatureTextView).text =
+                            "Temperature:" + temperatures.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " °C"
+                    }
+                    if(humiditySensor == null){
+                        findViewById<TextView>(R.id.humidityTextView).text =
+                            "Humidity:" + humidities.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " %"
+                    }
+                    if(pressureSensor == null){
+                        findViewById<TextView>(R.id.humidityTextView).text =
+                            "Pressure:" + pressures.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " hPa"
+                    }
+
                 }
             }
         })

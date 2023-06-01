@@ -3827,6 +3827,7 @@ string common_signin_button_text_long
 string confirm
 string copy_toast_msg
 string current
+string data
 string date
 string default_error_message
 string default_web_client_id
@@ -3990,7 +3991,6 @@ string template_percent
 string title_activity_login
 string title_activity_maps
 string username
-string wind
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
