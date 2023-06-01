@@ -1,6 +1,4 @@
-package be.seppevandenberk.degrootrally.model
-
-data class WeatherData(
+data class WeatherForecast(
     val latitude: Double,
     val longitude: Double,
     val generationtime_ms: Double,
@@ -10,9 +8,7 @@ data class WeatherData(
     val elevation: Double,
     val current_weather: CurrentWeather,
     val hourly_units: HourlyUnits,
-    val hourly: HourlyData,
-    val daily_units: DailyUnits,
-    val daily: DailyData
+    val hourly: Hourly
 )
 
 data class CurrentWeather(
@@ -26,22 +22,18 @@ data class CurrentWeather(
 
 data class HourlyUnits(
     val time: String,
-    val windspeed_80m: String,
-    val winddirection_80m: String
+    val temperature_2m: String,
+    val relativehumidity_2m: String,
+    val surface_pressure: String,
+    val windspeed_10m: String,
+    val winddirection_10m: String
 )
 
-data class HourlyData(
+data class Hourly(
     val time: List<String>,
-    val windspeed_80m: List<Double>,
-    val winddirection_80m: List<Int>
-)
-
-data class DailyUnits(
-    val time: String,
-    val weathercode: String
-)
-
-data class DailyData(
-    val time: List<String>,
-    val weathercode: List<Int>
+    val temperature_2m: List<Double>,
+    val relativehumidity_2m: List<Int>,
+    val surface_pressure: List<Double>,
+    val windspeed_10m: List<Double>,
+    val winddirection_10m: List<Int>
 )

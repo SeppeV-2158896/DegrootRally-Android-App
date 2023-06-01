@@ -3826,6 +3826,7 @@ int string common_signin_button_text_long 0x7f11003f
 int string confirm 0x7f110040
 int string copy_toast_msg 0x7f110041
 int string current 0x7f110042
+int string data 0x7f1100e7
 int string date 0x7f110043
 int string default_error_message 0x7f110044
 int string default_web_client_id 0x7f110045
@@ -3989,7 +3990,6 @@ int string template_percent 0x7f1100e2
 int string title_activity_login 0x7f1100e3
 int string title_activity_maps 0x7f1100e4
 int string username 0x7f1100e5
-int string wind 0x7f1100e6
 int style AlertDialog_AppCompat 0x7f120000
 int style AlertDialog_AppCompat_Light 0x7f120001
 int style Animation_AppCompat_Dialog 0x7f120002
