@@ -5,6 +5,7 @@
     <color name="degrootGreen">#006e28</color>
     <color name="errorRed">#ba1a1a</color>
     <color name="ic_launcher_background">#0A0A0A</color>
+    <color name="light_pastel_green">#B9F1B9</color>
     <color name="pastel_green">#77DD77</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
@@ -22,6 +23,7 @@
     <string name="change">Change Password</string>
     <string name="confirm">Confirm password</string>
     <string name="current">Current Password</string>
+    <string name="date">Date</string>
     <string name="default_web_client_id" translatable="false">203277665146-uvrepghubk0l8dh8eht5sunh2rfonttr.apps.googleusercontent.com</string>
     <string name="email">E-mail</string>
     <string name="forgot">Forgot Password</string>
@@ -32,6 +34,7 @@
     <string name="google_storage_bucket" translatable="false">rally-degroot.appspot.com</string>
     <string name="guest">Continue as Guest</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="humidity">Humidity</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
     <string name="nav_close">Close</string>
@@ -39,8 +42,11 @@
     <string name="newpw">New Password</string>
     <string name="no_account">No account? Sign up here</string>
     <string name="password">Password</string>
+    <string name="pressure">Pressure</string>
     <string name="project_id" translatable="false">rally-degroot</string>
+    <string name="save">Save</string>
     <string name="submit">Submit</string>
+    <string name="temperature">Temperature</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="username">Username</string>

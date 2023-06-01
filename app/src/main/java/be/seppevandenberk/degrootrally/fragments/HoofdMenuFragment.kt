@@ -75,7 +75,7 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         return binding.root
     }
 
-    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem> {
+    fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem> {
         if (rallyItems.size > 1) {
             val sortedRallyItems = rallyItems
             sortedRallyItems.sortWith { rallyItem1, rallyItem2 ->

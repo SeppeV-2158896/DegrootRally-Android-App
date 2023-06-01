@@ -49,6 +49,7 @@ id email_new_txt_ed
 id email_txt_ed
 id email_txt_vw
 id forgot_txt_vw
+id fragmentLayoutChangePassword
 id fragmentLayoutLogin
 id fragmentLayoutMain
 id frameLayoutKalender

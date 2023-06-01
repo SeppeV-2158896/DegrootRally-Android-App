@@ -86,6 +86,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         user.create()
 
         val intent = Intent(requireContext(), MainActivity::class.java)
+        intent.putExtra("name", user.username)
         startActivity(intent)
     }
 }

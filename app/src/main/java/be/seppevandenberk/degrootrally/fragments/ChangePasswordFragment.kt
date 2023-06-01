@@ -8,11 +8,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.databinding.FragmentAddRaceBinding
 import be.seppevandenberk.degrootrally.databinding.FragmentChangePasswordBinding
 
-class ChangePasswordFragment : Fragment() {
+class ChangePasswordFragment : Fragment(R.layout.fragment_change_password) {
     private lateinit var oldPassword: EditText
     private lateinit var newPassword: EditText
     private lateinit var confirmPassword: EditText
@@ -42,6 +43,7 @@ class ChangePasswordFragment : Fragment() {
                 newPassword.text.toString(),
                 confirmPassword.text.toString()
             )
+            displayFragment(AccountFragment())
         }
     }
     //TODO test
@@ -58,5 +60,13 @@ class ChangePasswordFragment : Fragment() {
                 Toast.LENGTH_LONG
             ).show()
         }
+        //TODO password effectief aanpassen
+    }
+
+    private fun displayFragment(fragment: Fragment) {
+        val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+        transaction.replace(R.id.fragmentLayoutMain, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }

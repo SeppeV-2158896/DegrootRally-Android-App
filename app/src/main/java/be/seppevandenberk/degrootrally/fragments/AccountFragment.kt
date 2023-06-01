@@ -17,6 +17,7 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 
 import be.seppevandenberk.degrootrally.R
+import be.seppevandenberk.degrootrally.databinding.FragmentChangePasswordBinding
 import be.seppevandenberk.degrootrally.model.User
 import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
 
@@ -28,13 +29,14 @@ class AccountFragment : Fragment() {
     private lateinit var userName: TextView
     private lateinit var email: TextView
     private var imageUri: Uri? = null
-    private val changePasswordFragment = ChangePasswordFragment()
+    private lateinit var binding : FragmentChangePasswordBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentChangePasswordBinding.inflate(layoutInflater)
         return inflater.inflate(R.layout.fragment_account, container, false)
     }
 
@@ -105,7 +107,7 @@ class AccountFragment : Fragment() {
 
         changePasswordButton.setOnClickListener {
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-            transaction.replace(R.id.fragmentLayoutLogin, changePasswordFragment)
+            transaction.replace(R.id.fragmentLayoutMain, ChangePasswordFragment())
             transaction.addToBackStack(null)
             transaction.commit()
         }
