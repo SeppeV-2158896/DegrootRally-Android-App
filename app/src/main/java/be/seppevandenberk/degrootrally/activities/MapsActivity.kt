@@ -3,6 +3,10 @@ package be.seppevandenberk.degrootrally.activities
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.Matrix
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.RotateDrawable
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -13,9 +17,11 @@ import android.os.Bundle
 import android.os.Looper
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.databinding.ActivityMapsBinding
 import be.seppevandenberk.degrootrally.model.WeatherData
@@ -37,6 +43,7 @@ import okhttp3.Callback
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.Response
+import org.w3c.dom.Text
 import java.io.IOException
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.LocationListener,SensorEventListener  {
@@ -168,7 +175,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1f, this)
         val lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)!!
-        getWindData("https://api.open-meteo.com/v1/forecast?latitude="+lastKnownLocation.latitude.toString()+"&longitude="+lastKnownLocation.latitude.toString()+"&hourly=windspeed_10m,winddirection_10m&daily=weathercode&current_weather=true&forecast_days=1&timezone=auto")
+        getWindData("https://api.open-meteo.com/v1/forecast?latitude="+lastKnownLocation.latitude.toString()+"&longitude="+lastKnownLocation.longitude.toString()+"&hourly=windspeed_10m,winddirection_10m&daily=weathercode&current_weather=true&forecast_days=1&timezone=auto")
+
 
     }
     fun getWindData(url : String){
@@ -188,7 +196,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
                 val weatherData = gson.fromJson(str_response, WeatherData::class.java)
                 val currentWeather = weatherData.current_weather
                 runOnUiThread {
-                    windTextView.text = "Windspeed: " + currentWeather.windspeed.toString() + " km/h"
+                    windTextView.text = "Wind: " + currentWeather.windspeed.toString() + " km/h"
+                    findViewById<ImageView>(R.id.wind_arrow).rotation = currentWeather.winddirection.toFloat()
                 }
             }
         })
