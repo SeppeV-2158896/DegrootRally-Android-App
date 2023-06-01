@@ -37,6 +37,17 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         }
         binding = FragmentHoofdMenuBinding.inflate(layoutInflater)
 
+        var adapterNextEvent = RallyAdapter(rallyItemNextEvent)
+        binding.recvwNextEventVw.adapter = adapterNextEvent
+        binding.recvwNextEventVw.layoutManager = LinearLayoutManager(this.context)
+
+        var adapterLastResult = RallyAdapter(rallyItemLastResult)
+        binding.recvwLastResultVw.adapter = adapterLastResult
+        binding.recvwLastResultVw.layoutManager = LinearLayoutManager(this.context)
+
+        adapterLastResult.setEditDeleteButtonsVisible(false)
+        adapterNextEvent.setEditDeleteButtonsVisible(false)
+
         val user = ViewModelProvider(requireActivity()).get(ViewModelLoggedInUser::class.java)
         user.name.observe(viewLifecycleOwner){name ->
             val user = User(null,name,"",null,requireContext())
@@ -45,14 +56,6 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
                 binding.tempEmergencyBtn.visibility = View.INVISIBLE
             }
         }
-
-        var adapterNextEvent = RallyAdapter(rallyItemNextEvent)
-        binding.recvwNextEventVw.adapter = adapterNextEvent
-        binding.recvwNextEventVw.layoutManager = LinearLayoutManager(this.context)
-
-        var adapterLastResult = RallyAdapter(rallyItemLastResult)
-        binding.recvwLastResultVw.adapter = adapterLastResult
-        binding.recvwLastResultVw.layoutManager = LinearLayoutManager(this.context)
 
         assignNextEventAndLastResultArray(rallyItems as ArrayList<RallyItem>)
         adapterLastResult.notifyDataSetChanged()
@@ -78,18 +81,26 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
 
     fun assignNextEventAndLastResultArray(rallyItems: ArrayList<RallyItem>){
         var sortedRallyItems = sortRallyItemsByDate(rallyItems)
-        val emptyRallyItem = RallyItem("No data provided.", "", "", Calendar.getInstance().time, BigDecimal.ZERO)
+
+        val emptyRallyItem = RallyItem("No data provided.", "", "", Calendar.getInstance().time, "")
+
         rallyItemLastResult.add(emptyRallyItem)
         rallyItemNextEvent.add(emptyRallyItem)
+
         sortedRallyItems.forEachIndexed { index, rallyItem ->
             if (index < sortedRallyItems.size - 1 && sortedRallyItems[index + 1].date >= Calendar.getInstance().time) {
                 rallyItemLastResult[0] = rallyItem
                 rallyItemNextEvent[0] = sortedRallyItems[index + 1]
                 return
             }
-            else if (index >= sortedRallyItems.size - 1){
+            else if (index >= sortedRallyItems.size - 1 && Calendar.getInstance().time > rallyItem.date){
                 rallyItemLastResult[0] = rallyItem
-                rallyItemNextEvent[0] = RallyItem("No next event present.", "", "", Calendar.getInstance().time, BigDecimal.ZERO)
+                rallyItemNextEvent[0] = RallyItem("No next event present.", "", "", Calendar.getInstance().time, "")
+                return
+            }
+            else{
+                rallyItemLastResult[0] = RallyItem("No next event present.", "", "", Calendar.getInstance().time, "")
+                rallyItemNextEvent[0] = rallyItem
                 return
             }
         }

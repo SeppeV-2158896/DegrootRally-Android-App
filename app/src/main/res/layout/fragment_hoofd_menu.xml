@@ -43,10 +43,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recvw_nextEvent_vw"
-        android:layout_width="380dp"
+        android:layout_width="316dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/txt_nextEvent_vw"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_nextEvent_vw" />
 
     <TextView
@@ -62,10 +64,12 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recvw_lastResult_vw"
-        android:layout_width="380dp"
+        android:layout_width="316dp"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="@+id/txt_lastResult_vw"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_lastResult_vw" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

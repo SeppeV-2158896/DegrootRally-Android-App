@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.set
 import androidx.fragment.app.FragmentTransaction
 import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.databinding.FragmentAddRaceBinding
@@ -34,24 +35,27 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         // Inflate the layout for this fragment
         binding = FragmentAddRaceBinding.inflate(layoutInflater)
 
+        date = Calendar.getInstance().time
+        
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
         if(rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size){
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
 
-        var adapter = RallyAdapter(rallyItems)
-        binding.addRaceBtn.setOnClickListener{
-            var result: BigDecimal = try{
-                BigDecimal(binding.txtResultEd.text.toString())
-            } catch (e: Exception){
-                BigDecimal.ZERO
-            }
+        sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
 
-            val newRallyItem = RallyItem(binding.titleTxtEd.text.toString(), binding.pilotTxtEd.text.toString(), binding.copilotTxtEd.text.toString(), date, result)
+        var adapter = RallyAdapter(rallyItems)
+
+        putArgsInFields()
+
+        binding.addRaceBtn.setOnClickListener{
+            val newRallyItem = RallyItem(binding.titleTxtEd.text.toString(), binding.pilotTxtEd.text.toString(), binding.copilotTxtEd.text.toString(), date, binding.txtResultEd.text.toString())
+            arguments?.getInt("position")?.let { it1 -> rallyItems.removeAt(it1) }
             rallyItems.add(newRallyItem)
             adapter.notifyItemInserted(rallyItems.size - 1)
             if (rallyItemsFileRepo != null) {
-                rallyItemsFileRepo.save(rallyItems as ArrayList<RallyItem>)
+                rallyItemsFileRepo.delete()
+                rallyItemsFileRepo.save(rallyItems)
             }
             displayFragment(KalenderEnResultatenFragment())
         }
@@ -86,5 +90,32 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         }, year, month, day)
 
         datePicker.show()
+    }
+
+    private fun putArgsInFields(){
+        binding.titleTxtEd.setText(arguments?.getString("title") ?: "")
+
+        if(arguments?.getLong("date") != null){
+            date = arguments?.getLong("date")?.let { Date(it) }!!
+            val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+            var formattedDate = dateFormat.format(date)
+
+            binding.dateTxtVw.setText("Date: $formattedDate")
+        }
+
+        binding.pilotTxtEd.setText(arguments?.getString("pilot") ?: "")
+        binding.copilotTxtEd.setText(arguments?.getString("copilot") ?: "")
+        binding.txtResultEd.setText(arguments?.getString("result") ?: "")
+    }
+
+    fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
+        if (rallyItems.size > 1){
+            var sortedRallyItems = rallyItems
+            sortedRallyItems.sortWith(Comparator{rallyItem1, rallyItem2 ->
+                rallyItem1.date.compareTo(rallyItem2.date)
+            })
+            return sortedRallyItems
+        }
+        return rallyItems
     }
 }

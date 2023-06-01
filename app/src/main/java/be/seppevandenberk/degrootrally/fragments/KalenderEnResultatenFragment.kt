@@ -37,6 +37,14 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
 
+        var sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
+
+        var adapter = RallyAdapter(sortedRallyItems)
+        binding.recyclerView.adapter = adapter
+        binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
+
+        adapter.setEditDeleteButtonsVisible(true)
+
         val user = ViewModelProvider(requireActivity()).get(ViewModelLoggedInUser::class.java)
         user.name.observe(viewLifecycleOwner){name ->
             val user = User(null,name,"",null,requireContext())
@@ -44,14 +52,9 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             if (type != "Admin"){
                 binding.addButton.visibility = View.INVISIBLE
                 binding.deleteBtn.visibility = View.INVISIBLE
+                adapter.setEditDeleteButtonsVisible(false)
             }
         }
-
-        var sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
-
-        var adapter = RallyAdapter(sortedRallyItems)
-        binding.recyclerView.adapter = adapter
-        binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
 
         binding.addButton.setOnClickListener{
             displayFragment(AddRaceFragment())
@@ -64,6 +67,39 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             rallyItems.clear()
             adapter.notifyDataSetChanged()
         }
+
+        adapter.setOnItemClickListener(object : RallyAdapter.OnItemClickListener{
+            override fun onDeleteClick(position: Int) {
+                sortedRallyItems.removeAt(position)
+                if (rallyItemsFileRepo != null) {
+                    rallyItemsFileRepo.delete()
+                    rallyItemsFileRepo.save(sortedRallyItems)
+                }
+                adapter.notifyItemRemoved(position)
+            }
+
+            override fun onEditClick(position: Int) {
+                val args = Bundle()
+                args.putString("title", rallyItems[position].title)
+                args.putLong("date", rallyItems[position].date.time)
+                args.putString("pilot", rallyItems[position].piloot)
+                args.putString("copilot", rallyItems[position].copiloot)
+                args.putString("result", rallyItems[position].result)
+                args.putInt("position", position)
+                val fragment = AddRaceFragment()
+                fragment.arguments = args
+                /*
+                rallyItems.removeAt(position)
+
+                if (rallyItemsFileRepo != null) {
+                    rallyItemsFileRepo.delete()
+                    rallyItemsFileRepo.save(rallyItems)
+                }
+                */
+                displayFragment(fragment)
+            }
+        })
+
         return binding.root
     }
     fun displayFragment(fragment: Fragment) {

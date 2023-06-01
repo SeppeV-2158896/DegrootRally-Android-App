@@ -8,7 +8,7 @@ data class RallyItem(
     val piloot: String,
     val copiloot: String,
     val date: Date,
-    var result: BigDecimal
+    var result: String
 ) {
 
 }
