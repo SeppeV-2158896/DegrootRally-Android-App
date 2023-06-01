@@ -318,7 +318,7 @@ MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\Sepp
 meta-data#com.google.android.maps.v2.API_KEY
 ADDED from F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:27:9-30:15
 	android:value
-		ADDED from F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:29:13-47
+		ADDED from F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:29:13-68
 	android:name
 		ADDED from F:\Documents\DegrootRally\app\src\main\AndroidManifest.xml:28:13-62
 activity#be.seppevandenberk.degrootrally.activities.MapsActivity

@@ -53,7 +53,7 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="enter_your_api_key" />
+            android:value="AIzaSyB5gXpCOVyrWWu9trUSst-cmSaFgk99Hf4" />
 
         <activity
             android:name="be.seppevandenberk.degrootrally.activities.MapsActivity"

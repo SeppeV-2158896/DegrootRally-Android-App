@@ -7240,5 +7240,4 @@ int styleable ViewTransition_viewTransitionMode 14
 int[] styleable include { 0x7f030121 }
 int styleable include_constraintSet 0
 int xml backup_rules 0x7f140000
-int xml data_extraction_rules 0x7f140001
-int xml image_share_filepaths 0x7f140002
+int xml image_share_filepaths 0x7f140001
