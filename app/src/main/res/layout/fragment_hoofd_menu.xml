@@ -10,44 +10,23 @@
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/hoofdMenuText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="HoofdMenu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/tempEmergencyBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Emergency delete"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
         android:id="@+id/txt_nextEvent_vw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="Next event:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/recvw_lastResult_vw" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recvw_nextEvent_vw"
-        android:layout_width="316dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_nextEvent_vw" />
 
@@ -60,15 +39,15 @@
         android:text="Last results:"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recvw_nextEvent_vw" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recvw_lastResult_vw"
-        android:layout_width="316dp"
+        android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_lastResult_vw" />
 

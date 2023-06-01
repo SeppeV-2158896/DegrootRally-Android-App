@@ -27,6 +27,7 @@ id TitelRallyEnDatum
 id account_image_ic
 id addButton
 id addRaceBtn
+id address_txt_ed
 id admin_txt_vw
 id change_password_btn
 id change_to_new_password_btn
@@ -35,7 +36,6 @@ id constraintLayout
 id copilot_txt_ed
 id current_password_txt_ed
 id date_txt_vw
-id deleteBtn
 id drawerLayout
 id email_new_txt_ed
 id email_txt_ed
@@ -45,11 +45,10 @@ id fragmentLayoutLogin
 id fragmentLayoutMain
 id frameLayoutKalender
 id guest_txt_vw
-id hoofdMenuText
 id humidityTextView
 id im_editPen_vw
+id im_maps_vw
 id im_trash_vw
-id imageView
 id login_btn
 id login_guest_btn
 id login_txt_ed
@@ -73,14 +72,13 @@ id recvw_nextEvent_vw
 id recyclerView
 id register_btn
 id register_txt_vw
+id result_txt_ed
 id sensorDataCardView
 id submit_btn
-id tempEmergencyBtn
 id temperatureTextView
 id title_txt_ed
 id txt_lastResult_vw
 id txt_nextEvent_vw
-id txt_result_ed
 id username_new_txt_ed
 id username_txt_vw
 id view

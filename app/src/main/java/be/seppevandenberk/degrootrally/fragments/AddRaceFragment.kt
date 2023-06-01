@@ -49,7 +49,7 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         putArgsInFields()
 
         binding.addRaceBtn.setOnClickListener{
-            val newRallyItem = RallyItem(binding.titleTxtEd.text.toString(), binding.pilotTxtEd.text.toString(), binding.copilotTxtEd.text.toString(), date, binding.txtResultEd.text.toString())
+            val newRallyItem = RallyItem(binding.titleTxtEd.text.toString(), binding.pilotTxtEd.text.toString(), binding.copilotTxtEd.text.toString(), date, binding.resultTxtEd.text.toString(), binding.addressTxtEd.text.toString())
             arguments?.getInt("position")?.let { it1 -> rallyItems.removeAt(it1) }
             rallyItems.add(newRallyItem)
             adapter.notifyItemInserted(rallyItems.size - 1)
@@ -100,12 +100,17 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
             val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
             var formattedDate = dateFormat.format(date)
 
-            binding.dateTxtVw.setText("Date: $formattedDate")
+            binding.dateTxtVw.text = "Date: $formattedDate"
+
+            //The date will always be set if the edit button is pressed because if the user
+            // doesn't select a date, the app will put the current date as the date of the event.
+            binding.addRaceBtn.text = "Save"
         }
 
         binding.pilotTxtEd.setText(arguments?.getString("pilot") ?: "")
         binding.copilotTxtEd.setText(arguments?.getString("copilot") ?: "")
-        binding.txtResultEd.setText(arguments?.getString("result") ?: "")
+        binding.resultTxtEd.setText(arguments?.getString("result") ?: "")
+        binding.addressTxtEd.setText(arguments?.getString("address") ?: "")
     }
 
     fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{

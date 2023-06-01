@@ -3005,6 +3005,7 @@ id activity_chooser_view_content
 id add
 id addButton
 id addRaceBtn
+id address_txt_ed
 id adjust_height
 id adjust_width
 id admin_txt_vw
@@ -3091,7 +3092,6 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
-id deleteBtn
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3171,7 +3171,6 @@ id hideable
 id home
 id homeAsUp
 id honorRequest
-id hoofdMenuText
 id horizontal_only
 id humidityTextView
 id hybrid
@@ -3182,9 +3181,9 @@ id ifRoom
 id ignore
 id ignoreRequest
 id im_editPen_vw
+id im_maps_vw
 id im_trash_vw
 id image
-id imageView
 id immediateStop
 id included
 id indeterminate
@@ -3344,6 +3343,7 @@ id recvw_nextEvent_vw
 id recyclerView
 id register_btn
 id register_txt_vw
+id result_txt_ed
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3446,7 +3446,6 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
-id tempEmergencyBtn
 id temperatureTextView
 id terrain
 id text
@@ -3485,7 +3484,6 @@ id transition_transform
 id triangle
 id txt_lastResult_vw
 id txt_nextEvent_vw
-id txt_result_ed
 id unchecked
 id uniform
 id unlabeled

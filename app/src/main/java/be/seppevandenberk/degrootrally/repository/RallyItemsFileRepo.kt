@@ -27,8 +27,8 @@ class RallyItemsFileRepo(val context : Context) : FileRepo{
             val fileName = where.absolutePath + "/rallyItemsFile.txt"
 
             val gson = Gson()
-            val todoListType = object : TypeToken<ArrayList<RallyItem>>() {}.type
-            val model = gson.fromJson<ArrayList<RallyItem>>(FileReader(fileName), todoListType)
+            val rallyItemsListType = object : TypeToken<ArrayList<RallyItem>>() {}.type
+            val model = gson.fromJson<ArrayList<RallyItem>>(FileReader(fileName), rallyItemsListType)
             return model
         } catch (e: FileNotFoundException){
             return ArrayList<RallyItem>(0)

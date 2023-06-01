@@ -3004,6 +3004,7 @@ int id activity_chooser_view_content 0x7f080049
 int id add 0x7f08004a
 int id addButton 0x7f08004b
 int id addRaceBtn 0x7f08004c
+int id address_txt_ed 0x7f08024b
 int id adjust_height 0x7f08004d
 int id adjust_width 0x7f08004e
 int id admin_txt_vw 0x7f08004f
@@ -3090,7 +3091,6 @@ int id decelerate 0x7f08009f
 int id decelerateAndComplete 0x7f0800a0
 int id decor_content_parent 0x7f0800a1
 int id default_activity_button 0x7f0800a2
-int id deleteBtn 0x7f0800a3
 int id deltaRelative 0x7f0800a4
 int id dependency_ordering 0x7f0800a5
 int id design_bottom_sheet 0x7f0800a6
@@ -3170,7 +3170,6 @@ int id hideable 0x7f0800ef
 int id home 0x7f0800f0
 int id homeAsUp 0x7f0800f1
 int id honorRequest 0x7f0800f2
-int id hoofdMenuText 0x7f0800f3
 int id horizontal_only 0x7f0800f4
 int id humidityTextView 0x7f0800f5
 int id hybrid 0x7f0800f6
@@ -3181,9 +3180,9 @@ int id ifRoom 0x7f0800fa
 int id ignore 0x7f0800fb
 int id ignoreRequest 0x7f0800fc
 int id im_editPen_vw 0x7f080249
+int id im_maps_vw 0x7f08024c
 int id im_trash_vw 0x7f08024a
 int id image 0x7f0800fd
-int id imageView 0x7f0800fe
 int id immediateStop 0x7f0800ff
 int id included 0x7f080100
 int id indeterminate 0x7f080101
@@ -3343,6 +3342,7 @@ int id recvw_nextEvent_vw 0x7f08019a
 int id recyclerView 0x7f08019b
 int id register_btn 0x7f08019c
 int id register_txt_vw 0x7f08019d
+int id result_txt_ed 0x7f08024d
 int id reverseSawtooth 0x7f08019e
 int id right 0x7f08019f
 int id rightToLeft 0x7f0801a0
@@ -3445,7 +3445,6 @@ int id tag_transition_group 0x7f080200
 int id tag_unhandled_key_event_manager 0x7f080201
 int id tag_unhandled_key_listeners 0x7f080202
 int id tag_window_insets_animation_callback 0x7f080203
-int id tempEmergencyBtn 0x7f080204
 int id temperatureTextView 0x7f080205
 int id terrain 0x7f080206
 int id text 0x7f080207
@@ -3484,7 +3483,6 @@ int id transition_transform 0x7f080227
 int id triangle 0x7f080228
 int id txt_lastResult_vw 0x7f080229
 int id txt_nextEvent_vw 0x7f08022a
-int id txt_result_ed 0x7f08022b
 int id unchecked 0x7f08022c
 int id uniform 0x7f08022d
 int id unlabeled 0x7f08022e
