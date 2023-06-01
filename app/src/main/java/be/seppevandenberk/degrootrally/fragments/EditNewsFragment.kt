@@ -28,8 +28,12 @@ class EditNewsFragment : Fragment() {
         if (newsFileRepo != null) {
             oldNews = newsFileRepo.readString().toString()
         }
-
-        binding.txtNewsEd.setText(oldNews)
+        if(oldNews != "null"){
+            binding.txtNewsEd.setText(oldNews)
+        }
+        else{
+            binding.txtNewsEd.setText("")
+        }
 
         binding.delNewsBtn.setOnClickListener {
             binding.txtNewsEd.setText("")

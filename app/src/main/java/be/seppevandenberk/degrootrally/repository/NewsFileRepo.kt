@@ -8,26 +8,12 @@ import java.io.*
 
 class NewsFileRepo(val context: Context) : FileRepo{
     override fun save(items: ArrayList<RallyItem>) {
-        val fileName = "newsFile.txt"
-        val fos: FileOutputStream = context.openFileOutput(fileName, Context.MODE_PRIVATE)
-        val gson = Gson()
-        val json = gson.toJson(items)
-        fos.write(json.toByteArray())
-        fos.close()
+        //should do nothing
     }
 
     override fun read(): ArrayList<RallyItem> {
-        return try{
-            val where: File = context.filesDir
-            val fileName = where.absolutePath + "/newsFile.txt"
-
-            val gson = Gson()
-            val newsType = object : TypeToken<ArrayList<RallyItem>>() {}.type
-            val model = gson.fromJson<ArrayList<RallyItem>>(FileReader(fileName), newsType)
-            model
-        } catch (e: FileNotFoundException){
-            ArrayList(0)
-        }
+        //should do nothing
+        return ArrayList<RallyItem>()
     }
 
     override fun delete() {

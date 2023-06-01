@@ -209,7 +209,5 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         val sezoensrally2023 = RallyItem("Sezoensrally 2023","Nico Degroot","Thomas Driesen",
             Date(2023-1900,5-1,20),"DNS","Dorperheideweg 56, 3950 Bocholt, België")
         rallyItems.add(sezoensrally2023)
-
-
     }
 }
