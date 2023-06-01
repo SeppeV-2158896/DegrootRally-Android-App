@@ -3181,6 +3181,8 @@ id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
+id im_editPen_vw
+id im_trash_vw
 id image
 id imageView
 id immediateStop

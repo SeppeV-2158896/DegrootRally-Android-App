@@ -105,4 +105,23 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
             }
         }
     }
+    //refresh front page every time its opened so data is always up-to-date
+    override fun onResume() {
+        super.onResume()
+        refreshMenu()
+    }
+
+    private fun refreshMenu(){
+        rallyItems.clear()
+
+        val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
+        if (rallyItemsFileRepo != null) {
+            rallyItems.addAll(rallyItemsFileRepo.read())
+        }
+
+        assignNextEventAndLastResultArray(rallyItems as ArrayList<RallyItem>)
+
+        binding.recvwNextEventVw.adapter?.notifyDataSetChanged()
+        binding.recvwLastResultVw.adapter?.notifyDataSetChanged()
+    }
 }

@@ -119,4 +119,23 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         }
         return rallyItems
     }
+
+    override fun onResume() {
+        super.onResume()
+        refreshMenu()
+    }
+
+    private fun refreshMenu(){
+        rallyItems.clear()
+
+        val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
+        if (rallyItemsFileRepo != null) {
+            rallyItems.addAll(rallyItemsFileRepo.read())
+        }
+
+        var sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
+
+        var adapter = RallyAdapter(sortedRallyItems)
+        adapter.notifyDataSetChanged()
+    }
 }
