@@ -1,5 +1,6 @@
 package be.seppevandenberk.degrootrally.activities
 
+import PictureFragment
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private val hoofdMenuFragment = HoofdMenuFragment()
     private val kalenderEnResultatenFragment = KalenderEnResultatenFragment()
     private val accountFragment = AccountFragment()
+    private val pictureFragment = PictureFragment()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,7 +80,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
 
             R.id.nav_picture -> {
-                navigateToPicture()
+                displayFragment(pictureFragment)
             }
 
             R.id.nav_maps -> {
@@ -91,9 +93,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    private fun navigateToPicture() {
-        TODO("Not yet implemented")
-    }
+
 
 
 

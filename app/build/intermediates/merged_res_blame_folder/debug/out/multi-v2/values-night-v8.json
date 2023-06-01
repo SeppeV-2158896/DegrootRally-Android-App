@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-68:/values-night-v8/values-night-v8.xml",
+            "outputFile": "be.seppevandenberk.degrootrally.app-mergeDebugResources-72:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\f4858bcb29eefc435d7c92b98ed868e8\\transformed\\material-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\a823a3e398978ccb995b7c51af57560f\\transformed\\material-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\Downloads\\DegrootRally\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "F:\\Documents\\DegrootRally\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -40,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jan-m\\.gradle\\caches\\transforms-3\\7613ee39803c39bd16cd24348bca8696\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Seppe\\.gradle\\caches\\transforms-3\\7a038ebd6a930b4385a25ba6760e0ae4\\transformed\\appcompat-1.6.1\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

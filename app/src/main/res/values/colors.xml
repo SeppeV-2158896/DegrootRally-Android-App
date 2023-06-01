@@ -12,4 +12,5 @@
     <color name="errorRed">#ba1a1a</color>
     <color name="surface">#fffbff</color>
     <color name="pastel_green">#77DD77</color>
+    <color name="light_pastel_green">#B9F1B9</color>
 </resources>

@@ -15,13 +15,21 @@
     <color name="white">#FFFFFFFF</color>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="APP_KEY">b9kt8v09ov2tkp6</string>
+    <string name="APP_SECRET">pmjyi3cabwfjqso</string>
     <string name="admin">Continue as Admin</string>
     <string name="app_name">Degroot Rally</string>
     <string name="change">Change Password</string>
     <string name="confirm">Confirm password</string>
     <string name="current">Current Password</string>
+    <string name="default_web_client_id" translatable="false">203277665146-uvrepghubk0l8dh8eht5sunh2rfonttr.apps.googleusercontent.com</string>
     <string name="email">E-mail</string>
     <string name="forgot">Forgot Password</string>
+    <string name="gcm_defaultSenderId" translatable="false">203277665146</string>
+    <string name="google_api_key" translatable="false">AIzaSyCKXluEbsWkEZcnRgZ69VJt3ltAUMYAgk8</string>
+    <string name="google_app_id" translatable="false">1:203277665146:android:ab3fd8cf45c5309ea94cc3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCKXluEbsWkEZcnRgZ69VJt3ltAUMYAgk8</string>
+    <string name="google_storage_bucket" translatable="false">rally-degroot.appspot.com</string>
     <string name="guest">Continue as Guest</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="login">Login</string>
@@ -31,10 +39,12 @@
     <string name="newpw">New Password</string>
     <string name="no_account">No account? Sign up here</string>
     <string name="password">Password</string>
+    <string name="project_id" translatable="false">rally-degroot</string>
     <string name="submit">Submit</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="username">Username</string>
+    <string name="wind">Update Winddata</string>
     <style name="Theme.DegrootRally" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/degrootGreen</item>
