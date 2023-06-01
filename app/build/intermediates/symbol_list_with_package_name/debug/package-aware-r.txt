@@ -1391,6 +1391,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -2096,6 +2100,8 @@ dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -2840,8 +2846,11 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account
 drawable ic_arrow_back_black_24
+drawable ic_calendar
+drawable ic_camera
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_home
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -2849,6 +2858,7 @@ drawable ic_lock
 drawable ic_m3_chip_check
 drawable ic_m3_chip_checked_circle
 drawable ic_m3_chip_close
+drawable ic_maps
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -3006,7 +3016,6 @@ id activity_chooser_view_content
 id add
 id addButton
 id addRaceBtn
-id address_txt_ed
 id adjust_height
 id adjust_width
 id admin_txt_vw
@@ -3040,6 +3049,12 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
+id btnSelectPhotos
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3094,6 +3109,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteBtn
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3160,6 +3176,7 @@ id frost
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3183,9 +3200,9 @@ id ifRoom
 id ignore
 id ignoreRequest
 id im_editPen_vw
-id im_maps_vw
 id im_trash_vw
 id image
+id imageView
 id immediateStop
 id included
 id indeterminate
@@ -3199,7 +3216,6 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
-id lastResultsBtn
 id last_events
 id layout
 id left
@@ -3302,7 +3318,6 @@ id news
 id news_body_txt_vw
 id news_image
 id news_txt_vw
-id nextEventBtn
 id next_events
 id noScroll
 id noState
@@ -3353,7 +3368,6 @@ id recvw_nextEvent_vw
 id recyclerView
 id register_btn
 id register_txt_vw
-id result_txt_ed
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3460,10 +3474,13 @@ id temperatureTextView
 id terrain
 id text
 id text2
+id textDescription
 id textEnd
+id textFirebase
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textTitle
 id textTop
 id textView
 id textWatcher
@@ -3496,10 +3513,12 @@ id transition_transform
 id triangle
 id txt_lastResult_vw
 id txt_nextEvent_vw
+id txt_result_ed
 id unchecked
 id uniform
 id unlabeled
 id up
+id upload_image_vw
 id useLogo
 id username_new_txt_ed
 id username_txt_vw
@@ -3638,6 +3657,8 @@ layout abc_tooltip
 layout activity_login
 layout activity_main
 layout activity_maps
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3663,6 +3684,7 @@ layout fragment_hoofd_menu
 layout fragment_kalender_en_resultaten
 layout fragment_login
 layout fragment_news
+layout fragment_picture
 layout fragment_sign_up
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3732,7 +3754,10 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 mipmap ic_launcher_square
 plurals mtrl_badge_content_description
+raw firebase_common_keep
 raw keep
+string APP_KEY
+string APP_SECRET
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3796,15 +3821,25 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string confirm
+string copy_toast_msg
 string current
 string default_error_message
+string default_web_client_id
 string email
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string forgot
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string guest
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
@@ -3930,6 +3965,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string progress
+string project_id
 string retry
 string search_menu_title
 string searchbar_scrolling_view_behavior
@@ -5220,3 +5256,4 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
+xml image_share_filepaths

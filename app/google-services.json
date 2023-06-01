@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "203277665146",
+    "project_id": "rally-degroot",
+    "storage_bucket": "rally-degroot.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203277665146:android:ab3fd8cf45c5309ea94cc3",
+        "android_client_info": {
+          "package_name": "be.seppevandenberk.degrootrally"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "203277665146-uvrepghubk0l8dh8eht5sunh2rfonttr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKXluEbsWkEZcnRgZ69VJt3ltAUMYAgk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "203277665146-uvrepghubk0l8dh8eht5sunh2rfonttr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

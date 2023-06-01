@@ -114,6 +114,7 @@ class AccountFragment : Fragment() {
         if (resultCode == RESULT_OK && requestCode == 100) {
             imageUri = data?.data
             imageAccountIcon.setImageURI(imageUri)
+
         }
     }
 }

@@ -5,21 +5,26 @@
 
     <item
         android:id="@+id/nav_home"
-        android:title="Home" />
+        android:title="Home"
+        android:icon="@drawable/ic_home"/>
     <item
         android:id="@+id/nav_kalender_en_resultaten"
-        android:title="Kalender en Resultaten" />
+        android:title="Kalender en Resultaten"
+        android:icon="@drawable/ic_calendar"/>
 
     <item
         android:id="@+id/nav_picture"
-        android:title="Upload Pictures" />
+        android:title="Upload Pictures"
+        android:icon="@drawable/ic_camera"/>
 
     <item
         android:id="@+id/nav_maps"
-        android:title="Location" />
+        android:title="Location"
+        android:icon="@drawable/ic_maps"/>
 
     <item
         android:id="@+id/nav_account"
-        android:title="Account" />
+        android:title="Account"
+        android:icon="@drawable/ic_person"/>
 
 </menu>

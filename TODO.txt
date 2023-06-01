@@ -1,10 +1,1 @@
-//TODO
 
-- voeg picture upload fragment toe (https://developer.android.com/training/camera-deprecated/photobasics)
-- wheather
-- save account image toe
-- maak homepage (next event - news - last result)
-
-- add rally button in kalender en resultaten (if admin account + save data to file) = RecyclerView
-- voeg optie toe om route naar rally te krijgen
-- Read website en voeg toe aan kalender aan resultaten (https://developer.android.com/codelabs/basic-android-kotlin-training-getting-data-internet#0)
