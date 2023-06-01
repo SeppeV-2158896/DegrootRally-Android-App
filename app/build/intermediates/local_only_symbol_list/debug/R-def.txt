@@ -35,7 +35,6 @@ id addButton
 id addRaceBtn
 id address_txt_ed
 id admin_txt_vw
-id body_news_txt_ed
 id btnSelectPhotos
 id change_password_btn
 id change_to_new_password_btn
@@ -44,6 +43,7 @@ id constraintLayout
 id copilot_txt_ed
 id current_password_txt_ed
 id date_txt_vw
+id delNewsBtn
 id drawerLayout
 id email_new_txt_ed
 id email_txt_ed
@@ -74,6 +74,7 @@ id nav_maps
 id nav_picture
 id new_password_txt_ed
 id news
+id newsBtn
 id news_body_txt_vw
 id news_image
 id news_txt_vw
@@ -90,16 +91,16 @@ id recyclerView
 id register_btn
 id register_txt_vw
 id result_txt_ed
+id saveNewsBtn
 id sensorDataCardView
 id submit_btn
 id temperatureTextView
 id textDescription
 id textFirebase
 id textTitle
-id textView
-id title_news_txt_ed
 id title_txt_ed
 id txt_lastResult_vw
+id txt_news_ed
 id txt_nextEvent_vw
 id upload_image_vw
 id username_new_txt_ed
@@ -114,11 +115,11 @@ layout activity_maps
 layout fragment_account
 layout fragment_add_race
 layout fragment_change_password
+layout fragment_edit_news
 layout fragment_forgot_password
 layout fragment_hoofd_menu
 layout fragment_kalender_en_resultaten
 layout fragment_login
-layout fragment_news
 layout fragment_picture
 layout fragment_sign_up
 layout nav_header

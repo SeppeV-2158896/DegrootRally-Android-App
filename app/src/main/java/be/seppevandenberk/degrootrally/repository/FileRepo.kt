@@ -6,4 +6,6 @@ interface FileRepo {
     fun save(items : ArrayList<RallyItem>)
     fun read() : ArrayList<RallyItem>
     fun delete()
+    fun saveString(string: String)
+    fun readString() : String?
 }

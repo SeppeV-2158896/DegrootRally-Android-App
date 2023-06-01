@@ -3045,7 +3045,6 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
-id body_news_txt_ed
 id bottom
 id bounce
 id bounceBoth
@@ -3111,6 +3110,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delNewsBtn
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3318,6 +3318,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id new_password_txt_ed
 id news
+id newsBtn
 id news_body_txt_vw
 id news_image
 id news_txt_vw
@@ -3382,6 +3383,7 @@ id rounded
 id row_index_key
 id rtl
 id satellite
+id saveNewsBtn
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3487,7 +3489,6 @@ id textSpacerNoTitle
 id textStart
 id textTitle
 id textTop
-id textView
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -3501,7 +3502,6 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
-id title_news_txt_ed
 id title_template
 id title_txt_ed
 id toggle
@@ -3517,6 +3517,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id txt_lastResult_vw
+id txt_news_ed
 id txt_nextEvent_vw
 id unchecked
 id uniform
@@ -3683,11 +3684,11 @@ layout dynamic_feature_install_fragment
 layout fragment_account
 layout fragment_add_race
 layout fragment_change_password
+layout fragment_edit_news
 layout fragment_forgot_password
 layout fragment_hoofd_menu
 layout fragment_kalender_en_resultaten
 layout fragment_login
-layout fragment_news
 layout fragment_picture
 layout fragment_sign_up
 layout m3_alert_dialog

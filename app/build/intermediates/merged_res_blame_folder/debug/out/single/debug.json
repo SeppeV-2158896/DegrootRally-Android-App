@@ -16,16 +16,20 @@
         "source": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-76:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-74:\\mipmap-xxhdpi_ic_launcher_square.png.flat",
-        "source": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-76:\\mipmap-xxhdpi\\ic_launcher_square.png"
-    },
-    {
         "merged": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-74:\\layout_fragment_login.xml.flat",
         "source": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-76:\\layout\\fragment_login.xml"
     },
     {
+        "merged": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-74:\\mipmap-xxhdpi_ic_launcher_square.png.flat",
+        "source": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-76:\\mipmap-xxhdpi\\ic_launcher_square.png"
+    },
+    {
         "merged": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-74:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-76:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-74:\\layout_fragment_edit_news.xml.flat",
+        "source": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-76:\\layout\\fragment_edit_news.xml"
     },
     {
         "merged": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-74:\\layout_fragment_change_password.xml.flat",
@@ -78,10 +82,6 @@
     {
         "merged": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-74:\\layout_fragment_picture.xml.flat",
         "source": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-main-76:\\layout\\fragment_picture.xml"
-    },
-    {
-        "merged": "be.seppevandenberk.degrootrally.app-merged_res-74:/layout_fragment_change_password.xml.flat",
-        "source": "be.seppevandenberk.degrootrally.app-main-76:/layout/fragment_change_password.xml"
     },
     {
         "merged": "C:\\Users\\jan-m\\.gradle\\daemon\\7.5\\be.seppevandenberk.degrootrally.app-merged_res-74:\\layout_nav_header.xml.flat",

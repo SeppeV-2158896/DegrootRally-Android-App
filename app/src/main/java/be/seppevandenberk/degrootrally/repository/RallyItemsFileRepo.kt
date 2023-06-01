@@ -1,7 +1,6 @@
 package be.seppevandenberk.degrootrally.repository
 
 import android.content.Context
-import android.util.Log
 import be.seppevandenberk.degrootrally.model.RallyItem
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -35,12 +34,19 @@ class RallyItemsFileRepo(val context : Context) : FileRepo{
     }
 
     override fun delete(){
-        //val where: File = context.filesDir
         val filePath = context.filesDir.absolutePath + "/rallyItemsFile.txt"
         val file = File(filePath)
         if(file.exists()){
             file.delete()
-            Log.i("File", "file deleted")
         }
+    }
+
+    override fun saveString(string: String) {
+        //should do nothing
+    }
+
+    override fun readString(): String? {
+        //should do nothing
+        return ""
     }
 }
