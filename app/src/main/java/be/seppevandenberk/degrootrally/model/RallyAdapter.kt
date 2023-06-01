@@ -14,9 +14,11 @@ import java.util.*
 class RallyAdapter(val items: List<RallyItem>) :
     RecyclerView.Adapter<RallyAdapter.RallyItemViewHolder>() {
     private var deleteButtonsVisible = true
+    private var mapsButtonVisible = true
     interface OnItemClickListener {
         fun onDeleteClick(position: Int)
         fun onEditClick(position: Int)
+        fun onMapsClick(position: Int)
     }
     private var listener: OnItemClickListener? = null
     fun setOnItemClickListener(listener: OnItemClickListener) {
@@ -26,10 +28,15 @@ class RallyAdapter(val items: List<RallyItem>) :
         deleteButtonsVisible = visible
         notifyDataSetChanged()
     }
+    fun setMapsButtonVisible(visible: Boolean) {
+        mapsButtonVisible = visible
+        notifyDataSetChanged()
+    }
     inner class RallyItemViewHolder(currentItemView: View) :
         RecyclerView.ViewHolder(currentItemView){
             val deleteImageView: ImageView = currentItemView.findViewById(R.id.im_trash_vw)
             val editImageView: ImageView = currentItemView.findViewById(R.id.im_editPen_vw)
+            val mapsImageView: ImageView = currentItemView.findViewById(R.id.im_maps_vw)
         }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RallyItemViewHolder {
@@ -57,6 +64,9 @@ class RallyAdapter(val items: List<RallyItem>) :
         holder.editImageView.setOnClickListener {
             listener?.onEditClick(position)
         }
+        holder.mapsImageView.setOnClickListener {
+            listener?.onMapsClick(position)
+        }
 
         if (deleteButtonsVisible) {
             holder.deleteImageView.visibility = View.VISIBLE
@@ -64,6 +74,11 @@ class RallyAdapter(val items: List<RallyItem>) :
         } else {
             holder.deleteImageView.visibility = View.INVISIBLE
             holder.editImageView.visibility = View.INVISIBLE
+        }
+        if (mapsButtonVisible){
+            holder.mapsImageView.visibility = View.VISIBLE
+        } else {
+            holder.mapsImageView.visibility = View.INVISIBLE
         }
     }
 

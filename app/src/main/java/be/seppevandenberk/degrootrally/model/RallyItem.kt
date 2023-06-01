@@ -8,7 +8,8 @@ data class RallyItem(
     val piloot: String,
     val copiloot: String,
     val date: Date,
-    var result: String
+    var result: String,
+    val address: String
 ) {
 
 }

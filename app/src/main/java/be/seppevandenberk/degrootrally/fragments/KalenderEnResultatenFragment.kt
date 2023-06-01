@@ -1,16 +1,14 @@
 package be.seppevandenberk.degrootrally.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.databinding.FragmentKalenderEnResultatenBinding
@@ -20,10 +18,11 @@ import be.seppevandenberk.degrootrally.model.User
 import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
 import be.seppevandenberk.degrootrally.repository.RallyItemsFileRepo
 import com.google.android.material.snackbar.Snackbar
-import java.time.Duration
+import java.net.URLEncoder
 
 class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resultaten) {
     val rallyItems = mutableListOf<RallyItem>()
+    var sortedRallyItems = mutableListOf<RallyItem>()
     private lateinit var binding: FragmentKalenderEnResultatenBinding
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -37,7 +36,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
 
-        var sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
+        sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
 
         var adapter = RallyAdapter(sortedRallyItems)
         binding.recyclerView.adapter = adapter
@@ -51,7 +50,6 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             val type = user.getType()
             if (type != "Admin"){
                 binding.addButton.visibility = View.INVISIBLE
-                binding.deleteBtn.visibility = View.INVISIBLE
                 adapter.setEditDeleteButtonsVisible(false)
             }
         }
@@ -60,22 +58,20 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             displayFragment(AddRaceFragment())
         }
 
-        binding.deleteBtn.setOnClickListener {
-            if (rallyItemsFileRepo != null) {
-                rallyItemsFileRepo.delete()
-            }
-            rallyItems.clear()
-            adapter.notifyDataSetChanged()
-        }
-
         adapter.setOnItemClickListener(object : RallyAdapter.OnItemClickListener{
             override fun onDeleteClick(position: Int) {
-                sortedRallyItems.removeAt(position)
-                if (rallyItemsFileRepo != null) {
-                    rallyItemsFileRepo.delete()
-                    rallyItemsFileRepo.save(sortedRallyItems)
+                if (sortedRallyItems.size - 1 < 1){
+                    val rootView = binding.root
+                    Snackbar.make(rootView, "There must be at least one item in this list.", Snackbar.LENGTH_SHORT).show()
                 }
-                adapter.notifyItemRemoved(position)
+                else{
+                    sortedRallyItems.removeAt(position)
+                    if (rallyItemsFileRepo != null) {
+                        rallyItemsFileRepo.delete()
+                        rallyItemsFileRepo.save(sortedRallyItems as ArrayList<RallyItem>)
+                    }
+                    adapter.notifyDataSetChanged()
+                }
             }
 
             override fun onEditClick(position: Int) {
@@ -85,18 +81,32 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
                 args.putString("pilot", rallyItems[position].piloot)
                 args.putString("copilot", rallyItems[position].copiloot)
                 args.putString("result", rallyItems[position].result)
+                args.putString("address", rallyItems[position].address)
+
                 args.putInt("position", position)
+
                 val fragment = AddRaceFragment()
                 fragment.arguments = args
-                /*
-                rallyItems.removeAt(position)
-
-                if (rallyItemsFileRepo != null) {
-                    rallyItemsFileRepo.delete()
-                    rallyItemsFileRepo.save(rallyItems)
-                }
-                */
                 displayFragment(fragment)
+            }
+
+            override fun onMapsClick(position: Int) {
+                if(!(rallyItems[position].address.isNullOrBlank())){
+                    val address = rallyItems[position].address
+
+                    val encodedAddress = URLEncoder.encode(address, "UTF-8")
+                    val uri = "geo:0,0?q=$encodedAddress"
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
+                    intent.setPackage("com.google.android.apps.maps")
+
+                    if (intent.resolveActivity(requireActivity().packageManager) != null) {
+                        startActivity(intent)
+                    }
+                }
+                else{
+                    val rootView: View = binding.root
+                    Snackbar.make(rootView, "No location present, please add a location.", Snackbar.LENGTH_SHORT).show()
+                }
             }
         })
 
@@ -133,7 +143,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
 
-        var sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
+        sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
 
         var adapter = RallyAdapter(sortedRallyItems)
         adapter.notifyDataSetChanged()

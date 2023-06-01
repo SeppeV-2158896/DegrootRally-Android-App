@@ -21,12 +21,11 @@ import java.util.Calendar
 import java.util.Date
 
 class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
-    //Dit stuk code is om de json opslag file te kunnen deleten vanuit een andere fragment voor
-    // als er iets misloopt en we niet meer in de fragment met de delete knop geraken. ->
     private lateinit var binding: FragmentHoofdMenuBinding
     val rallyItems = mutableListOf<RallyItem>()
-    var rallyItemNextEvent = mutableListOf<RallyItem>()
-    var rallyItemLastResult = mutableListOf<RallyItem>()
+    val emptyRallyItem = RallyItem("No data provided.", "", "", Calendar.getInstance().time, "", "")
+    var rallyItemNextEvent = MutableList<RallyItem>(1){emptyRallyItem}
+    var rallyItemLastResult = MutableList<RallyItem>(1){emptyRallyItem}
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,8 +45,11 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         binding.recvwLastResultVw.adapter = adapterLastResult
         binding.recvwLastResultVw.layoutManager = LinearLayoutManager(this.context)
 
+        //Hiding the buttons on the main screen
         adapterLastResult.setEditDeleteButtonsVisible(false)
+        adapterLastResult.setMapsButtonVisible(false)
         adapterNextEvent.setEditDeleteButtonsVisible(false)
+        adapterNextEvent.setMapsButtonVisible(false)
 
         val user = ViewModelProvider(requireActivity()).get(ViewModelLoggedInUser::class.java)
         user.name.observe(viewLifecycleOwner){name ->
@@ -55,10 +57,7 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
             val type = user.getType()
             if (type != "Admin"){
                 binding.newsBodyTxtVw.setOnClickListener{
-                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                    transaction.replace(R.id.fragmentLayoutLogin, NewsFragment())
-                    transaction.addToBackStack(null)
-                    transaction.commit()
+                    displayFragment(NewsFragment())
                 }
             }
         }
@@ -66,9 +65,15 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         assignNextEventAndLastResultArray(rallyItems as ArrayList<RallyItem>)
         adapterLastResult.notifyDataSetChanged()
 
+        binding.nextEventBtn.setOnClickListener {
+            displayFragment(KalenderEnResultatenFragment())
+        }
+        binding.lastResultsBtn.setOnClickListener {
+            displayFragment(KalenderEnResultatenFragment())
+        }
+
         return binding.root
     }
-    // -> tot hier
     fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
         if (rallyItems.size > 1){
             var sortedRallyItems = rallyItems
@@ -83,25 +88,27 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
     fun assignNextEventAndLastResultArray(rallyItems: ArrayList<RallyItem>){
         var sortedRallyItems = sortRallyItemsByDate(rallyItems)
 
-        val emptyRallyItem = RallyItem("No data provided.", "", "", Calendar.getInstance().time, "")
+        rallyItemLastResult[0] = emptyRallyItem
+        rallyItemNextEvent[0] = emptyRallyItem
 
-        rallyItemLastResult.add(emptyRallyItem)
-        rallyItemNextEvent.add(emptyRallyItem)
-
+        var stopLoop: Boolean = false
         sortedRallyItems.forEachIndexed { index, rallyItem ->
-            if (index < sortedRallyItems.size - 1 && sortedRallyItems[index + 1].date >= Calendar.getInstance().time) {
+            if(stopLoop) return
+
+            if (index < sortedRallyItems.size - 1 && rallyItem.date <= Calendar.getInstance().time && sortedRallyItems[index + 1].date >= Calendar.getInstance().time) {
                 rallyItemLastResult[0] = rallyItem
                 rallyItemNextEvent[0] = sortedRallyItems[index + 1]
                 return
             }
             else if (index >= sortedRallyItems.size - 1 && Calendar.getInstance().time > rallyItem.date){
                 rallyItemLastResult[0] = rallyItem
-                rallyItemNextEvent[0] = RallyItem("No next event present.", "", "", Calendar.getInstance().time, "")
+                rallyItemNextEvent[0] = RallyItem("No next event present.", "", "", Calendar.getInstance().time, "", "")
                 return
             }
-            else{
-                rallyItemLastResult[0] = RallyItem("No next event present.", "", "", Calendar.getInstance().time, "")
+            else if (Calendar.getInstance().time < sortedRallyItems.first().date){
+                rallyItemLastResult[0] = RallyItem("No results present.", "", "", Calendar.getInstance().time, "", "")
                 rallyItemNextEvent[0] = rallyItem
+                stopLoop = true
                 return
             }
         }
@@ -124,5 +131,11 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
 
         binding.recvwNextEventVw.adapter?.notifyDataSetChanged()
         binding.recvwLastResultVw.adapter?.notifyDataSetChanged()
+    }
+    fun displayFragment(fragment: Fragment) {
+        val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
+        transaction.replace(R.id.fragmentLayoutMain, fragment)
+        transaction.addToBackStack(null)
+        transaction.commit()
     }
 }
