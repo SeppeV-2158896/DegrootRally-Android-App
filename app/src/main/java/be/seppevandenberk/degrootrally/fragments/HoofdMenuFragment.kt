@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.seppevandenberk.degrootrally.R
@@ -20,12 +21,11 @@ import java.util.Calendar
 import java.util.Date
 
 class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
-    //Dit stuk code is om de json opslag file te kunnen deleten vanuit een andere fragment voor
-    // als er iets misloopt en we niet meer in de fragment met de delete knop geraken. ->
     private lateinit var binding: FragmentHoofdMenuBinding
     val rallyItems = mutableListOf<RallyItem>()
-    var rallyItemNextEvent = mutableListOf<RallyItem>()
-    var rallyItemLastResult = mutableListOf<RallyItem>()
+    val emptyRallyItem = RallyItem("No data provided.", "", "", Calendar.getInstance().time, "", "")
+    var rallyItemNextEvent = MutableList<RallyItem>(1){emptyRallyItem}
+    var rallyItemLastResult = MutableList<RallyItem>(1){emptyRallyItem}
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -57,10 +57,7 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
             val type = user.getType()
             if (type != "Admin"){
                 binding.newsBodyTxtVw.setOnClickListener{
-                    val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
-                    transaction.replace(R.id.fragmentLayoutLogin, NewsFragment())
-                    transaction.addToBackStack(null)
-                    transaction.commit()
+                    displayFragment(NewsFragment())
                 }
             }
         }
@@ -68,16 +65,15 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         assignNextEventAndLastResultArray(rallyItems as ArrayList<RallyItem>)
         adapterLastResult.notifyDataSetChanged()
 
-        binding.recvwNextEventVw.setOnClickListener {
+        binding.nextEventBtn.setOnClickListener {
             displayFragment(KalenderEnResultatenFragment())
         }
-        binding.recvwLastResultVw.setOnClickListener {
+        binding.lastResultsBtn.setOnClickListener {
             displayFragment(KalenderEnResultatenFragment())
         }
 
         return binding.root
     }
-    // -> tot hier
     fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
         if (rallyItems.size > 1){
             var sortedRallyItems = rallyItems

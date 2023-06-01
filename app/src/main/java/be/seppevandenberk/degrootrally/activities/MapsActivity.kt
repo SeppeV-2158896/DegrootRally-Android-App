@@ -53,9 +53,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
     private lateinit var locationManager : LocationManager
     val client = OkHttpClient()
     private lateinit var sensorManager: SensorManager
-    private lateinit var temperatureSensor: Sensor
-    private lateinit var humiditySensor: Sensor
-    private lateinit var pressureSensor: Sensor
+    private var temperatureSensor: Sensor? = null
+    private var humiditySensor: Sensor? = null
+    private var pressureSensor: Sensor? = null
     private lateinit var windTextView: TextView
     private lateinit var windButton: Button
 
@@ -68,9 +68,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
-        humiditySensor = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY)
-        pressureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE)
+        if (sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE) != null){
+            temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
+        }
+        if (sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY) != null){
+            humiditySensor = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY)
+        }
+        if (sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE) != null){
+            pressureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE)
+        }
         windTextView = findViewById(R.id.windSpeedTextView)
         windButton = findViewById(R.id.wind_data_button)
 
@@ -138,13 +144,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
 
     override fun onSensorChanged(event: SensorEvent?) {
         if (event != null) {
-            if (event.sensor == temperatureSensor) {
+            if (temperatureSensor != null && event.sensor == temperatureSensor) {
                 val temperature = event.values[0] // Temperature value in Celsius
                 this.findViewById<TextView>(R.id.temperatureTextView).text = "Temperature: " + temperature.toString() + " °C"
-            } else if (event.sensor == humiditySensor) {
+            } else if (humiditySensor != null && event.sensor == humiditySensor) {
                 val humidity = event.values[0] // Humidity value in percentage
                 this.findViewById<TextView>(R.id.humidityTextView).text = "Humidity: " + humidity.toString() + " %"
-            } else if (event.sensor == pressureSensor) {
+            } else if (pressureSensor != null && event.sensor == pressureSensor) {
                 val pressure = event.values[0] // Pressure value in hPa (millibar)
                 this.findViewById<TextView>(R.id.pressureTextView).text = "Pressure: " + pressure.toString() + " hPa"
             }
