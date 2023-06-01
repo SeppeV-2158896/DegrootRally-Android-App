@@ -9,19 +9,23 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import be.seppevandenberk.degrootrally.R
+import be.seppevandenberk.degrootrally.databinding.FragmentAddRaceBinding
+import be.seppevandenberk.degrootrally.databinding.FragmentChangePasswordBinding
 
 class ChangePasswordFragment : Fragment() {
     private lateinit var oldPassword: EditText
     private lateinit var newPassword: EditText
     private lateinit var confirmPassword: EditText
     private lateinit var confirmBtn: Button
+    private lateinit var binding : FragmentChangePasswordBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.fragment_change_password, container, false)
+        binding = FragmentChangePasswordBinding.inflate(layoutInflater)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

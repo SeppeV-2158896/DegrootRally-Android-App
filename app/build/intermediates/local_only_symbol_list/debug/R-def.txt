@@ -5,6 +5,7 @@ color darkGreen
 color degrootGreen
 color errorRed
 color ic_launcher_background
+color light_pastel_green
 color pastel_green
 color purple_200
 color purple_500
@@ -32,6 +33,7 @@ id TitelRallyEnDatum
 id account_image_ic
 id addButton
 id addRaceBtn
+id address_txt_ed
 id admin_txt_vw
 id body_news_txt_ed
 id btnSelectPhotos
@@ -42,7 +44,6 @@ id constraintLayout
 id copilot_txt_ed
 id current_password_txt_ed
 id date_txt_vw
-id deleteBtn
 id drawerLayout
 id email_new_txt_ed
 id email_txt_ed
@@ -54,8 +55,9 @@ id frameLayoutKalender
 id guest_txt_vw
 id humidityTextView
 id im_editPen_vw
+id im_maps_vw
 id im_trash_vw
-id imageView
+id lastResultsBtn
 id last_events
 id login_btn
 id login_guest_btn
@@ -74,6 +76,7 @@ id news
 id news_body_txt_vw
 id news_image
 id news_txt_vw
+id nextEventBtn
 id next_events
 id password_confirm_txt_ed
 id password_new_txt_ed
@@ -85,6 +88,7 @@ id recvw_nextEvent_vw
 id recyclerView
 id register_btn
 id register_txt_vw
+id result_txt_ed
 id sensorDataCardView
 id submit_btn
 id temperatureTextView
@@ -96,7 +100,6 @@ id title_news_txt_ed
 id title_txt_ed
 id txt_lastResult_vw
 id txt_nextEvent_vw
-id txt_result_ed
 id upload_image_vw
 id username_new_txt_ed
 id username_txt_vw
@@ -130,6 +133,7 @@ string app_name
 string change
 string confirm
 string current
+string date
 string default_web_client_id
 string email
 string forgot
@@ -140,6 +144,7 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string guest
 string hello_blank_fragment
+string humidity
 string login
 string logout
 string nav_close
@@ -147,8 +152,11 @@ string nav_open
 string newpw
 string no_account
 string password
+string pressure
 string project_id
+string save
 string submit
+string temperature
 string title_activity_login
 string title_activity_maps
 string username

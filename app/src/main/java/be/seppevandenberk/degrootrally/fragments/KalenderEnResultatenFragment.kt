@@ -19,6 +19,7 @@ import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
 import be.seppevandenberk.degrootrally.repository.RallyItemsFileRepo
 import com.google.android.material.snackbar.Snackbar
 import java.net.URLEncoder
+import java.util.Date
 
 class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resultaten) {
     val rallyItems = mutableListOf<RallyItem>()
@@ -32,7 +33,12 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
     ): View {
         binding = FragmentKalenderEnResultatenBinding.inflate(layoutInflater)
 
+        initializeArray(rallyItems)
+
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
+        if (rallyItemsFileRepo != null) {
+            rallyItemsFileRepo.save(rallyItems as ArrayList<RallyItem>)
+        }
         if (rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size) {
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
@@ -155,5 +161,55 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
 
         val adapter = RallyAdapter(sortedRallyItems)
         adapter.notifyDataSetChanged()
+    }
+
+    fun initializeArray(rallyItems: MutableList<RallyItem>){
+        val rallyVanHaspengouw2017 = RallyItem("Rally van Haspengouw 2017","Nico Degroot","Kenneth Dardenne",
+            Date(2017-1900,2-1,27),"29","Lichtenberglaan 1090,3800 Sint-Truiden")
+        rallyItems.add(rallyVanHaspengouw2017)
+        val rallyeDeHannut2017 = RallyItem("Rallye De Hannut 2017","Nico Degroot","Mike van den Brink",
+            Date(2017-1900,3-1,12),"32","Rue Lambert Mottart 21, 4280 Hannut")
+        rallyItems.add(rallyeDeHannut2017)
+        val sezoensrally2017 = RallyItem("Sezoensrally 2017","Nico Degroot","Kenneth Dardenne",
+            Date(2017-1900,5-1,20),"21","Dorperheideweg 56, 3950 Bocholt, België")
+        rallyItems.add(sezoensrally2017)
+        val bouclesChevrotines2017 = RallyItem("Boucles Chevrotines 2017","Nico Degroot","Veerle Bovy",
+            Date(2017-1900,8-1,6),"Retired","Rue de l’Ile Dossai 12, 5300 SCLAYN")
+        rallyItems.add(bouclesChevrotines2017)
+        val criteriumJeanLouisDumont2017 = RallyItem("Critérium Jean-Louis Dumont 2017","Nico Degroot","Nicky Vandepoel",
+            Date(2017-1900,9-1,17),"15","Zoning industriel de Waremme 4300 Borgworm")
+        rallyItems.add(criteriumJeanLouisDumont2017)
+        val rallyVanZuidLimburg2017 = RallyItem("Rally van Zuid-Limburg 2017","Nico Degroot","Filip Keyen",
+            Date(2017-1900,11-1,12),"24"," Ambachtsweg 5  - 3890 Gingelom")
+        rallyItems.add(rallyVanZuidLimburg2017)
+        val rallyVanHaspengouw2018 = RallyItem("Rally van Haspengouw 2018","Nico Degroot","Mike van den Brink",
+            Date(2018-1900,2-1,24),"20","Lichtenberglaan 1090,3800 Sint-Truiden")
+        rallyItems.add(rallyVanHaspengouw2018)
+        val rallyeDeHannut2018 = RallyItem("Rallye De Hannut 2018","Nico Degroot","Thomas Driesen",
+            Date(2018-1900,3-1,11),"Accident","Rue Lambert Mottart 21, 4280 Hannut")
+        rallyItems.add(rallyeDeHannut2018)
+        val rallyVanZuidLimburg2018 = RallyItem("Rally van Zuid-Limburg 2018","Nico Degroot","Thomas Driesen",
+            Date(2018-1900,11-1,11),"43"," Ambachtsweg 5  - 3890 Gingelom")
+        rallyItems.add(rallyVanZuidLimburg2018)
+        val rallyVanHaspengouw2020 = RallyItem("Rally van Haspengouw 2020","Nico Degroot","Veerle Bovy",
+            Date(2020-1900,2-1,29),"Accident","Lichtenberglaan 1090,3800 Sint-Truiden")
+        rallyItems.add(rallyVanHaspengouw2020)
+        val rallyVanHaspengouw2022 = RallyItem("Rally van Haspengouw 2022","Nico Degroot","Mike van den Brink",
+            Date(2022-1900,2-1,26),"Retired","Lichtenberglaan 1090,3800 Sint-Truiden")
+        rallyItems.add(rallyVanHaspengouw2022)
+        val rallyeSprintDeHaillot2022 = RallyItem("Rallye Sprint De Haillot","Nico Degroot","David Vanrijkelen",
+            Date(2022-1900,5-1,26),"Windscreen","Rue de I'lle Dossai 12,5300 Sclayn")
+        rallyItems.add(rallyeSprintDeHaillot2022)
+        val rallyVanZuidLimburg2022 = RallyItem("Rally van Zuid-Limburg 2022","Nico Degroot","Thomas Driesen",
+            Date(2022-1900,11-1,13),"Course Car"," Ambachtsweg 5  - 3890 Gingelom")
+        rallyItems.add(rallyVanZuidLimburg2022)
+        val rallyVanHaspengouw2023 = RallyItem("Rally van Haspengouw 2023","Nico Degroot","Thomas Driesen",
+            Date(2023-1900,2-1,25),"Retired","Lichtenberglaan 1090,3800 Sint-Truiden")
+        rallyItems.add(rallyVanHaspengouw2023)
+        val sezoensrally2023 = RallyItem("Sezoensrally 2023","Nico Degroot","Thomas Driesen",
+            Date(2023-1900,5-1,20),"DNS","Dorperheideweg 56, 3950 Bocholt, België")
+        rallyItems.add(sezoensrally2023)
+
+
     }
 }
