@@ -10,38 +10,37 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.databinding.FragmentHoofdMenuBinding
-import be.seppevandenberk.degrootrally.databinding.FragmentKalenderEnResultatenBinding
 import be.seppevandenberk.degrootrally.model.RallyAdapter
 import be.seppevandenberk.degrootrally.model.RallyItem
 import be.seppevandenberk.degrootrally.model.User
 import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
 import be.seppevandenberk.degrootrally.repository.RallyItemsFileRepo
-import java.math.BigDecimal
 import java.util.Calendar
-import java.util.Date
 
 class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
     private lateinit var binding: FragmentHoofdMenuBinding
-    val rallyItems = mutableListOf<RallyItem>()
-    val emptyRallyItem = RallyItem("No data provided.", "", "", Calendar.getInstance().time, "", "")
-    var rallyItemNextEvent = MutableList<RallyItem>(1){emptyRallyItem}
-    var rallyItemLastResult = MutableList<RallyItem>(1){emptyRallyItem}
+    private val rallyItems = mutableListOf<RallyItem>()
+    private val emptyRallyItem = RallyItem("No data provided.", "", "", Calendar.getInstance().time, "", "")
+    private var rallyItemNextEvent = MutableList(1){emptyRallyItem}
+    private var rallyItemLastResult = MutableList(1){emptyRallyItem}
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
         if(rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size){
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
+
         binding = FragmentHoofdMenuBinding.inflate(layoutInflater)
 
-        var adapterNextEvent = RallyAdapter(rallyItemNextEvent)
+        val adapterNextEvent = RallyAdapter(rallyItemNextEvent)
         binding.recvwNextEventVw.adapter = adapterNextEvent
         binding.recvwNextEventVw.layoutManager = LinearLayoutManager(this.context)
 
-        var adapterLastResult = RallyAdapter(rallyItemLastResult)
+        val adapterLastResult = RallyAdapter(rallyItemLastResult)
         binding.recvwLastResultVw.adapter = adapterLastResult
         binding.recvwLastResultVw.layoutManager = LinearLayoutManager(this.context)
 
@@ -51,7 +50,7 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         adapterNextEvent.setEditDeleteButtonsVisible(false)
         adapterNextEvent.setMapsButtonVisible(false)
 
-        val user = ViewModelProvider(requireActivity()).get(ViewModelLoggedInUser::class.java)
+        val user = ViewModelProvider(requireActivity())[ViewModelLoggedInUser::class.java]
         user.name.observe(viewLifecycleOwner){name ->
             val user = User(null,name,"",null,requireContext())
             val type = user.getType()
@@ -74,27 +73,25 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
 
         return binding.root
     }
-    fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
+
+    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
         if (rallyItems.size > 1){
-            var sortedRallyItems = rallyItems
-            sortedRallyItems.sortWith(Comparator{rallyItem1, rallyItem2 ->
+            val sortedRallyItems = rallyItems
+            sortedRallyItems.sortWith { rallyItem1, rallyItem2 ->
                 rallyItem1.date.compareTo(rallyItem2.date)
-            })
+            }
             return sortedRallyItems
         }
         return rallyItems
     }
 
-    fun assignNextEventAndLastResultArray(rallyItems: ArrayList<RallyItem>){
-        var sortedRallyItems = sortRallyItemsByDate(rallyItems)
+    private fun assignNextEventAndLastResultArray(rallyItems: ArrayList<RallyItem>){
+        val sortedRallyItems = sortRallyItemsByDate(rallyItems)
 
         rallyItemLastResult[0] = emptyRallyItem
         rallyItemNextEvent[0] = emptyRallyItem
 
-        var stopLoop: Boolean = false
         sortedRallyItems.forEachIndexed { index, rallyItem ->
-            if(stopLoop) return
-
             if (index < sortedRallyItems.size - 1 && rallyItem.date <= Calendar.getInstance().time && sortedRallyItems[index + 1].date >= Calendar.getInstance().time) {
                 rallyItemLastResult[0] = rallyItem
                 rallyItemNextEvent[0] = sortedRallyItems[index + 1]
@@ -108,11 +105,11 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
             else if (Calendar.getInstance().time < sortedRallyItems.first().date){
                 rallyItemLastResult[0] = RallyItem("No results present.", "", "", Calendar.getInstance().time, "", "")
                 rallyItemNextEvent[0] = rallyItem
-                stopLoop = true
                 return
             }
         }
     }
+
     //refresh front page every time its opened so data is always up-to-date
     override fun onResume() {
         super.onResume()
@@ -132,7 +129,8 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         binding.recvwNextEventVw.adapter?.notifyDataSetChanged()
         binding.recvwLastResultVw.adapter?.notifyDataSetChanged()
     }
-    fun displayFragment(fragment: Fragment) {
+
+    private fun displayFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
         transaction.replace(R.id.fragmentLayoutMain, fragment)
         transaction.addToBackStack(null)

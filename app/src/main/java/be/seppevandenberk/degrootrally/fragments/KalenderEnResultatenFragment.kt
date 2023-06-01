@@ -24,11 +24,12 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
     val rallyItems = mutableListOf<RallyItem>()
     var sortedRallyItems = mutableListOf<RallyItem>()
     private lateinit var binding: FragmentKalenderEnResultatenBinding
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentKalenderEnResultatenBinding.inflate(layoutInflater)
 
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
@@ -38,13 +39,13 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
 
         sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
 
-        var adapter = RallyAdapter(sortedRallyItems)
+        val adapter = RallyAdapter(sortedRallyItems)
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
 
         adapter.setEditDeleteButtonsVisible(true)
 
-        val user = ViewModelProvider(requireActivity()).get(ViewModelLoggedInUser::class.java)
+        val user = ViewModelProvider(requireActivity())[ViewModelLoggedInUser::class.java]
         user.name.observe(viewLifecycleOwner){name ->
             val user = User(null,name,"",null,requireContext())
             val type = user.getType()
@@ -91,7 +92,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             }
 
             override fun onMapsClick(position: Int) {
-                if(!(rallyItems[position].address.isNullOrBlank())){
+                if(rallyItems[position].address.isNotBlank()){
                     val address = rallyItems[position].address
 
                     val encodedAddress = URLEncoder.encode(address, "UTF-8")
@@ -112,6 +113,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
 
         return binding.root
     }
+
     fun displayFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
         transaction.replace(R.id.fragmentLayoutMain, fragment)
@@ -119,12 +121,12 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         transaction.commit()
     }
 
-    fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
+    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
         if (rallyItems.size > 1){
-            var sortedRallyItems = rallyItems
-            sortedRallyItems.sortWith(Comparator{rallyItem1, rallyItem2 ->
+            val sortedRallyItems = rallyItems
+            sortedRallyItems.sortWith { rallyItem1, rallyItem2 ->
                 rallyItem1.date.compareTo(rallyItem2.date)
-            })
+            }
             return sortedRallyItems
         }
         return rallyItems
@@ -145,7 +147,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
 
         sortedRallyItems = sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
 
-        var adapter = RallyAdapter(sortedRallyItems)
+        val adapter = RallyAdapter(sortedRallyItems)
         adapter.notifyDataSetChanged()
     }
 }

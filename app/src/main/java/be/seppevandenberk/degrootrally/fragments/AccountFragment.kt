@@ -1,5 +1,4 @@
 package be.seppevandenberk.degrootrally.fragments
-import ChangePasswordFragment
 import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.net.Uri
@@ -17,14 +16,10 @@ import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 
 import be.seppevandenberk.degrootrally.R
-import be.seppevandenberk.degrootrally.activities.LoginActivity
-import be.seppevandenberk.degrootrally.activities.MainActivity
 import be.seppevandenberk.degrootrally.model.User
 import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
 
-
 class AccountFragment : Fragment() {
-
     private lateinit var imageAccountIcon: ImageView
     private lateinit var changePasswordButton: Button
     private lateinit var loginButton: Button
@@ -33,7 +28,6 @@ class AccountFragment : Fragment() {
     private lateinit var email : TextView
     private var imageUri : Uri? = null
     private val changePasswordFragment = ChangePasswordFragment()
-
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_account, container, false)
@@ -49,10 +43,9 @@ class AccountFragment : Fragment() {
         userName = view.findViewById(R.id.username_txt_vw)
         email = view.findViewById(R.id.email_txt_vw)
 
-        // Set initial account icon
         imageAccountIcon.setImageResource(R.drawable.ic_account)
 
-        val user = ViewModelProvider(requireActivity()).get(ViewModelLoggedInUser::class.java)
+        val user = ViewModelProvider(requireActivity())[ViewModelLoggedInUser::class.java]
         user.name.observe(viewLifecycleOwner){name ->
             val user = User(null,name,"",null,requireContext())
             val type = user.getType()
@@ -75,7 +68,7 @@ class AccountFragment : Fragment() {
                 email.visibility = View.VISIBLE
                 userName.text = name
                 val data = user.getEmail()
-                email.text = data;
+                email.text = data
                 changePasswordButton.visibility = View.VISIBLE
                 loginButton.visibility = View.INVISIBLE
                 logoutButton.visibility = View.VISIBLE
@@ -86,12 +79,14 @@ class AccountFragment : Fragment() {
         imageAccountIcon.setOnClickListener {
             requestPicture()
         }
+
         loginButton.setOnClickListener{
             val intent = requireActivity().baseContext.packageManager.getLaunchIntentForPackage(requireActivity().baseContext.packageName)
             intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             requireActivity().finish()
             startActivity(intent)
         }
+
         logoutButton.setOnClickListener{
             val loggedInUser = ViewModelProvider(this)[ViewModelLoggedInUser::class.java]
             loggedInUser.name.value = ""
@@ -107,9 +102,6 @@ class AccountFragment : Fragment() {
             transaction.addToBackStack(null)
             transaction.commit()
         }
-
-
-
     }
 
     private fun requestPicture(){

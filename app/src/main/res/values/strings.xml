@@ -21,6 +21,11 @@
     <string name="change">Change Password</string>
     <string name="logout">Logout</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="date">Date</string>
+    <string name="save">Save</string>
+    <string name="temperature">Temperature</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
 
     <string name="wind">Update Winddata</string>
 </resources>

@@ -1,3 +1,5 @@
+package be.seppevandenberk.degrootrally.fragments
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,21 +11,17 @@ import androidx.fragment.app.Fragment
 import be.seppevandenberk.degrootrally.R
 
 class ChangePasswordFragment : Fragment() {
-
     private lateinit var oldPassword : EditText
     private lateinit var newPassword : EditText
     private lateinit var confirmPassword : EditText
     private lateinit var confirmBtn : Button
-
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view = inflater.inflate(R.layout.fragment_change_password, container, false)
-
-        return view
+        return inflater.inflate(R.layout.fragment_change_password, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,7 +35,6 @@ class ChangePasswordFragment : Fragment() {
         confirmBtn.setOnClickListener{
             changePassword(oldPassword.text.toString(),newPassword.text.toString(),confirmPassword.text.toString())
         }
-
     }
 
     private fun changePassword(oldPassword : String,newPassword : String, confirmPassword: String){
@@ -50,7 +47,5 @@ class ChangePasswordFragment : Fragment() {
         else if (oldPassword == newPassword){
             Toast.makeText(requireContext(), "New password can't be the same as the old password!", Toast.LENGTH_LONG).show()
         }
-
     }
-
 }

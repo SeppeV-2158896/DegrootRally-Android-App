@@ -1,6 +1,5 @@
 package be.seppevandenberk.degrootrally.model
 
-import java.math.BigDecimal
 import java.util.Date
 
 data class RallyItem(
@@ -10,6 +9,4 @@ data class RallyItem(
     val date: Date,
     var result: String,
     val address: String
-) {
-
-}
+)

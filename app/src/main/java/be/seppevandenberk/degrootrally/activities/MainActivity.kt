@@ -17,7 +17,6 @@ import be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment
 import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
 import com.google.android.material.navigation.NavigationView
 
-
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
     private lateinit var binding: ActivityMainBinding
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
@@ -41,12 +40,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(binding.root)
     }
 
-
     private fun setupActionBarDrawer() {
         actionBarDrawerToggle =
             ActionBarDrawerToggle(this, binding.drawerLayout, R.string.nav_open, R.string.nav_close)
         binding.drawerLayout.addDrawerListener(actionBarDrawerToggle)
-
 
         actionBarDrawerToggle.syncState()
         binding.navView.setNavigationItemSelectedListener(this)
@@ -95,9 +92,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         TODO("Not yet implemented")
     }
 
-
-
-
     private fun displayFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.fragmentLayoutMain, fragment)
@@ -105,8 +99,4 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             commit()
         }
     }
-
-
-
-
 }

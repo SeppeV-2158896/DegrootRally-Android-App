@@ -13,7 +13,6 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
     override fun onCreate(db: SQLiteDatabase) {
         // below is a sqlite query, where column names along with their data types is given
-
         val query = ("CREATE TABLE " + TABLE_NAME + " ("
                 + EMAIL_COL + " EMAIL, " +
                 NAME_COL + " NAME," +
@@ -22,18 +21,15 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
 
         // method for executing our query
         db.execSQL(query)
-
-
     }
 
     override fun onUpgrade(db: SQLiteDatabase, p1: Int, p2: Int) {
         // this method is to check if table already exists
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME)
+        db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
         onCreate(db)
     }
 
     fun addUser(email: String, name: String, password: String, type: String) {
-
         val values = ContentValues()
 
         values.put(EMAIL_COL, email)
@@ -41,10 +37,8 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         values.put(PASSWORD_COL, password)
         values.put(TYPE_COL, type)
 
-        // here we are creating a
-        // writable variable of
-        // our database as we want to
-        // insert value in our database
+        // here we are creating a writable variable of
+        // our database as we want to insert value in our database
         val db = this.writableDatabase
 
         // all values are inserted into database
@@ -53,39 +47,31 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         db.close()
     }
 
-    // below method is to get
-    // all data from our database
+    // below method is to get all data from our database
     fun getUser(): Cursor? {
-
-        // here we are creating a readable
-        // variable of our database
-        // as we want to read value from it
+        // here we are creating a readable variable of our database as we want to read value from it
         val db = this.readableDatabase
 
-        // below code returns a cursor to
-        // read data from the database
-        val cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null)
+        // below code returns a cursor to read data from the database
+        val cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
 
         if (cursor.moveToFirst()){
             return cursor
         }
 
         return null
-
     }
 
     companion object {
         // here we have defined variables for our database
+        private const val DATABASE_NAME = "RALLY DEGROOT"
+        private const val DATABASE_VERSION = 1
 
-        private val DATABASE_NAME = "RALLY DEGROOT"
-
-        private val DATABASE_VERSION = 1
-
-        val TABLE_NAME = "gfg_table"
-        val EMAIL_COL = "email"
-        val NAME_COL = "name"
-        val PASSWORD_COL = "password"
-        val TYPE_COL = "type"
+        const val TABLE_NAME = "gfg_table"
+        const val EMAIL_COL = "email"
+        const val NAME_COL = "name"
+        const val PASSWORD_COL = "password"
+        const val TYPE_COL = "type"
     }
 
     fun getPath():String{

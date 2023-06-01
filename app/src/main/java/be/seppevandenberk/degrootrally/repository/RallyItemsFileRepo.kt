@@ -10,7 +10,6 @@ import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.FileReader
 
-
 class RallyItemsFileRepo(val context : Context) : FileRepo{
     override fun save(items: ArrayList<RallyItem>) {
         val fileName = "rallyItemsFile.txt"
@@ -22,16 +21,16 @@ class RallyItemsFileRepo(val context : Context) : FileRepo{
     }
 
     override fun read(): ArrayList<RallyItem> {
-        try{
+        return try{
             val where: File = context.filesDir
             val fileName = where.absolutePath + "/rallyItemsFile.txt"
 
             val gson = Gson()
             val rallyItemsListType = object : TypeToken<ArrayList<RallyItem>>() {}.type
             val model = gson.fromJson<ArrayList<RallyItem>>(FileReader(fileName), rallyItemsListType)
-            return model
+            model
         } catch (e: FileNotFoundException){
-            return ArrayList<RallyItem>(0)
+            ArrayList(0)
         }
     }
 

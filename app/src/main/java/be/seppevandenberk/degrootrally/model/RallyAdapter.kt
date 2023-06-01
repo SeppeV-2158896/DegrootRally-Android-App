@@ -7,31 +7,35 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import be.seppevandenberk.degrootrally.R
-import java.math.BigDecimal
 import java.text.SimpleDateFormat
 import java.util.*
 
-class RallyAdapter(val items: List<RallyItem>) :
+class RallyAdapter(private val items: List<RallyItem>) :
     RecyclerView.Adapter<RallyAdapter.RallyItemViewHolder>() {
     private var deleteButtonsVisible = true
     private var mapsButtonVisible = true
+
     interface OnItemClickListener {
         fun onDeleteClick(position: Int)
         fun onEditClick(position: Int)
         fun onMapsClick(position: Int)
     }
+
     private var listener: OnItemClickListener? = null
     fun setOnItemClickListener(listener: OnItemClickListener) {
         this.listener = listener
     }
+
     fun setEditDeleteButtonsVisible(visible: Boolean) {
         deleteButtonsVisible = visible
         notifyDataSetChanged()
     }
+
     fun setMapsButtonVisible(visible: Boolean) {
         mapsButtonVisible = visible
         notifyDataSetChanged()
     }
+
     inner class RallyItemViewHolder(currentItemView: View) :
         RecyclerView.ViewHolder(currentItemView){
             val deleteImageView: ImageView = currentItemView.findViewById(R.id.im_trash_vw)
@@ -83,5 +87,4 @@ class RallyAdapter(val items: List<RallyItem>) :
     }
 
     override fun getItemCount(): Int = items.size
-
 }

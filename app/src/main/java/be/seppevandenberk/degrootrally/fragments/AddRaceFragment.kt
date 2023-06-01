@@ -6,24 +6,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.text.set
 import androidx.fragment.app.FragmentTransaction
 import be.seppevandenberk.degrootrally.R
 import be.seppevandenberk.degrootrally.databinding.FragmentAddRaceBinding
-import be.seppevandenberk.degrootrally.databinding.FragmentKalenderEnResultatenBinding
 import be.seppevandenberk.degrootrally.model.RallyAdapter
 import be.seppevandenberk.degrootrally.model.RallyItem
 import be.seppevandenberk.degrootrally.repository.RallyItemsFileRepo
-import java.math.BigDecimal
 import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
 
-
 class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
-    val rallyItems = mutableListOf<RallyItem>()
+    private val rallyItems = mutableListOf<RallyItem>()
     private lateinit var binding: FragmentAddRaceBinding
     private lateinit var date: Date
 
@@ -31,8 +25,7 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+    ): View {
         binding = FragmentAddRaceBinding.inflate(layoutInflater)
 
         date = Calendar.getInstance().time
@@ -44,7 +37,7 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
 
         sortRallyItemsByDate(rallyItems as ArrayList<RallyItem>)
 
-        var adapter = RallyAdapter(rallyItems)
+        val adapter = RallyAdapter(rallyItems)
 
         putArgsInFields()
 
@@ -67,7 +60,7 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         return binding.root
     }
 
-    fun displayFragment(fragment: Fragment) {
+    private fun displayFragment(fragment: Fragment) {
         val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
         transaction.replace(R.id.fragmentLayoutMain, fragment)
         transaction.addToBackStack(null)
@@ -98,7 +91,7 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         if(arguments?.getLong("date") != null){
             date = arguments?.getLong("date")?.let { Date(it) }!!
             val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
-            var formattedDate = dateFormat.format(date)
+            val formattedDate = dateFormat.format(date)
 
             binding.dateTxtVw.text = "Date: $formattedDate"
 
@@ -113,12 +106,12 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         binding.addressTxtEd.setText(arguments?.getString("address") ?: "")
     }
 
-    fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
+    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
         if (rallyItems.size > 1){
-            var sortedRallyItems = rallyItems
-            sortedRallyItems.sortWith(Comparator{rallyItem1, rallyItem2 ->
+            val sortedRallyItems = rallyItems
+            sortedRallyItems.sortWith { rallyItem1, rallyItem2 ->
                 rallyItem1.date.compareTo(rallyItem2.date)
-            })
+            }
             return sortedRallyItems
         }
         return rallyItems

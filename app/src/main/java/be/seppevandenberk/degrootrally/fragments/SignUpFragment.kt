@@ -14,7 +14,6 @@ import be.seppevandenberk.degrootrally.model.User
 import com.google.android.material.snackbar.Snackbar
 
 class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
-
     private lateinit var registerBtn: Button
     private lateinit var passwordEditText: EditText
     private lateinit var passwordConfirmEditText: EditText
@@ -26,7 +25,6 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         val view = inflater.inflate(R.layout.fragment_sign_up, container, false)
 
         registerBtn = view.findViewById(R.id.register_btn)
@@ -42,7 +40,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
         return view
     }
 
-    fun register() {
+    private fun register() {
         if (passwordEditText.text.isEmpty() || passwordConfirmEditText.text.isEmpty() || usernameEditText.text.isEmpty() || emailEditText.text.isEmpty()) {
             view?.let{rootView -> Snackbar.make(rootView, "Need to fill in all the fields", Snackbar.LENGTH_SHORT).show()}
             return
@@ -59,10 +57,11 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             view?.let{rootView -> Snackbar.make(rootView, "Username is invalid, choose an other username", Snackbar.LENGTH_SHORT).show()}
             return
         }
-        if (!passwordEditText.text.toString().equals(passwordConfirmEditText.text.toString())) {
+        if (passwordEditText.text.toString() != passwordConfirmEditText.text.toString()) {
             view?.let{rootView -> Snackbar.make(rootView, "Password are not the same", Snackbar.LENGTH_SHORT).show()}
             return
         }
+
         val user = User(
             emailEditText.text.toString(),
             usernameEditText.text.toString(),
@@ -70,20 +69,23 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             "User",
             requireContext()
         )
+
         if (user.checkForAccountWithSameEmail(emailEditText.text.toString())) {
             view?.let{rootView -> Snackbar.make(rootView, "Account with same email already exists", Snackbar.LENGTH_SHORT).show()}
             return
         }
+
         val cursor = user.checkForAccountWithSameUsername(usernameEditText.text.toString())
         if (cursor != null) {
             cursor.close()
             view?.let{rootView -> Snackbar.make(rootView, "Account with same username already exists", Snackbar.LENGTH_SHORT).show()}
             return
         }
-        val hashedpassword = user.hashPassword(passwordEditText.text.toString())
+
+        user.hashPassword(passwordEditText.text.toString())
         user.create()
+
         val intent = Intent(requireContext(), MainActivity::class.java)
         startActivity(intent)
-
     }
 }
