@@ -29,6 +29,7 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         onCreate(db)
     }
 
+    //TODO test
     fun addUser(email: String, name: String, password: String, type: String) {
         val values = ContentValues()
 
@@ -48,6 +49,7 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
     }
 
     // below method is to get all data from our database
+    //TODO test
     fun getUser(): Cursor? {
         // here we are creating a readable variable of our database as we want to read value from it
         val db = this.readableDatabase
@@ -55,7 +57,7 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         // below code returns a cursor to read data from the database
         val cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
 
-        if (cursor.moveToFirst()){
+        if (cursor.moveToFirst()) {
             return cursor
         }
 
@@ -74,7 +76,7 @@ class DatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
         const val TYPE_COL = "type"
     }
 
-    fun getPath():String{
+    fun getPath(): String {
         return writableDatabase.path
     }
 }

@@ -1,4 +1,5 @@
 package be.seppevandenberk.degrootrally.fragments
+
 import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.net.Uri
@@ -24,12 +25,16 @@ class AccountFragment : Fragment() {
     private lateinit var changePasswordButton: Button
     private lateinit var loginButton: Button
     private lateinit var logoutButton: Button
-    private lateinit var userName : TextView
-    private lateinit var email : TextView
-    private var imageUri : Uri? = null
+    private lateinit var userName: TextView
+    private lateinit var email: TextView
+    private var imageUri: Uri? = null
     private val changePasswordFragment = ChangePasswordFragment()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.fragment_account, container, false)
     }
 
@@ -46,25 +51,23 @@ class AccountFragment : Fragment() {
         imageAccountIcon.setImageResource(R.drawable.ic_account)
 
         val user = ViewModelProvider(requireActivity())[ViewModelLoggedInUser::class.java]
-        user.name.observe(viewLifecycleOwner){name ->
-            val user = User(null,name,"",null,requireContext())
+        user.name.observe(viewLifecycleOwner) { name ->
+            val user = User(null, name, "", null, requireContext())
             val type = user.getType()
-            if (type == "Guest"){
+            if (type == "Guest") {
                 userName.text = "Guest"
                 email.visibility = View.INVISIBLE
                 changePasswordButton.visibility = View.INVISIBLE
                 loginButton.visibility = View.VISIBLE
                 logoutButton.visibility = View.INVISIBLE
 
-            }
-            else if (type == "Admin"){
+            } else if (type == "Admin") {
                 userName.text = "Admin"
                 email.visibility = View.INVISIBLE
                 changePasswordButton.visibility = View.INVISIBLE
                 loginButton.visibility = View.INVISIBLE
                 logoutButton.visibility = View.VISIBLE
-            }
-            else {
+            } else {
                 email.visibility = View.VISIBLE
                 userName.text = name
                 val data = user.getEmail()
@@ -80,23 +83,27 @@ class AccountFragment : Fragment() {
             requestPicture()
         }
 
-        loginButton.setOnClickListener{
-            val intent = requireActivity().baseContext.packageManager.getLaunchIntentForPackage(requireActivity().baseContext.packageName)
+        loginButton.setOnClickListener {
+            val intent = requireActivity().baseContext.packageManager.getLaunchIntentForPackage(
+                requireActivity().baseContext.packageName
+            )
             intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             requireActivity().finish()
             startActivity(intent)
         }
 
-        logoutButton.setOnClickListener{
+        logoutButton.setOnClickListener {
             val loggedInUser = ViewModelProvider(this)[ViewModelLoggedInUser::class.java]
             loggedInUser.name.value = ""
-            val intent = requireActivity().baseContext.packageManager.getLaunchIntentForPackage(requireActivity().baseContext.packageName)
+            val intent = requireActivity().baseContext.packageManager.getLaunchIntentForPackage(
+                requireActivity().baseContext.packageName
+            )
             intent?.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
             requireActivity().finish()
             startActivity(intent)
         }
 
-        changePasswordButton.setOnClickListener{
+        changePasswordButton.setOnClickListener {
             val transaction: FragmentTransaction = requireFragmentManager().beginTransaction()
             transaction.replace(R.id.fragmentLayoutLogin, changePasswordFragment)
             transaction.addToBackStack(null)
@@ -104,9 +111,9 @@ class AccountFragment : Fragment() {
         }
     }
 
-    private fun requestPicture(){
-        val intent = Intent(Intent.ACTION_PICK,MediaStore.Images.Media.INTERNAL_CONTENT_URI)
-        startActivityForResult(intent,100)
+    private fun requestPicture() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+        startActivityForResult(intent, 100)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

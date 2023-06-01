@@ -20,9 +20,10 @@ import java.util.Calendar
 class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
     private lateinit var binding: FragmentHoofdMenuBinding
     private val rallyItems = mutableListOf<RallyItem>()
-    private val emptyRallyItem = RallyItem("No data provided.", "", "", Calendar.getInstance().time, "", "")
-    private var rallyItemNextEvent = MutableList(1){emptyRallyItem}
-    private var rallyItemLastResult = MutableList(1){emptyRallyItem}
+    private val emptyRallyItem =
+        RallyItem("No data provided.", "", "", Calendar.getInstance().time, "", "")
+    private var rallyItemNextEvent = MutableList(1) { emptyRallyItem }
+    private var rallyItemLastResult = MutableList(1) { emptyRallyItem }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,7 +31,7 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         savedInstanceState: Bundle?
     ): View {
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
-        if(rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size){
+        if (rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size) {
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
 
@@ -51,11 +52,11 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         adapterNextEvent.setMapsButtonVisible(false)
 
         val user = ViewModelProvider(requireActivity())[ViewModelLoggedInUser::class.java]
-        user.name.observe(viewLifecycleOwner){name ->
-            val user = User(null,name,"",null,requireContext())
+        user.name.observe(viewLifecycleOwner) { name ->
+            val user = User(null, name, "", null, requireContext())
             val type = user.getType()
-            if (type != "Admin"){
-                binding.newsBodyTxtVw.setOnClickListener{
+            if (type != "Admin") {
+                binding.newsBodyTxtVw.setOnClickListener {
                     displayFragment(NewsFragment())
                 }
             }
@@ -74,8 +75,8 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         return binding.root
     }
 
-    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
-        if (rallyItems.size > 1){
+    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem> {
+        if (rallyItems.size > 1) {
             val sortedRallyItems = rallyItems
             sortedRallyItems.sortWith { rallyItem1, rallyItem2 ->
                 rallyItem1.date.compareTo(rallyItem2.date)
@@ -84,8 +85,8 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         }
         return rallyItems
     }
-
-    private fun assignNextEventAndLastResultArray(rallyItems: ArrayList<RallyItem>){
+    //TODO test
+    private fun assignNextEventAndLastResultArray(rallyItems: ArrayList<RallyItem>) {
         val sortedRallyItems = sortRallyItemsByDate(rallyItems)
 
         rallyItemLastResult[0] = emptyRallyItem
@@ -96,14 +97,14 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
                 rallyItemLastResult[0] = rallyItem
                 rallyItemNextEvent[0] = sortedRallyItems[index + 1]
                 return
-            }
-            else if (index >= sortedRallyItems.size - 1 && Calendar.getInstance().time > rallyItem.date){
+            } else if (index >= sortedRallyItems.size - 1 && Calendar.getInstance().time > rallyItem.date) {
                 rallyItemLastResult[0] = rallyItem
-                rallyItemNextEvent[0] = RallyItem("No next event present.", "", "", Calendar.getInstance().time, "", "")
+                rallyItemNextEvent[0] =
+                    RallyItem("No next event present.", "", "", Calendar.getInstance().time, "", "")
                 return
-            }
-            else if (Calendar.getInstance().time < sortedRallyItems.first().date){
-                rallyItemLastResult[0] = RallyItem("No results present.", "", "", Calendar.getInstance().time, "", "")
+            } else if (Calendar.getInstance().time < sortedRallyItems.first().date) {
+                rallyItemLastResult[0] =
+                    RallyItem("No results present.", "", "", Calendar.getInstance().time, "", "")
                 rallyItemNextEvent[0] = rallyItem
                 return
             }
@@ -116,7 +117,7 @@ class HoofdMenuFragment : Fragment(R.layout.fragment_hoofd_menu) {
         refreshMenu()
     }
 
-    private fun refreshMenu(){
+    private fun refreshMenu() {
         rallyItems.clear()
 
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }

@@ -33,7 +33,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         binding = FragmentKalenderEnResultatenBinding.inflate(layoutInflater)
 
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
-        if(rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size){
+        if (rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size) {
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
 
@@ -46,26 +46,29 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         adapter.setEditDeleteButtonsVisible(true)
 
         val user = ViewModelProvider(requireActivity())[ViewModelLoggedInUser::class.java]
-        user.name.observe(viewLifecycleOwner){name ->
-            val user = User(null,name,"",null,requireContext())
+        user.name.observe(viewLifecycleOwner) { name ->
+            val user = User(null, name, "", null, requireContext())
             val type = user.getType()
-            if (type != "Admin"){
+            if (type != "Admin") {
                 binding.addButton.visibility = View.INVISIBLE
                 adapter.setEditDeleteButtonsVisible(false)
             }
         }
 
-        binding.addButton.setOnClickListener{
+        binding.addButton.setOnClickListener {
             displayFragment(AddRaceFragment())
         }
 
-        adapter.setOnItemClickListener(object : RallyAdapter.OnItemClickListener{
+        adapter.setOnItemClickListener(object : RallyAdapter.OnItemClickListener {
             override fun onDeleteClick(position: Int) {
-                if (sortedRallyItems.size - 1 < 1){
+                if (sortedRallyItems.size - 1 < 1) {
                     val rootView = binding.root
-                    Snackbar.make(rootView, "There must be at least one item in this list.", Snackbar.LENGTH_SHORT).show()
-                }
-                else{
+                    Snackbar.make(
+                        rootView,
+                        "There must be at least one item in this list.",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
+                } else {
                     sortedRallyItems.removeAt(position)
                     if (rallyItemsFileRepo != null) {
                         rallyItemsFileRepo.delete()
@@ -92,7 +95,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
             }
 
             override fun onMapsClick(position: Int) {
-                if(rallyItems[position].address.isNotBlank()){
+                if (rallyItems[position].address.isNotBlank()) {
                     val address = rallyItems[position].address
 
                     val encodedAddress = URLEncoder.encode(address, "UTF-8")
@@ -103,10 +106,13 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
                     if (intent.resolveActivity(requireActivity().packageManager) != null) {
                         startActivity(intent)
                     }
-                }
-                else{
+                } else {
                     val rootView: View = binding.root
-                    Snackbar.make(rootView, "No location present, please add a location.", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(
+                        rootView,
+                        "No location present, please add a location.",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
                 }
             }
         })
@@ -121,8 +127,8 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         transaction.commit()
     }
 
-    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
-        if (rallyItems.size > 1){
+    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem> {
+        if (rallyItems.size > 1) {
             val sortedRallyItems = rallyItems
             sortedRallyItems.sortWith { rallyItem1, rallyItem2 ->
                 rallyItem1.date.compareTo(rallyItem2.date)
@@ -137,7 +143,7 @@ class KalenderEnResultatenFragment : Fragment(R.layout.fragment_kalender_en_resu
         refreshMenu()
     }
 
-    private fun refreshMenu(){
+    private fun refreshMenu() {
         rallyItems.clear()
 
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }

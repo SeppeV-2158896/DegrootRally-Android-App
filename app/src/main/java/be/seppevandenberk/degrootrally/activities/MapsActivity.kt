@@ -31,11 +31,12 @@ import okhttp3.Request
 import okhttp3.Response
 import java.io.IOException
 
-class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.LocationListener,SensorEventListener  {
+class MapsActivity : AppCompatActivity(), OnMapReadyCallback, android.location.LocationListener,
+    SensorEventListener {
 
     private lateinit var mMap: GoogleMap
     private lateinit var binding: ActivityMapsBinding
-    private lateinit var locationManager : LocationManager
+    private lateinit var locationManager: LocationManager
     private val client = OkHttpClient()
     private lateinit var sensorManager: SensorManager
     private var temperatureSensor: Sensor? = null
@@ -53,20 +54,20 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
         locationManager = getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-        if (sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE) != null){
+        if (sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE) != null) {
             temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
         }
-        if (sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY) != null){
+        if (sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY) != null) {
             humiditySensor = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY)
         }
-        if (sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE) != null){
+        if (sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE) != null) {
             pressureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE)
         }
 
         windTextView = findViewById(R.id.windSpeedTextView)
         windButton = findViewById(R.id.wind_data_button)
 
-        windButton.setOnClickListener{
+        windButton.setOnClickListener {
             updateWind()
         }
 
@@ -87,6 +88,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
 
         sensorManager.unregisterListener(this)
     }
+
     private fun getCurrentLocationUser() {
         if (ActivityCompat.checkSelfPermission(
                 this, Manifest.permission.ACCESS_FINE_LOCATION
@@ -105,7 +107,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
             mMap.uiSettings.isZoomControlsEnabled = true
 
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1f, this)
-            val lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+            val lastKnownLocation =
+                locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
             lastKnownLocation?.let { updateCurrentLocation(it) }
         }
     }
@@ -145,7 +148,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
     override fun onLocationChanged(location: Location) {
     }
 
-    private fun updateWind(){
+    private fun updateWind() {
         if (ActivityCompat.checkSelfPermission(
                 this,
                 Manifest.permission.ACCESS_FINE_LOCATION
@@ -165,9 +168,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
 
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1f, this)
         val lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)!!
-        getWindData("https://api.open-meteo.com/v1/forecast?latitude="+lastKnownLocation.latitude.toString()+"&longitude="+lastKnownLocation.longitude.toString()+"&hourly=windspeed_10m,winddirection_10m&daily=weathercode&current_weather=true&forecast_days=1&timezone=auto")
+        getWindData("https://api.open-meteo.com/v1/forecast?latitude=" + lastKnownLocation.latitude.toString() + "&longitude=" + lastKnownLocation.longitude.toString() + "&hourly=windspeed_10m,winddirection_10m&daily=weathercode&current_weather=true&forecast_days=1&timezone=auto")
     }
-    private fun getWindData(url : String){
+
+    private fun getWindData(url: String) {
         val request = Request.Builder()
             .url(url)
             .build()
@@ -185,7 +189,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback,android.location.Lo
 
                 runOnUiThread {
                     windTextView.text = "Wind: " + currentWeather.windspeed.toString() + " km/h"
-                    findViewById<ImageView>(R.id.wind_arrow).rotation = currentWeather.winddirection.toFloat()
+                    findViewById<ImageView>(R.id.wind_arrow).rotation =
+                        currentWeather.winddirection.toFloat()
                 }
             }
         })

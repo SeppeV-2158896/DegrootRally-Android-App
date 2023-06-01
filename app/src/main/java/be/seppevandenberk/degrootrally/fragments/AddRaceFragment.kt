@@ -29,9 +29,9 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         binding = FragmentAddRaceBinding.inflate(layoutInflater)
 
         date = Calendar.getInstance().time
-        
+
         val rallyItemsFileRepo = this.context?.let { it1 -> RallyItemsFileRepo(it1) }
-        if(rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size){
+        if (rallyItemsFileRepo != null && rallyItemsFileRepo.read().size != rallyItems.size) {
             rallyItems.addAll(rallyItemsFileRepo.read())
         }
 
@@ -41,8 +41,15 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
 
         putArgsInFields()
 
-        binding.addRaceBtn.setOnClickListener{
-            val newRallyItem = RallyItem(binding.titleTxtEd.text.toString(), binding.pilotTxtEd.text.toString(), binding.copilotTxtEd.text.toString(), date, binding.resultTxtEd.text.toString(), binding.addressTxtEd.text.toString())
+        binding.addRaceBtn.setOnClickListener {
+            val newRallyItem = RallyItem(
+                binding.titleTxtEd.text.toString(),
+                binding.pilotTxtEd.text.toString(),
+                binding.copilotTxtEd.text.toString(),
+                date,
+                binding.resultTxtEd.text.toString(),
+                binding.addressTxtEd.text.toString()
+            )
             arguments?.getInt("position")?.let { it1 -> rallyItems.removeAt(it1) }
             rallyItems.add(newRallyItem)
             adapter.notifyItemInserted(rallyItems.size - 1)
@@ -73,22 +80,24 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         val month = calendar.get(Calendar.MONTH)
         val day = calendar.get(Calendar.DAY_OF_MONTH)
 
-        val datePicker = DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
-            val selectedDate = Calendar.getInstance()
-            selectedDate.set(selectedYear, selectedMonth, selectedDay)
-            val formattedDate = String.format("%02d/%02d/%04d", selectedDay, selectedMonth + 1, selectedYear)
-            binding.dateTxtVw.text = "Date: $formattedDate"
+        val datePicker =
+            DatePickerDialog(requireContext(), { _, selectedYear, selectedMonth, selectedDay ->
+                val selectedDate = Calendar.getInstance()
+                selectedDate.set(selectedYear, selectedMonth, selectedDay)
+                val formattedDate =
+                    String.format("%02d/%02d/%04d", selectedDay, selectedMonth + 1, selectedYear)
+                binding.dateTxtVw.text = "Date: $formattedDate"
 
-            date = selectedDate.time
-        }, year, month, day)
+                date = selectedDate.time
+            }, year, month, day)
 
         datePicker.show()
     }
 
-    private fun putArgsInFields(){
+    private fun putArgsInFields() {
         binding.titleTxtEd.setText(arguments?.getString("title") ?: "")
 
-        if(arguments?.getLong("date") != null){
+        if (arguments?.getLong("date") != null) {
             date = arguments?.getLong("date")?.let { Date(it) }!!
             val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
             val formattedDate = dateFormat.format(date)
@@ -105,9 +114,9 @@ class AddRaceFragment : Fragment(R.layout.fragment_add_race) {
         binding.resultTxtEd.setText(arguments?.getString("result") ?: "")
         binding.addressTxtEd.setText(arguments?.getString("address") ?: "")
     }
-
-    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem>{
-        if (rallyItems.size > 1){
+    //TODO test
+    private fun sortRallyItemsByDate(rallyItems: ArrayList<RallyItem>): ArrayList<RallyItem> {
+        if (rallyItems.size > 1) {
             val sortedRallyItems = rallyItems
             sortedRallyItems.sortWith { rallyItem1, rallyItem2 ->
                 rallyItem1.date.compareTo(rallyItem2.date)

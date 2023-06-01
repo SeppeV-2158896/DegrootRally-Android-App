@@ -1,6 +1,6 @@
 package be.seppevandenberk.degrootrally.activities
 
-import PictureFragment
+import be.seppevandenberk.degrootrally.fragments.PictureFragment
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -18,14 +18,13 @@ import be.seppevandenberk.degrootrally.fragments.KalenderEnResultatenFragment
 import be.seppevandenberk.degrootrally.model.ViewModelLoggedInUser
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
+class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     private val hoofdMenuFragment = HoofdMenuFragment()
     private val kalenderEnResultatenFragment = KalenderEnResultatenFragment()
     private val accountFragment = AccountFragment()
     private val pictureFragment = PictureFragment()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -85,11 +84,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)
             }
         }
-        // Close the navigation drawer if necessary
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
-
 
 
     private fun displayFragment(fragment: Fragment) {

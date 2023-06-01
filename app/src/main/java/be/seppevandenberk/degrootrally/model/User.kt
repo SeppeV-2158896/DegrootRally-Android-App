@@ -27,7 +27,7 @@ data class User(
 
         Toast.makeText(context, "Account has been registered", Toast.LENGTH_LONG).show()
     }
-
+    //TODO test
     fun checkForAccountWithSameEmail(email: String): Boolean {
         val db = DatabaseHelper(context, null)
 
@@ -56,7 +56,7 @@ data class User(
         }
         return false
     }
-
+    //TODO test
     fun checkForAccountWithSameUsername(username: String): Cursor? {
         val db = DatabaseHelper(context, null)
 
@@ -89,7 +89,7 @@ data class User(
         val hashedInput = hashPassword(input)
         return hashedInput == hashedPassword
     }
-
+    //TODO test
     fun checkAccessGranted(username: String, password: String): Boolean {
         val db = DatabaseHelper(context, null)
 
@@ -106,7 +106,7 @@ data class User(
         }
         return false
     }
-
+    //TODO test
     fun getType(): String {
         val db = DatabaseHelper(context, null)
         val cursor = checkForAccountWithSameUsername(username) ?: return ""
@@ -116,7 +116,7 @@ data class User(
         cursor.close()
         return type
     }
-
+    //TODO test
     fun getEmail(): String {
         val db = DatabaseHelper(context, null)
         val cursor = checkForAccountWithSameUsername(username) ?: return ""

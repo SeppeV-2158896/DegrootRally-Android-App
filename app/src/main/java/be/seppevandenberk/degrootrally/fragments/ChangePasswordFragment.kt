@@ -11,10 +11,10 @@ import androidx.fragment.app.Fragment
 import be.seppevandenberk.degrootrally.R
 
 class ChangePasswordFragment : Fragment() {
-    private lateinit var oldPassword : EditText
-    private lateinit var newPassword : EditText
-    private lateinit var confirmPassword : EditText
-    private lateinit var confirmBtn : Button
+    private lateinit var oldPassword: EditText
+    private lateinit var newPassword: EditText
+    private lateinit var confirmPassword: EditText
+    private lateinit var confirmBtn: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,20 +32,27 @@ class ChangePasswordFragment : Fragment() {
         confirmPassword = view.findViewById(R.id.confirm_password_txt_ed)
         confirmBtn = view.findViewById(R.id.change_to_new_password_btn)
 
-        confirmBtn.setOnClickListener{
-            changePassword(oldPassword.text.toString(),newPassword.text.toString(),confirmPassword.text.toString())
+        confirmBtn.setOnClickListener {
+            changePassword(
+                oldPassword.text.toString(),
+                newPassword.text.toString(),
+                confirmPassword.text.toString()
+            )
         }
     }
-
-    private fun changePassword(oldPassword : String,newPassword : String, confirmPassword: String){
-        if(oldPassword == "" || newPassword == "" ||confirmPassword == "" ){
+    //TODO test
+    private fun changePassword(oldPassword: String, newPassword: String, confirmPassword: String) {
+        if (oldPassword == "" || newPassword == "" || confirmPassword == "") {
             Toast.makeText(requireContext(), "Fill in all the fields!", Toast.LENGTH_LONG).show()
-        }
-        else if (confirmPassword != newPassword){
-            Toast.makeText(requireContext(), "New passwords are not the same!", Toast.LENGTH_LONG).show()
-        }
-        else if (oldPassword == newPassword){
-            Toast.makeText(requireContext(), "New password can't be the same as the old password!", Toast.LENGTH_LONG).show()
+        } else if (confirmPassword != newPassword) {
+            Toast.makeText(requireContext(), "New passwords are not the same!", Toast.LENGTH_LONG)
+                .show()
+        } else if (oldPassword == newPassword) {
+            Toast.makeText(
+                requireContext(),
+                "New password can't be the same as the old password!",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 }

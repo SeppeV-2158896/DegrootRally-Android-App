@@ -37,11 +37,11 @@ class RallyAdapter(private val items: List<RallyItem>) :
     }
 
     inner class RallyItemViewHolder(currentItemView: View) :
-        RecyclerView.ViewHolder(currentItemView){
-            val deleteImageView: ImageView = currentItemView.findViewById(R.id.im_trash_vw)
-            val editImageView: ImageView = currentItemView.findViewById(R.id.im_editPen_vw)
-            val mapsImageView: ImageView = currentItemView.findViewById(R.id.im_maps_vw)
-        }
+        RecyclerView.ViewHolder(currentItemView) {
+        val deleteImageView: ImageView = currentItemView.findViewById(R.id.im_trash_vw)
+        val editImageView: ImageView = currentItemView.findViewById(R.id.im_editPen_vw)
+        val mapsImageView: ImageView = currentItemView.findViewById(R.id.im_maps_vw)
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RallyItemViewHolder {
         val view =
@@ -79,7 +79,7 @@ class RallyAdapter(private val items: List<RallyItem>) :
             holder.deleteImageView.visibility = View.INVISIBLE
             holder.editImageView.visibility = View.INVISIBLE
         }
-        if (mapsButtonVisible){
+        if (mapsButtonVisible) {
             holder.mapsImageView.visibility = View.VISIBLE
         } else {
             holder.mapsImageView.visibility = View.INVISIBLE
