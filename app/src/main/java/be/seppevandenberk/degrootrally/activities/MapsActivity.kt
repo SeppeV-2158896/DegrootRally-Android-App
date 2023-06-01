@@ -11,6 +11,7 @@ import android.hardware.SensorManager
 import android.location.Location
 import android.location.LocationManager
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.CalendarView
 import android.widget.ImageView
@@ -111,7 +112,14 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, android.location.L
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1f, this)
             val lastKnownLocation =
                 locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-            lastKnownLocation?.let { updateCurrentLocation(it) }
+            if(lastKnownLocation == null){
+                windButton.visibility = View.INVISIBLE
+            }
+            lastKnownLocation?.let {
+                updateCurrentLocation(it)
+                windButton.visibility= View.VISIBLE
+            }
+
         }
     }
 
