@@ -178,13 +178,11 @@
 
             <TextView
                 android:id="@+id/news_body_txt_vw"
-                android:layout_width="197dp"
-                android:layout_height="108dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="8dp"
-                app:layout_constraintBottom_toBottomOf="@+id/news_image"
-                app:layout_constraintStart_toEndOf="@+id/news_image"
-                app:layout_constraintTop_toBottomOf="@+id/news_txt_vw"
+                android:layout_width="238dp"
+                android:layout_height="153dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="@+id/news_txt_vw"
+                app:layout_constraintTop_toTopOf="@+id/news_image"
                 tools:text="blabla" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

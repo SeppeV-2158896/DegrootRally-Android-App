@@ -207,15 +207,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, android.location.L
                     val now = Calendar.getInstance()
                     if(temperatureSensor == null){
                         findViewById<TextView>(R.id.temperatureTextView).text =
-                            "Temperature:" + temperatures.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " °C"
+                            "Temperature: " + temperatures.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " °C"
                     }
                     if(humiditySensor == null){
                         findViewById<TextView>(R.id.humidityTextView).text =
-                            "Humidity:" + humidities.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " %"
+                            "Humidity: " + humidities.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " %"
                     }
                     if(pressureSensor == null){
-                        findViewById<TextView>(R.id.humidityTextView).text =
-                            "Pressure:" + pressures.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " hPa"
+                        findViewById<TextView>(R.id.pressureTextView).text =
+                            "Pressure: " + pressures.elementAt((now.get(Calendar.HOUR_OF_DAY))-1) + " hPa"
                     }
 
                 }
